@@ -3,7 +3,7 @@
   <title>奔跑</title>
   <link href="http://www.runjf.com/atom.xml" rel="self"/>
   <link href="http://www.runjf.com"/>
-  <updated>2013-03-02T10:00:31.090Z</updated>
+  <updated>2013-03-02T10:42:49.010Z</updated>
   <id>http://www.runjf.com</id>
   <author>
     <name>ruanjf</name>
@@ -125,7 +125,35 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -241,7 +269,35 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -363,7 +419,35 @@ MIN_DISPLAY_COLORS=256
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -552,7 +636,35 @@ public class CreatePluginsConfig {
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -702,7 +814,35 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -845,7 +985,35 @@ The state of the socket is unknown.&lt;/p&gt;
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -1030,7 +1198,35 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -1218,7 +1414,35 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -1333,7 +1557,35 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -1458,7 +1710,35 @@ var inject = function(){
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -1574,7 +1854,35 @@ var inject = function(){
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -1692,7 +2000,35 @@ var inject = function(){
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -1821,7 +2157,35 @@ git clone git@192.168.1.103:testgit aa
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -1960,7 +2324,35 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/2012-09-15-java-environment-variable&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -2092,7 +2484,35 @@ $JAVA_HOME/jre/lib/rt.pack   转为  rt.jar&lt;br&gt;&lt;/p&gt;
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/hello&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
@@ -2206,7 +2626,35 @@ var inject = function(){
   &lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot;&gt;&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;next disabled&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;&lt;/section&gt;
+&lt;!--a(href=posts[0].url)= posts[0].title + posts.length--&gt;
+&lt;hr/&gt;
+&lt;div id=&quot;disqus_thread&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+&lt;/script&gt;
+&lt;noscript&gt;
+  &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
+&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+&lt;/script&gt;&lt;/section&gt;
       &lt;hr&gt;
       &lt;footer&gt;
         &lt;div&gt;Copyright © 2012 - ruanjiefeng@gmail.com&lt;/div&gt;
