@@ -3,7 +3,7 @@
   <title>奔跑</title>
   <link href="http://www.runjf.com/atom.xml" rel="self"/>
   <link href="http://www.runjf.com"/>
-  <updated>2013-03-02T10:42:49.010Z</updated>
+  <updated>2013-03-02T10:47:02.926Z</updated>
   <id>http://www.runjf.com</id>
   <author>
     <name>ruanjf</name>
@@ -141,7 +141,7 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -285,7 +285,7 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -435,7 +435,7 @@ MIN_DISPLAY_COLORS=256
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -652,7 +652,7 @@ public class CreatePluginsConfig {
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -830,7 +830,7 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -1001,7 +1001,7 @@ The state of the socket is unknown.&lt;/p&gt;
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -1214,7 +1214,7 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -1430,7 +1430,7 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -1573,7 +1573,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -1726,7 +1726,7 @@ var inject = function(){
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -1870,7 +1870,7 @@ var inject = function(){
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -2016,7 +2016,7 @@ var inject = function(){
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -2173,7 +2173,7 @@ git clone git@192.168.1.103:testgit aa
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -2340,7 +2340,7 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -2500,7 +2500,7 @@ $JAVA_HOME/jre/lib/rt.pack   转为  rt.jar&lt;br&gt;&lt;/p&gt;
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
@@ -2617,7 +2617,7 @@ var inject = function(){
   &lt;section id=&quot;related&quot;&gt;
     &lt;h3&gt;Related Posts&lt;/h3&gt;
     &lt;nav class=&quot;linklist&quot;&gt;
-      &lt;li&gt;&lt;span&gt;Feb 26 2013&lt;/span&gt; &amp;raquo;&amp;nbsp;&lt;a href=&quot;/pages/about&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;span&gt;Feb 26 2013&lt;/span&gt; &amp;raquo;&amp;nbsp;&lt;a href=&quot;/pages/about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
     &lt;/nav&gt;
   &lt;/section&gt;
 &lt;/footer&gt;
@@ -2642,7 +2642,7 @@ var inject = function(){
 &lt;/script&gt;
 &lt;noscript&gt;
   &lt;Please&gt;enable JavaScript to view the &lt;/Please&gt;&lt;a href=&quot;http://disqus.com/?ref_noscript&quot;&gt;comments powered by Disqus.&lt;/a&gt;
-&lt;/noscript&gt;&lt;a href=&quot;http://disqus.com&quot;&gt;comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;&lt;/a&gt;
+&lt;/noscript&gt;&lt;!--a(href=&quot;http://disqus.com&quot;, class=&quot;dsq-brlink) comments powered by&lt;span class=&quot;logo-disqus&quot;&gt;Disqus&lt;/span&gt;--&gt;
 &lt;script type=&quot;text/javascript&quot;&gt;
   /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
