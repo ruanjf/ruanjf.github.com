@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta-->
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>JAVA_OPTS | 奔跑</title>
+    <meta name="description" content="When your website appears in search results in say Google, the text here will be shown underneath your website's title.">
+    <meta name="keywords" content="place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website">
+    <meta name="author" content="ruanjf"><meta http-equiv="X-Powered-By" content="DocPad"/>
+    <meta name="viewport" content="width=device-width">
+    <!-- Icons-->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"><!--[if lt IE 9]>
+    <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap-responsive.css" /><link  rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <!-- Markup-->
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="brand">Blog</a>
+          <div style="height: 0px;" class="nav-collapse collapse">
+            <ul class="nav">
+              <li typeof="sioc:Page" about="/pages/posts"><a href="/pages/posts" property="dc:title">Archives</a></li>
+              <li typeof="sioc:Page" about="/pages/about"><a href="/pages/about" property="dc:title">About</a></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li><!--li<a href="ruanjiefeng@gmail.com" rel="subscribe-email" title="subscribe via email">Email</a>-->
+            </ul>
+            <form action="http://203.208.46.146/search" method="get" class="navbar-search pull-right">
+              <input type="hidden" name="q" value="site:www.runjf.com">
+              <input type="text" name="q" results="0" placeholder="Search" class="search-query">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <section id="content" class="content">
+<article id="post" class="post">
+  <h1>JAVA_OPTS</h1>
+  <div class="post-content"><p>JAVA_OPTS=”-server -Xms1536m -Xmx1536m -XX:NewSize=320m -XX:MaxNewSize=320m -XX:PermSize=96m -XX:MaxPermSize=256m -Xmn500m -XX:MaxTenuringThreshold=5″</p>
+<p>JAVA_OPTS并不是已成不变的，不同的应用、软硬件环境下，要想充分发挥应用的性能，这些参数里边的设置可是非常有技巧和具有经验积累的。
+经过查找资料，先看下JAVA_OPTS参数表示的意义。</p>
+<pre><code>-server:一定要作为第一个参数，在多个CPU时性能佳
+-Xms：初始Heap大小，使用的最小内存,cpu性能高时此值应设的大一些
+-Xmx：java heap最大值，使用的最大内存。上面两个值是分配JVM的最小和最大内存，取决于硬件物理内存的大小，建议均设为物理内存的一半。
+-XX:PermSize:设定内存的永久保存区域
+-XX:MaxPermSize:设定最大内存的永久保存区域
+-XX:MaxNewSize:
+-Xss 15120 这使得JBoss每增加一个线程（thread)就会立即消耗15M内存，而最佳值应该是128K,默认值好像是512k.
++XX:AggressiveHeap 会使得 Xms没有意义。这个参数让jvm忽略Xmx参数,疯狂地吃完一个G物理内存,再吃尽一个G的swap。
+-Xss：每个线程的Stack大小
+-verbose:gc 现实垃圾收集信息
+-Xloggc:gc.log 指定垃圾收集日志文件
+-Xmn：young generation的heap大小，一般设置为Xmx的3、4分之一
+-XX:+UseParNewGC ：缩短minor收集的时间
+-XX:+UseConcMarkSweepGC ：缩短major收集的时间</code></pre>
+<p>提示：此选项在Heap Size 比较大而且Major收集时间较长的情况下使用更合适。</p>
+</div>
+</article>
+<footer>
+</footer>
+<ul class="pager">
+  <li class="previous"><a href="/posts/2012-09-16-maven-environment-variable">&larr; Newer</a></li>
+  <li typeof="sioc:Page" about="/pages/posts"><a href="/pages/posts" property="dc:title">Archives</a></li>
+  <li class="next"><a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">Older &rarr;</a></li>
+</ul>
+<!--a(href=posts[0].url)= posts[0].title + posts.length--></section>
+      <hr>
+      <footer>
+        <div>Copyright © 2012 - ruanjiefeng@gmail.com</div>
+        <!--div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}-->
+      </footer>
+    </div>
+    <!-- Scripts--><script >(function(){
+	// Did we just livereload?
+var log = true && localStorage && console && console.log && true;
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReloaded at', new Date())
+}
+
+// Listen for the regenerated event
+// and perform a reload of the page when the event occurs
+var listen = function(){
+	var socket = io.connect('/docpad-livereload');
+	socket.on('regenerated',function(){
+		if ( log ) {
+	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+}
+document.location.reload();
+	});
+};
+	if ( typeof io !== 'undefined' ) {
+		listen();
+	} else {
+		// Inject socket.io into our page then listen once loaded
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
+	t.src = '/socket.io/socket.io.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t,s);
+};
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery.js"></script><script defer="defer"  src="/vendor/twitter-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+  </body>
+</html>

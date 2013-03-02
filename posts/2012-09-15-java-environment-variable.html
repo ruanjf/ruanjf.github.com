@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta-->
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>java 环境变量配置 | 奔跑</title>
+    <meta name="description" content="When your website appears in search results in say Google, the text here will be shown underneath your website's title.">
+    <meta name="keywords" content="place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website">
+    <meta name="author" content="ruanjf"><meta http-equiv="X-Powered-By" content="DocPad"/>
+    <meta name="viewport" content="width=device-width">
+    <!-- Icons-->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"><!--[if lt IE 9]>
+    <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap-responsive.css" /><link  rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <!-- Markup-->
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="brand">Blog</a>
+          <div style="height: 0px;" class="nav-collapse collapse">
+            <ul class="nav">
+              <li typeof="sioc:Page" about="/pages/posts"><a href="/pages/posts" property="dc:title">Archives</a></li>
+              <li typeof="sioc:Page" about="/pages/about"><a href="/pages/about" property="dc:title">About</a></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li><!--li<a href="ruanjiefeng@gmail.com" rel="subscribe-email" title="subscribe via email">Email</a>-->
+            </ul>
+            <form action="http://203.208.46.146/search" method="get" class="navbar-search pull-right">
+              <input type="hidden" name="q" value="site:www.runjf.com">
+              <input type="text" name="q" results="0" placeholder="Search" class="search-query">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <section id="content" class="content">
+<article id="post" class="post">
+  <h1>java 环境变量配置</h1>
+  <div class="post-content"><h3>windows</h3>
+<p>右键我的电脑-属性-高级-环境变量<br>
+在系统变量里新建(jdk的安装路径)<br>
+JAVA_HOME=F:\Java\jdk1.6.0_12<br>
+Path=;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+注意，这个要添加到系统原来的PATH前面，要像有些人说的加后面可能会不能编译。 <br>
+Classpath=.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\jre\lib\rt.jar
+然后就是试下看是否配置成功了 <br>
+关于设置JAVA HOME的必要性：你若装TOMCAT或ORACLE等都会改变你的环境设置，总是改path，classpath容易出错也不方便，<br>
+所以JAVA HOME就有了统一指向性，方便不易出错。<br>
+开始-运行-CMD然后&quot;java&quot;、&quot;javac&quot;会出现很多操作说明，也可以&quot;java -version&quot;查看版本信息。<br>
+再就是自己编个简单的JAVA文件试下了。<br></p>
+<h3>linux</h3>
+<p>在文件/etc/profile末尾添加如下内容(你的jdk所在位置)<br></p>
+<pre><code>JAVA_HOME=/usr/java/jdk1.6.0_25
+PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$PATH
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JAVA_HOME/jre/lib/rt.jar
+export JAVA_HOME
+export PATH
+export CLASSPATH</code></pre>
+<p>注意:linux下面用冒号分割<br>
+解决 java/lang/NoClassDefFoundError: java/lang/Object 错误<br>
+$JAVA_HOME/lib/ tools.pack  转为  tools.jar  <br>
+$JAVA_HOME/jre/lib/rt.pack   转为  rt.jar<br></p>
+<pre><code class="lang-sh">[root@localhost lib]# unpack200 rt.pack rt.jar</code></pre>
+</div>
+</article>
+<footer>
+</footer>
+<ul class="pager">
+  <li class="previous"><a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">&larr; Newer</a></li>
+  <li typeof="sioc:Page" about="/pages/posts"><a href="/pages/posts" property="dc:title">Archives</a></li>
+  <li class="next"><a href="/posts/hello">Older &rarr;</a></li>
+</ul>
+<!--a(href=posts[0].url)= posts[0].title + posts.length--></section>
+      <hr>
+      <footer>
+        <div>Copyright © 2012 - ruanjiefeng@gmail.com</div>
+        <!--div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}-->
+      </footer>
+    </div>
+    <!-- Scripts--><script >(function(){
+	// Did we just livereload?
+var log = true && localStorage && console && console.log && true;
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReloaded at', new Date())
+}
+
+// Listen for the regenerated event
+// and perform a reload of the page when the event occurs
+var listen = function(){
+	var socket = io.connect('/docpad-livereload');
+	socket.on('regenerated',function(){
+		if ( log ) {
+	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+}
+document.location.reload();
+	});
+};
+	if ( typeof io !== 'undefined' ) {
+		listen();
+	} else {
+		// Inject socket.io into our page then listen once loaded
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
+	t.src = '/socket.io/socket.io.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t,s);
+};
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery.js"></script><script defer="defer"  src="/vendor/twitter-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+  </body>
+</html>

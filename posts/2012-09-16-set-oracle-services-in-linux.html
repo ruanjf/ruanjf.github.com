@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta-->
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Linux下设置oracle 10g 服务以及实例自动启动方法 | 奔跑</title>
+    <meta name="description" content="When your website appears in search results in say Google, the text here will be shown underneath your website's title.">
+    <meta name="keywords" content="place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website">
+    <meta name="author" content="ruanjf"><meta http-equiv="X-Powered-By" content="DocPad"/>
+    <meta name="viewport" content="width=device-width">
+    <!-- Icons-->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"><!--[if lt IE 9]>
+    <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap-responsive.css" /><link  rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <!-- Markup-->
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="brand">Blog</a>
+          <div style="height: 0px;" class="nav-collapse collapse">
+            <ul class="nav">
+              <li typeof="sioc:Page" about="/pages/posts"><a href="/pages/posts" property="dc:title">Archives</a></li>
+              <li typeof="sioc:Page" about="/pages/about"><a href="/pages/about" property="dc:title">About</a></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li><!--li<a href="ruanjiefeng@gmail.com" rel="subscribe-email" title="subscribe via email">Email</a>-->
+            </ul>
+            <form action="http://203.208.46.146/search" method="get" class="navbar-search pull-right">
+              <input type="hidden" name="q" value="site:www.runjf.com">
+              <input type="text" name="q" results="0" placeholder="Search" class="search-query">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <section id="content" class="content">
+<article id="post" class="post">
+  <h1>Linux下设置oracle 10g 服务以及实例自动启动方法</h1>
+  <div class="post-content"><p>Linux中在Oracle安装完毕以后,如果重新启动Linux ,Oracle是不会自动启动的,你可以通过手动调用dbstart命令来进行启动,不过这样似乎也很繁琐.我们可以通过配置Oracle的自动启动脚本,然后利用Linux的Service来启动Oracle服务器.
+首先在/etc/init.d/目录下配置Oracle的服务文件.</p>
+<pre><code>[root@oracle10g ~]#touch oracle10g
+[root@oracle10g ~]#chmod a+x oracle10g</code></pre>
+<p>然后编辑此oracle10g文件.内容如下.</p>
+<pre><code>[root@oracle10g ~]#vi /etc/init.d/oracle10g</code></pre>
+<pre><code class="lang-sh"># !/bin/bash
+# whoami
+# root
+# chkconfig: 345 51 49
+# /etc/init.d/oracle10g
+# description: starts the oracle dabase deamons
+#
+ORA_HOME=/oracle/app/oracle/product/10.2.0/db_1
+ORA_OWNER=oracle
+case &quot;$1&quot; in
+start)
+echo -n &quot;Starting oracle10g: &quot;
+su - $ORA_OWNER -c &quot;$ORA_HOME/bin/dbstart&quot; &amp;
+su - $ORA_OWNER -c &quot;$ORA_HOME/bin/lsnrctl start&quot;
+su - $ORA_OWNER -c &quot;$ORA_HOME/bin/emctl start dbconsole&quot;
+touch /var/lock/subsys/oracle10g
+echo
+;;
+stop)
+echo -n &quot;shutting down oracle10g: &quot;
+su - $ORA_OWNER -c &quot;$ORA_HOME/bin/dbshut&quot; &amp;
+su - $ORA_OWNER -c &quot;$ORA_HOME/bin/lsnrctl stop&quot;
+su - $ORA_OWNER -c &quot;$ORA_HOME/bin/emctl stop dbconsole&quot;
+rm -f /var/lock/subsys/oracle10g
+echo
+;;
+restart)
+echo -n &quot;restarting oracle10g: &quot;
+$0 stop
+$0 start
+echo
+;;
+*)
+echo &quot;Usage: `basename $0` start|stop|restart&quot;
+exit 1
+esac
+exit 0</code></pre>
+<p>把配置好的拷贝到启动目录（添加linux服务时使用）</p>
+<pre><code>[root@oracle10g ~]#cp oracle10g /etc/init.d/</code></pre>
+<p>保存文件,退出以后,添加并启动察看服务.</p>
+<pre><code>[root@oracle10g ~]#chkconfig --add oracle10g
+[root@oracle10g ~]#chkconfig --list oracle10g
+[root@oracle10g ~]#chkconfig --level 345 oracle10g on</code></pre>
+<p>重新启动Linux的时候,如果看到启动项Oracle出现OK,代表Oracle成功随Linux启动了.
+注意:
+这样的脚本启动一般不会启动实例,如果想让实例也随脚本一起启动的话,就需要修改文件</p>
+<pre><code>[root@oracle10g ~]#ls /etc/oratab</code></pre>
+<p>如果这个文件不存在,那么就得运行脚本文件产生它</p>
+<pre><code>[root@oracle10g ~]#sh /oracle/product/10.2.0/db_1/root.sh</code></pre>
+<p>比如我的oratab代码如下:</p>
+<pre><code class="lang-sh">#
+# This file is used by ORACLE utilities.  It is created by root.sh
+# and updated by the Database Configuration Assistant when creating
+# a database.
+# A colon, &#39;:&#39;, is used as the field terminator.  A new line terminates
+# the entry.  Lines beginning with a pound sign, &#39;#&#39;, are comments.
+#
+# Entries are of the form:
+#   $ORACLE_SID:$ORACLE_HOME:&lt;N|Y&gt;:
+#
+# The first and second fields are the system identifier and home
+# directory of the database respectively.  The third filed indicates
+# to the dbstart utility that the database should , &quot;Y&quot;, or should not,
+# &quot;N&quot;, be brought up at system boot time.
+#
+# Multiple entries with the same $ORACLE_SID are not allowed.
+#
+#
+orcl:/oracle/product/10.2.0/db_1:N
+gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
+#看设置,可以看出实例 gzgi 是自动启动的(表识是Y),而orcl的表识是N,则不启动</code></pre>
+<p>只要在这里设置好后,在配合上面的脚本,即可实现开机自动启动oracle以及实例了.</p>
+</div>
+</article>
+<footer>
+</footer>
+<ul class="pager">
+  <li class="previous"><a href="/posts/2012-09-16-linux-connection-number-query">&larr; Newer</a></li>
+  <li typeof="sioc:Page" about="/pages/posts"><a href="/pages/posts" property="dc:title">Archives</a></li>
+  <li class="next"><a href="/posts/2012-09-16-oracle-10g-install-in-linux">Older &rarr;</a></li>
+</ul>
+<!--a(href=posts[0].url)= posts[0].title + posts.length--></section>
+      <hr>
+      <footer>
+        <div>Copyright © 2012 - ruanjiefeng@gmail.com</div>
+        <!--div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}-->
+      </footer>
+    </div>
+    <!-- Scripts--><script >(function(){
+	// Did we just livereload?
+var log = true && localStorage && console && console.log && true;
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReloaded at', new Date())
+}
+
+// Listen for the regenerated event
+// and perform a reload of the page when the event occurs
+var listen = function(){
+	var socket = io.connect('/docpad-livereload');
+	socket.on('regenerated',function(){
+		if ( log ) {
+	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+}
+document.location.reload();
+	});
+};
+	if ( typeof io !== 'undefined' ) {
+		listen();
+	} else {
+		// Inject socket.io into our page then listen once loaded
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
+	t.src = '/socket.io/socket.io.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t,s);
+};
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery.js"></script><script defer="defer"  src="/vendor/twitter-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+  </body>
+</html>

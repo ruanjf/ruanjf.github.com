@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta-->
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>linux connection number query | 奔跑</title>
+    <meta name="description" content="When your website appears in search results in say Google, the text here will be shown underneath your website's title.">
+    <meta name="keywords" content="place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website">
+    <meta name="author" content="ruanjf"><meta http-equiv="X-Powered-By" content="DocPad"/>
+    <meta name="viewport" content="width=device-width">
+    <!-- Icons-->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"><!--[if lt IE 9]>
+    <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap-responsive.css" /><link  rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <!-- Markup-->
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="brand">Blog</a>
+          <div style="height: 0px;" class="nav-collapse collapse">
+            <ul class="nav">
+              <li typeof="sioc:Page" about="/pages/posts"><a href="/pages/posts" property="dc:title">Archives</a></li>
+              <li typeof="sioc:Page" about="/pages/about"><a href="/pages/about" property="dc:title">About</a></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li><!--li<a href="ruanjiefeng@gmail.com" rel="subscribe-email" title="subscribe via email">Email</a>-->
+            </ul>
+            <form action="http://203.208.46.146/search" method="get" class="navbar-search pull-right">
+              <input type="hidden" name="q" value="site:www.runjf.com">
+              <input type="text" name="q" results="0" placeholder="Search" class="search-query">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <section id="content" class="content">
+<article id="post" class="post">
+  <h1>linux connection number query</h1>
+  <div class="post-content"><pre><code>#netstat -n | awk &#39;/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}&#39; ;netstat -nat |wc -l</code></pre>
+<p>得到类似如下的输出：</p>
+<pre><code>LAST_ACK 5
+SYN_RECV 28
+CLOSE_WAIT 475
+ESTABLISHED 646
+FIN_WAIT1 35
+FIN_WAIT2 111
+CLOSING 28
+TIME_WAIT 1448
+2849</code></pre>
+<p>最后一行是总的连接数。前面那些，左列是连接状态，右列是数量。</p>
+<p>连接状态说明：（man netstat）</p>
+<p>ESTABLISHED
+The socket has an established connection.</p>
+<p>SYN_SENT
+The socket is actively attempting to establish a connection.</p>
+<p>SYN_RECV
+A connection request has been received from the network.</p>
+<p>FIN_WAIT1
+The socket is closed, and the connection is shutting down.</p>
+<p>FIN_WAIT2
+Connection is closed, and the socket is waiting for a shutdown from the remote end.</p>
+<p>TIME_WAIT
+The socket is waiting after close to handle packets still in the network.</p>
+<p>CLOSED The socket is not being used.</p>
+<p>CLOSE_WAIT
+The remote end has shut down, waiting for the socket to close.</p>
+<p>LAST_ACK
+The remote end has shut down, and the socket is closed. Waiting for acknowledgement.</p>
+<p>LISTEN The  socket  is  listening for incoming connections.  Such sockets are not included in the output unless you
+specify the –listening (-l) or –all (-a) option.</p>
+<p>CLOSING
+Both sockets are shut down but we still don’t have all our data sent.</p>
+<p>UNKNOWN
+The state of the socket is unknown.</p>
+</div>
+</article>
+<footer>
+</footer>
+<ul class="pager">
+  <li class="previous"><a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">&larr; Newer</a></li>
+  <li typeof="sioc:Page" about="/pages/posts"><a href="/pages/posts" property="dc:title">Archives</a></li>
+  <li class="next"><a href="/posts/2012-09-16-set-oracle-services-in-linux">Older &rarr;</a></li>
+</ul>
+<!--a(href=posts[0].url)= posts[0].title + posts.length--></section>
+      <hr>
+      <footer>
+        <div>Copyright © 2012 - ruanjiefeng@gmail.com</div>
+        <!--div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}-->
+      </footer>
+    </div>
+    <!-- Scripts--><script >(function(){
+	// Did we just livereload?
+var log = true && localStorage && console && console.log && true;
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReloaded at', new Date())
+}
+
+// Listen for the regenerated event
+// and perform a reload of the page when the event occurs
+var listen = function(){
+	var socket = io.connect('/docpad-livereload');
+	socket.on('regenerated',function(){
+		if ( log ) {
+	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+}
+document.location.reload();
+	});
+};
+	if ( typeof io !== 'undefined' ) {
+		listen();
+	} else {
+		// Inject socket.io into our page then listen once loaded
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
+	t.src = '/socket.io/socket.io.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t,s);
+};
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery.js"></script><script defer="defer"  src="/vendor/twitter-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+  </body>
+</html>

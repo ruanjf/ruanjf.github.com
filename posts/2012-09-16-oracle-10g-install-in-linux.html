@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta-->
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>linux下oracle 10g 安装全过程 | 奔跑</title>
+    <meta name="description" content="When your website appears in search results in say Google, the text here will be shown underneath your website's title.">
+    <meta name="keywords" content="place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website">
+    <meta name="author" content="ruanjf"><meta http-equiv="X-Powered-By" content="DocPad"/>
+    <meta name="viewport" content="width=device-width">
+    <!-- Icons-->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png"><!--[if lt IE 9]>
+    <script async src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Styles--><link  rel="stylesheet" href="/vendor/prettify.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap.css" /><link  rel="stylesheet" href="/vendor/twitter-bootstrap/css/bootstrap-responsive.css" /><link  rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <!-- Markup-->
+    <div class="navbar navbar-fixed-top navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="brand">Blog</a>
+          <div style="height: 0px;" class="nav-collapse collapse">
+            <ul class="nav">
+              <li typeof="sioc:Page" about="/pages/posts"><a href="/pages/posts" property="dc:title">Archives</a></li>
+              <li typeof="sioc:Page" about="/pages/about"><a href="/pages/about" property="dc:title">About</a></li>
+            </ul>
+            <ul class="nav pull-right">
+              <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li><!--li<a href="ruanjiefeng@gmail.com" rel="subscribe-email" title="subscribe via email">Email</a>-->
+            </ul>
+            <form action="http://203.208.46.146/search" method="get" class="navbar-search pull-right">
+              <input type="hidden" name="q" value="site:www.runjf.com">
+              <input type="text" name="q" results="0" placeholder="Search" class="search-query">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <section id="content" class="content">
+<article id="post" class="post">
+  <h1>linux下oracle 10g 安装全过程</h1>
+  <div class="post-content"><h3>1、准备工作</h3>
+<p>验证依赖：</p>
+<pre><code>#rpm -q binutils compat-libstdc++-33 elfutils elfutils-libelf-devel gcc gcc-c++ glibc glibc-common glibc-devel glibc-headers libaio libaio-devel libgcc libstdc++ libstdc++-devel make sysstat unixODBC unixODBC-devel libXp gcc</code></pre>
+<p>如果出现xxxx is not installed 请用rpm -ivh xxx 安装对应包</p>
+<h3>2、设置正确的内核参数Kernel Parameter</h3>
+<pre><code>#vim /etc/sysctl.conf</code></pre>
+<p>在文件末尾添加如下参数：</p>
+<pre><code class="lang-sh"># Kernel Parameters for Oracle Database 10g
+fs.file-max = 6553600
+kernel.shmall = 2097152
+kernel.shmmax = 2147483648
+kernel.shmmni = 4096
+kernel.sem = 250 32000 100 128
+net.ipv4.ip_local_port_range = 1024 65000
+net.core.rmem_default = 4194304
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 262144</code></pre>
+<p>因为默认CentOS 6.0不支持10.2.0需修改配置文件，使CentOS 6.0支持Oracle10g .</p>
+<pre><code># vim /etc/redhat-release
+CentOS Linux release 4.0 (Final)</code></pre>
+<h3>3、设置系统资源限制</h3>
+<pre><code>#vim /etc/security/limits.conf</code></pre>
+<pre><code class="lang-sh">#Add for Install Oracle Database 10g
+oraclesoft   nproc   2047
+oracle  hard  nproc   16384
+oracle  soft   nofile  1024
+oracle  hard   nofile  65536</code></pre>
+<p>接着，设置/etc/pam.d/login，启动系统资源限制</p>
+<pre><code>#vim /etc/pam.d/login</code></pre>
+<pre><code class="lang-sh">#Add for Install Oracle Database 10g
+session    required     /lib/security/pam_limits.so
+session    required     pam_limits.so</code></pre>
+<p>最后，为了能让用户oracle在每次登录操作系统后，都会自动设置其最大可启动进程数与最多可开户文件数：</p>
+<pre><code># vim /etc/profile</code></pre>
+<pre><code>#Add for Install Oracle Database 10g
+if [ $USER = &quot;oracle&quot; ]; then
+        if [ $SHELL = &quot;/bin/ksh&quot; ]; then
+              ulimit -p 16384
+              ulimit -n 65536
+        else
+              ulimit -u 16384 -n 65536
+        fi
+fi</code></pre>
+<h3>4、网络设置</h3>
+<p>关闭SELinux</p>
+<pre><code>#vim /etc/selinux/config</code></pre>
+<p>确保以下内容</p>
+<pre><code>SELINUX=disabled</code></pre>
+<p>另外在安装oracle数据库的时候要注意/etc/hosts与/etc/sysconfig/network文件主机名的一致性，否则会在后面运行netca和
+dbca可能出现错误提示。</p>
+<h3>5、创建用户组与用户账户</h3>
+<pre><code>#groupadd oinstall
+#groupadd dba
+#groupadd oper
+#useradd -g oinstall -G dba,oper oracle
+#passwd oracle</code></pre>
+<h3>6、设置用户环境变量</h3>
+<pre><code>#vim /home/oracle/.bash_profile</code></pre>
+<p>在文件末尾添加如下参数：</p>
+<pre><code class="lang-sh">#Add for Install Oracle Database 10g
+umask 022
+ORACLE_BASE=/u01/app/oracle
+ORACLE_HOME=$ORACLE_BASE/product/10.2.0/db_1
+ORACLE_SID=orcl
+PATH=$ORACLE_HOME/bin:$PATH
+
+export PATH
+export ORACLE_BASE ORACLE_HOME ORACLE_SID</code></pre>
+<h3>7、设置安装路径</h3>
+<pre><code># mkdir -p -m 775 /u01/app
+# chown -R oracle:oinstall /u01/app</code></pre>
+<h3>8、安装Oracle Database 10g</h3>
+<p>注意：要使用非root用户账号安装Oracle数据库，注销root账户以oracle登录。到oracle用户主目录（Home Directory）下。</p>
+<pre><code>[oracle@linuxde ~]$ wget http://download.oracle.com/otn/linux/oracle10g/10201/10201_database_linux32.zip
+[oracle@linuxde ~]$ unzip 10201_database_linux32.zip //解压安装文件为database
+[oracle@linuxde ~]$ cd database
+[oracle@linuxde database]$ ./runInstaller  //执行安装程序文件</code></pre>
+<p>linux安装Oracle安装界面乱码解决方法！</p>
+<pre><code>#export NLS_LANG=AMERICAN_AMERICA.UTF8
+#export LC_ALL=C</code></pre>
+</div>
+</article>
+<footer>
+</footer>
+<ul class="pager">
+  <li class="previous"><a href="/posts/2012-09-16-set-oracle-services-in-linux">&larr; Newer</a></li>
+  <li typeof="sioc:Page" about="/pages/posts"><a href="/pages/posts" property="dc:title">Archives</a></li>
+  <li class="next"><a href="/posts/2012-09-16-maven-environment-variable">Older &rarr;</a></li>
+</ul>
+<!--a(href=posts[0].url)= posts[0].title + posts.length--></section>
+      <hr>
+      <footer>
+        <div>Copyright © 2012 - ruanjiefeng@gmail.com</div>
+        <!--div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}-->
+      </footer>
+    </div>
+    <!-- Scripts--><script >(function(){
+	// Did we just livereload?
+var log = true && localStorage && console && console.log && true;
+if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
+	localStorage.removeItem('/docpad-livereload/reloaded');
+	console.log('LiveReloaded at', new Date())
+}
+
+// Listen for the regenerated event
+// and perform a reload of the page when the event occurs
+var listen = function(){
+	var socket = io.connect('/docpad-livereload');
+	socket.on('regenerated',function(){
+		if ( log ) {
+	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
+}
+document.location.reload();
+	});
+};
+	if ( typeof io !== 'undefined' ) {
+		listen();
+	} else {
+		// Inject socket.io into our page then listen once loaded
+var inject = function(){
+	var t = document.createElement('script');
+	t.type = 'text/javascript';
+	t.async = true;
+	t.src = '/socket.io/socket.io.js';
+	t.onload = listen;
+	var s = document.getElementsByTagName('script')[0];
+	s.parentNode.insertBefore(t,s);
+};
+		inject();
+	}
+})();</script><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery.js"></script><script defer="defer"  src="/vendor/twitter-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+  </body>
+</html>
