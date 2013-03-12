@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:wb="http://open.weibo.com/wb">
   <head>
     <!-- Meta-->
     <meta charset="utf-8">
@@ -52,7 +52,7 @@
   <section id="related">
     <h3>Related Posts</h3>
     <nav class="linklist">
-      <li><span>Feb 26 2013</span> &raquo;&nbsp;<a href="/pages/about.html">About</a></li>
+      <li><span>Feb 26 2013</span> &raquo;&nbsp;<a href="/pages/about">About</a></li>
     </nav>
   </section>
 </footer>
@@ -61,75 +61,17 @@
   <li typeof="sioc:Page" about="/pages/posts"><a href="/pages/posts" property="dc:title">Archives</a></li>
   <li class="next disabled"><a href="javascript:void(0)">Older &rarr;</a></li>
 </ul>
-<!--a(href=posts[0].url)= posts[0].title + posts.length-->
-<hr/>
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
-        
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-</script>
-<noscript>
-  <Please>enable JavaScript to view the </Please><a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript><!--a(href="http://disqus.com", class="dsq-brlink) comments powered by<span class="logo-disqus">Disqus</span>-->
-<script type="text/javascript">
-  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'ruanjf'; // required: replace example with your forum shortname
-    
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script></section>
+<!--hr-->
+<div id="comments">
+  <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
+  <wb:comments url="auto" border="n" brandline="y" width="auto" skin="silver" appkey="2957178576"></wb:comments>
+</div></section>
       <hr>
       <footer>
         <div>Copyright © 2012 - ruanjiefeng@gmail.com</div>
         <!--div(style="font-style:italic; font-size: 12px") This website was last updated at #{site.date}-->
       </footer>
     </div>
-    <!-- Scripts--><script >(function(){
-	// Did we just livereload?
-var log = true && localStorage && console && console.log && true;
-if ( log && localStorage.getItem('/docpad-livereload/reloaded') === 'yes' ) {
-	localStorage.removeItem('/docpad-livereload/reloaded');
-	console.log('LiveReloaded at', new Date())
-}
-
-// Listen for the regenerated event
-// and perform a reload of the page when the event occurs
-var listen = function(){
-	var socket = io.connect('/docpad-livereload');
-	socket.on('regenerated',function(){
-		if ( log ) {
-	localStorage.setItem('/docpad-livereload/reloaded', 'yes');
-}
-document.location.reload();
-	});
-};
-	if ( typeof io !== 'undefined' ) {
-		listen();
-	} else {
-		// Inject socket.io into our page then listen once loaded
-var inject = function(){
-	var t = document.createElement('script');
-	t.type = 'text/javascript';
-	t.async = true;
-	t.src = '/socket.io/socket.io.js';
-	t.onload = listen;
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(t,s);
-};
-		inject();
-	}
-})();</script><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery.js"></script><script defer="defer"  src="/vendor/twitter-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+    <!-- Scripts--><script defer="defer"  src="/vendor/prettify.js"></script><script defer="defer"  src="/vendor/jquery.js"></script><script defer="defer"  src="/vendor/twitter-bootstrap/js/bootstrap.js"></script><script defer="defer"  src="/vendor/log.js"></script><script defer="defer"  src="/vendor/modernizr.js"></script><script defer="defer"  src="/scripts/script.js"></script>
   </body>
 </html>
