@@ -34,7 +34,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/vendor/highlight.js/styles/magula.css" /><link  rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
 	<!-- Markup -->
@@ -94,23 +94,23 @@
 			</div>
 		</div>
 	</blockquote>
-	<div class="post-content"><pre><code>JAVA_OPTS=&quot;-server -Xms1536m -Xmx1536m -XX:NewSize=320m -XX:MaxNewSize=320m -XX:PermSize=96m -XX:MaxPermSize=256m -Xmn500m -XX:MaxTenuringThreshold=5&quot;</code></pre>
+	<div class="post-content"><pre class="highlighted"><code class="brainfuck"><span class="comment">JAVA_OPTS="</span>-<span class="comment">server</span> <span class="literal">-</span><span class="comment">Xms1536m</span> <span class="literal">-</span><span class="comment">Xmx1536m</span> <span class="literal">-</span><span class="comment">XX:NewSize=320m</span> <span class="literal">-</span><span class="comment">XX:MaxNewSize=320m</span> <span class="literal">-</span><span class="comment">XX:PermSize=96m</span> <span class="literal">-</span><span class="comment">XX:MaxPermSize=256m</span> <span class="literal">-</span><span class="comment">Xmn500m</span> <span class="literal">-</span><span class="comment">XX:MaxTenuringThreshold=5"</code></pre>
 <p>JAVA_OPTS并不是已成不变的，不同的应用、软硬件环境下，要想充分发挥应用的性能，这些参数里边的设置可是非常有技巧和具有经验积累的。
 经过查找资料，先看下JAVA_OPTS参数表示的意义。</p>
-<pre><code>-server:一定要作为第一个参数，在多个CPU时性能佳
--Xms：初始Heap大小，使用的最小内存,cpu性能高时此值应设的大一些
--Xmx：java heap最大值，使用的最大内存。上面两个值是分配JVM的最小和最大内存，取决于硬件物理内存的大小，建议均设为物理内存的一半。
--XX:PermSize:设定内存的永久保存区域
--XX:MaxPermSize:设定最大内存的永久保存区域
--XX:MaxNewSize:
--Xss 15120 这使得JBoss每增加一个线程（thread)就会立即消耗15M内存，而最佳值应该是128K,默认值好像是512k.
-+XX:AggressiveHeap 会使得 Xms没有意义。这个参数让jvm忽略Xmx参数,疯狂地吃完一个G物理内存,再吃尽一个G的swap。
--Xss：每个线程的Stack大小
--verbose:gc 现实垃圾收集信息
--Xloggc:gc.log 指定垃圾收集日志文件
--Xmn：young generation的heap大小，一般设置为Xmx的3、4分之一
--XX:+UseParNewGC ：缩短minor收集的时间
--XX:+UseConcMarkSweepGC ：缩短major收集的时间</code></pre>
+<pre class="highlighted"><code class="brainfuck"><span class="literal">-</span><span class="comment">server:一定要作为第一个参数，在多个CPU时性能佳</span>
+<span class="literal">-</span><span class="comment">Xms：初始Heap大小，使用的最小内存</span>,<span class="comment">cpu性能高时此值应设的大一些</span>
+<span class="literal">-</span><span class="comment">Xmx：java</span> <span class="comment">heap最大值，使用的最大内存。上面两个值是分配JVM的最小和最大内存，取决于硬件物理内存的大小，建议均设为物理内存的一半。</span>
+<span class="literal">-</span><span class="comment">XX:PermSize:设定内存的永久保存区域</span>
+<span class="literal">-</span><span class="comment">XX:MaxPermSize:设定最大内存的永久保存区域</span>
+<span class="literal">-</span><span class="comment">XX:MaxNewSize:</span>
+<span class="literal">-</span><span class="comment">Xss</span> <span class="comment">15120</span> <span class="comment">这使得JBoss每增加一个线程（thread)就会立即消耗15M内存，而最佳值应该是128K</span>,<span class="comment">默认值好像是512k</span>.
+<span class="literal">+</span><span class="comment">XX:AggressiveHeap</span> <span class="comment">会使得</span> <span class="comment">Xms没有意义。这个参数让jvm忽略Xmx参数</span>,<span class="comment">疯狂地吃完一个G物理内存</span>,<span class="comment">再吃尽一个G的swap。</span>
+<span class="literal">-</span><span class="comment">Xss：每个线程的Stack大小</span>
+<span class="literal">-</span><span class="comment">verbose:gc</span> <span class="comment">现实垃圾收集信息</span>
+<span class="literal">-</span><span class="comment">Xloggc:gc</span>.<span class="comment">log</span> <span class="comment">指定垃圾收集日志文件</span>
+<span class="literal">-</span><span class="comment">Xmn：young</span> <span class="comment">generation的heap大小，一般设置为Xmx的3、4分之一</span>
+<span class="literal">-</span><span class="comment">XX:</span>+<span class="comment">UseParNewGC</span> <span class="comment">：缩短minor收集的时间</span>
+<span class="literal">-</span><span class="comment">XX:</span>+<span class="comment">UseConcMarkSweepGC</span> <span class="comment">：缩短major收集的时间</code></pre>
 <p>提示：此选项在Heap Size 比较大而且Major收集时间较长的情况下使用更合适。</p>
 </div>
 </article>
@@ -123,23 +123,15 @@
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+				<a href="/posts/2012-09-16-linux-connection-number-query">linux connection number query</a></li>
 			
 				<li><span>Sat Sep 15 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
+				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -147,19 +139,23 @@
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
+				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
+			
+				<li><span>Sat Sep 15 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
 				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-linux-connection-number-query">linux connection number query</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
-			
-				<li><span>Sat Sep 15 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
+				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -168,6 +164,10 @@
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">把 svnserve 注册成 windows service 的正确命令</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
 			
 				<li><span>Mon Sep 17 2012</span>
 				&raquo;
@@ -204,13 +204,13 @@
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/highlight.js/highlight.pack.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

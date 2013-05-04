@@ -34,7 +34,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/vendor/highlight.js/styles/magula.css" /><link  rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
 	<!-- Markup -->
@@ -95,12 +95,12 @@
 		</div>
 	</blockquote>
 	<div class="post-content"><p>这2个东西应该是java里很常见，很简单，他们都和classpath设定有关，但区别在哪里呢？ 我们都知道java里生成对象有如下两种方式：</p>
-<pre><code class="lang-java">//1
-Object obj = new ClassName(); //直接new一个对象
+<pre class="highlighted"><code class="java"><span class="comment">//1</span>
+Object obj = <span class="keyword">new</span> ClassName(); <span class="comment">//直接new一个对象</span>
 
-//2
+<span class="comment">//2</span>
 Class clazz = Class.forName(ClassName);
-Object obj = clazz.newInstance(); //通过class loader动态装载一个类，然后获取这个类的实例</code></pre>
+Object obj = clazz.newInstance(); <span class="comment">//通过class loader动态装载一个类，然后获取这个类的实例</span></code></pre>
 <p>同样是生成对象，1在编译期间检查classpath, 如果没有类定义，编译没法通过。而2在编译期间是不会检查的，不过需要抛出或者自己catch ClassNotFoundException。 运行期间，如果1编译时依赖的类不在classpath中（导致classloader装载失败），此时抛出的异常就是 NoClassDefFoundError。而如果2在运行期间需要装载的类不在classpath中，抛出的则是 ClassNotFoundException。</p>
 <p>NoClassDefFoundError是编译期间能找到，但runtime找不到。而ClassNotFoundException则是说runtime找不到，因为编译期间是不做检查的</p>
 </div>
@@ -116,6 +116,30 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 				&raquo;
 				<a href="/posts/2012-09-16-linux-connection-number-query">linux connection number query</a></li>
 			
+				<li><span>Sat Sep 15 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
+			
+				<li><span>Sat Sep 15 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
+			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
@@ -126,39 +150,15 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
-			
-				<li><span>Sat Sep 15 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
-			
-				<li><span>Sat Sep 15 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
 				<a href="/posts/2012-09-16-set-oracle-services-in-linux">Linux下设置oracle 10g 服务以及实例自动启动方法</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">把 svnserve 注册成 windows service 的正确命令</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
 			
 				<li><span>Mon Sep 17 2012</span>
 				&raquo;
@@ -195,13 +195,13 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/highlight.js/highlight.pack.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

@@ -34,7 +34,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/vendor/highlight.js/styles/magula.css" /><link  rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
 	<!-- Markup -->
@@ -92,10 +92,10 @@
 <li>安装<a href="http://github-windows.s3.amazonaws.com/GitHubSetup.exe">windows客户端</a>基本上不会出现什么特殊情况</li>
 <li>安装<a href="http://code.google.com/p/msysgit/downloads/list">msysgit</a>现在最新的就好了，不会配置的<a href="https://help.github.com/articles/set-up-git">看图</a>一步步来。
 接下来就是<a href="https://help.github.com/articles/generating-ssh-keys">生成SSH keys</a>按照其中的步骤做完，至于<a href="http://zh.wikipedia.org/wiki/SSH">ssh</a>不知是何物的同学要科普了解下就可以了。
-这里要注意的就是权限问题，用命令查看下有没有ssh key<pre><code class="lang-sh">ssh-add -l 
-#没有的话就添加下
+这里要注意的就是权限问题，用命令查看下有没有ssh key<pre class="highlighted"><code class="bash">ssh-add -l 
+<span class="comment">#没有的话就添加下</span>
 ssh-add 
-#或者
+<span class="comment">#或者</span>
 ssh-add 路径</code></pre>
 到此git安装就算到一个阶段</li>
 </ul>
@@ -105,11 +105,11 @@ ssh-add 路径</code></pre>
 <ul>
 <li><p>安装前提环境，git上面就讲过了剩下的就是基于ruby的应用了。这样有<a href="http://rubyinstaller.org/downloads/">安装包</a>windows下安装挺方便的（还提供了压缩包的对于喜欢绿色的同学还是不错的）。接下来就是配置下<a href="http://baike.baidu.com/view/95930.htm">环境变量</a> 新建<code>RUBY_HOME=F:\ruby\ruby-1.9.3-p194-i386-mingw32</code> 和 编辑<code>Path</code>添加<code>;%RUBY_HOME%\bin;</code> 由于octopress对python依赖挺大的，所以也要<a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi">安装</a>。接下来还是一样的配置环境变量，新建<code>PYTHON_HOME=F:\python\Python27</code> 和 编辑<code>Path</code>添加<code>;%PYTHON_HOME%;</code>
 看下安装的是否可用</p>
-<pre><code>python --version
+<pre class="highlighted"><code class="bash">python --version
 ruby --version</code></pre>
 </li>
 <li><p><a href="http://octopress.org/docs/setup/">安装octopress</a>安装其中说的做，其中</p>
-<pre><code>rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command</code></pre>
+<pre class="highlighted"><code class="bash">rbenv rehash    <span class="comment"># If you use rbenv, rehash to be able to run the bundle command</span></code></pre>
 <p>这个出错可以忽然</p>
 </li>
 <li><p><a href="http://octopress.org/docs/deploying/github/">关联github</a>如果配置<a href="http://username.github.com这样的就看(With">http://username.github.com这样的就看(With</a> Github User/Organization pages)部分，如果配置<a href="http://username.github.com/project这个的就看（With">http://username.github.com/project这个的就看（With</a> Github Project pages (gh-pages)）最后有域名的可以加下<code>CNAME</code>，注意不用它说的命令加文件在windows会产生编码问题，自己新建下也是挺快的（域名只支持一个不要填多个会无效的）。</p>
@@ -118,28 +118,28 @@ ruby --version</code></pre>
 <hr>
 <h3>写博客</h3>
 <p>主要是以下几个命令</p>
-<pre><code class="lang-sh">rake new_post[&quot;title&quot;]
-#新建标题为title的文章
+<pre class="highlighted"><code class="bash">rake new_post[<span class="string">"title"</span>]
+<span class="comment">#新建标题为title的文章</span>
 
 rake generate
-#生成文章等
+<span class="comment">#生成文章等</span>
 
 rake preview
-#预览博客默认htt://localhost:4000地址
+<span class="comment">#预览博客默认htt://localhost:4000地址</span>
 
 rake deploy
-#发布博客到github，这样就可以用http://username.github.com访问了</code></pre>
+<span class="comment">#发布博客到github，这样就可以用http://username.github.com访问了</span></code></pre>
 <p>生成文章建议用<code>utf-8</code>编码原因是html编码是<code>utf-8</code>，因此有两个文件要改
 ruby安装路径下的</p>
 <p>``` ruby convertible.rb</p>
 <h1>27行self.content = File.read(File.join(base, name))换成</h1>
 <p>self.content = File.read(File.join(base, name), :encoding =&gt; &quot;utf-8&quot;)</p>
-<pre><code>
+<pre class="highlighted"><code class="objectivec">
 和octopress文件夹下的
 
-``` ruby pygments_code.rb
-#22行highlighted_code = File.read(path)换成
-highlighted_code = File.read(path, :encoding =&gt; &quot;utf-8&quot;)</code></pre>
+``` ruby pygments_code<span class="variable">.rb</span>
+<span class="preprocessor">#22行highlighted_code = File.read(path)换成</span>
+highlighted_code = File<span class="variable">.read</span>(path, :encoding =&gt; <span class="string">"utf-8"</span>)</code></pre>
 <p>这样生成是就不会报错了，血淋淋的经验啊！</p>
 <div>
 </article>
@@ -148,13 +148,13 @@ highlighted_code = File.read(path, :encoding =&gt; &quot;utf-8&quot;)</code></pr
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/highlight.js/highlight.pack.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

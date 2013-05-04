@@ -34,7 +34,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/vendor/highlight.js/styles/magula.css" /><link  rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
 	<!-- Markup -->
@@ -94,17 +94,17 @@
 			</div>
 		</div>
 	</blockquote>
-	<div class="post-content"><pre><code>#netstat -n | awk &#39;/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}&#39; ;netstat -nat |wc -l</code></pre>
+	<div class="post-content"><pre class="highlighted"><code class="brainfuck"><span class="comment">#netstat</span> <span class="literal">-</span><span class="comment">n</span> <span class="comment">|</span> <span class="comment">awk</span> <span class="comment">'/^tcp/</span> <span class="comment">{</span>+<span class="literal">+</span><span class="comment">S</span>[<span class="comment">$NF</span>]<span class="comment">}</span> <span class="comment">END</span> <span class="comment">{for(a</span> <span class="comment">in</span> <span class="comment">S)</span> <span class="comment">print</span> <span class="comment">a</span>, <span class="comment">S</span>[<span class="comment">a</span>]<span class="comment">}'</span> <span class="comment">;netstat</span> <span class="literal">-</span><span class="comment">nat</span> <span class="comment">|wc</span> <span class="literal">-</span><span class="comment">l</code></pre>
 <p>得到类似如下的输出：</p>
-<pre><code>LAST_ACK 5
-SYN_RECV 28
-CLOSE_WAIT 475
-ESTABLISHED 646
-FIN_WAIT1 35
-FIN_WAIT2 111
-CLOSING 28
-TIME_WAIT 1448
-2849</code></pre>
+<pre class="highlighted"><code class="nginx"><span class="title">LAST_ACK</span> <span class="number">5</span>
+SYN_RECV <span class="number">28</span>
+CLOSE_WAIT <span class="number">475</span>
+ESTABLISHED <span class="number">646</span>
+FIN_WAIT1 <span class="number">35</span>
+FIN_WAIT2 <span class="number">111</span>
+CLOSING <span class="number">28</span>
+TIME_WAIT <span class="number">1448</span>
+<span class="number">2849</span></code></pre>
 <p>最后一行是总的连接数。前面那些，左列是连接状态，右列是数量。</p>
 <p>连接状态说明：（man netstat）</p>
 <p>ESTABLISHED
@@ -139,9 +139,13 @@ The state of the socket is unknown.</p>
 		<h3>Related Posts</h3>
 		<nav class="linklist">
 			
+				<li><span>Sat Sep 15 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
+			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
+				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -149,35 +153,27 @@ The state of the socket is unknown.</p>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
+				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
 			
-				<li><span>Sat Sep 15 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
-			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
 			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
-			
 				<li><span>Sat Sep 15 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -186,6 +182,10 @@ The state of the socket is unknown.</p>
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">把 svnserve 注册成 windows service 的正确命令</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
 			
 				<li><span>Mon Sep 17 2012</span>
 				&raquo;
@@ -222,13 +222,13 @@ The state of the socket is unknown.</p>
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/highlight.js/highlight.pack.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

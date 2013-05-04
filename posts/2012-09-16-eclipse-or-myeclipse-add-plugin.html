@@ -34,7 +34,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/vendor/highlight.js/styles/magula.css" /><link  rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
 	<!-- Markup -->
@@ -94,86 +94,86 @@
 			</div>
 		</div>
 	</blockquote>
-	<div class="post-content"><pre><code class="lang-java">package com;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-/**
+	<div class="post-content"><pre class="highlighted"><code class="java"><span class="keyword">package</span> com;
+<span class="keyword">import</span> java.io.File;
+<span class="keyword">import</span> java.util.ArrayList;
+<span class="keyword">import</span> java.util.List;
+<span class="javadoc">/**
  * MyEclipse 安装插件代码生成器
  * 修改configuration/org.eclipse.equinox.simpleconfigurator/bundles.info文件，生成的路径
  *
- */
-public class CreatePluginsConfig {
-    private String path;
-    public CreatePluginsConfig(String path) {
-        this.path = path;
+ */</span>
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreatePluginsConfig</span> {</span>
+    <span class="keyword">private</span> String path;
+    <span class="keyword">public</span> CreatePluginsConfig(String path) {
+        <span class="keyword">this</span>.path = path;
     }
-    public void print() {
+    <span class="keyword">public</span> <span class="keyword">void</span> print() {
         List list = getFileList(path);
-        if (list == null) {
-            return;
+        <span class="keyword">if</span> (list == <span class="keyword">null</span>) {
+            <span class="keyword">return</span>;
         }
-        int length = list.size();
-        for (int i = 0; i &lt; length; i++) {
-            String result = &quot;&quot;;
+        <span class="keyword">int</span> length = list.size();
+        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i++) {
+            String result = <span class="string">""</span>;
             String thePath = getFormatPath(getString(list.get(i)));
-            File file = new File(thePath);
-            if (file.isDirectory()) {
+            File file = <span class="keyword">new</span> File(thePath);
+            <span class="keyword">if</span> (file.isDirectory()) {
                 String fileName = file.getName();
-                if (fileName.indexOf(&quot;_&quot;) &lt; 0) {
-                    continue;
+                <span class="keyword">if</span> (fileName.indexOf(<span class="string">"_"</span>) &lt; <span class="number">0</span>) {
+                    <span class="keyword">continue</span>;
                 }
-                String[] filenames = fileName.split(&quot;_&quot;);
-                String filename1 = filenames[0];
-                String filename2 = filenames[1];
-                result = filename1 + &quot;,&quot; + filename2 + &quot;,file:/&quot; + path + &quot;//&quot;
-                        + fileName + &quot;//,4,false&quot;;
+                String[] filenames = fileName.split(<span class="string">"_"</span>);
+                String filename1 = filenames[<span class="number">0</span>];
+                String filename2 = filenames[<span class="number">1</span>];
+                result = filename1 + <span class="string">","</span> + filename2 + <span class="string">",file:/"</span> + path + <span class="string">"//"</span>
+                        + fileName + <span class="string">"//,4,false"</span>;
                 System.out.println(result);
-            } else if (file.isFile()) {
+            } <span class="keyword">else</span> <span class="keyword">if</span> (file.isFile()) {
                 String fileName = file.getName();
-                if (fileName.indexOf(&quot;_&quot;) &lt; 0) {
-                    continue;
+                <span class="keyword">if</span> (fileName.indexOf(<span class="string">"_"</span>) &lt; <span class="number">0</span>) {
+                    <span class="keyword">continue</span>;
                 }
-                String[] filenames = fileName.split(&quot;_&quot;);
-                String filename1 = filenames[0] + &quot;_&quot; + filenames[1];
+                String[] filenames = fileName.split(<span class="string">"_"</span>);
+                String filename1 = filenames[<span class="number">0</span>] + <span class="string">"_"</span> + filenames[<span class="number">1</span>];
                 String filename2;
-                String filename3 = filenames[0];
-                filename2 = filenames[1].substring(0, filenames[1]
-                        .lastIndexOf(&quot;.&quot;));
-                result = filename3 + &quot;,&quot; + filename2 + &quot;,file:/&quot; + path + &quot;//&quot;
-                        + fileName + &quot;,4,false&quot;;
+                String filename3 = filenames[<span class="number">0</span>];
+                filename2 = filenames[<span class="number">1</span>].substring(<span class="number">0</span>, filenames[<span class="number">1</span>]
+                        .lastIndexOf(<span class="string">"."</span>));
+                result = filename3 + <span class="string">","</span> + filename2 + <span class="string">",file:/"</span> + path + <span class="string">"//"</span>
+                        + fileName + <span class="string">",4,false"</span>;
                 System.out.println(result);
             }
         }
     }
-    public List getFileList(String path) {
+    <span class="keyword">public</span> List getFileList(String path) {
         path = getFormatPath(path);
-        path = path + &quot;/&quot;;
-        File filePath = new File(path);
-        if (!filePath.isDirectory()) {
-            return null;
+        path = path + <span class="string">"/"</span>;
+        File filePath = <span class="keyword">new</span> File(path);
+        <span class="keyword">if</span> (!filePath.isDirectory()) {
+            <span class="keyword">return</span> <span class="keyword">null</span>;
         }
         String[] filelist = filePath.list();
-        List filelistFilter = new ArrayList();
-        for (int i = 0; i &lt; filelist.length; i++) {
+        List filelistFilter = <span class="keyword">new</span> ArrayList();
+        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; filelist.length; i++) {
             String tempfilename = getFormatPath(path + filelist[i]);
             filelistFilter.add(tempfilename);
         }
-        return filelistFilter;
+        <span class="keyword">return</span> filelistFilter;
     }
-    public String getString(Object object) {
-        if (object == null) {
-            return &quot;&quot;;
+    <span class="keyword">public</span> String getString(Object object) {
+        <span class="keyword">if</span> (object == <span class="keyword">null</span>) {
+            <span class="keyword">return</span> <span class="string">""</span>;
         }
-        return String.valueOf(object);
+        <span class="keyword">return</span> String.valueOf(object);
     }
-    public String getFormatPath(String path) {
-        path = path.replaceAll(&quot;////&quot;, &quot;/&quot;);
-        path = path.replaceAll(&quot;//&quot;, &quot;/&quot;);
-        return path;
+    <span class="keyword">public</span> String getFormatPath(String path) {
+        path = path.replaceAll(<span class="string">"////"</span>, <span class="string">"/"</span>);
+        path = path.replaceAll(<span class="string">"//"</span>, <span class="string">"/"</span>);
+        <span class="keyword">return</span> path;
     }
-    public static void main(String[] args) {
-        new CreatePluginsConfig(&quot;D://MyEclipse-8.6//myplugins//svn//plugins&quot;).print(); // 插件路径
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+        <span class="keyword">new</span> CreatePluginsConfig(<span class="string">"D://MyEclipse-8.6//myplugins//svn//plugins"</span>).print(); <span class="comment">// 插件路径</span>
     }
 }</code></pre>
 </div>
@@ -185,9 +185,9 @@ public class CreatePluginsConfig {
 		<h3>Related Posts</h3>
 		<nav class="linklist">
 			
-				<li><span>Sun Sep 16 2012</span>
+				<li><span>Sat Sep 15 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
+				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -195,11 +195,7 @@ public class CreatePluginsConfig {
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
-			
-				<li><span>Sat Sep 15 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
+				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -211,14 +207,6 @@ public class CreatePluginsConfig {
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
 				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
 			
 				<li><span>Sat Sep 15 2012</span>
@@ -227,11 +215,23 @@ public class CreatePluginsConfig {
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
+				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
 				<a href="/posts/2012-09-16-set-oracle-services-in-linux">Linux下设置oracle 10g 服务以及实例自动启动方法</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">把 svnserve 注册成 windows service 的正确命令</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
 			
 				<li><span>Mon Sep 17 2012</span>
 				&raquo;
@@ -268,13 +268,13 @@ public class CreatePluginsConfig {
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/highlight.js/highlight.pack.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

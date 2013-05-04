@@ -34,7 +34,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/vendor/highlight.js/styles/magula.css" /><link  rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
 	<!-- Markup -->
@@ -94,26 +94,26 @@
 			</div>
 		</div>
 	</blockquote>
-	<div class="post-content"><pre><code class="lang-java">package com.hou;
-public class Car {}
+	<div class="post-content"><pre class="highlighted"><code class="java"><span class="keyword">package</span> com.hou;
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> {</span>}
 
-package com.hou;
-public class Main {
-    public static void main(String [] args){
-        try {
-            Object c = Class.forName(&quot;car&quot;).newInstance();
-        } catch (InstantiationException e) {
+<span class="keyword">package</span> com.hou;
+<span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> {</span>
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String [] args){
+        <span class="keyword">try</span> {
+            Object c = Class.forName(<span class="string">"car"</span>).newInstance();
+        } <span class="keyword">catch</span> (InstantiationException e) {
             e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } <span class="keyword">catch</span> (IllegalAccessException e) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } <span class="keyword">catch</span> (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 }</code></pre>
-<p>编译运行后出现：<br></p>
-<pre><code class="lang-java">java.lang.ClassNotFoundException: car
-    at java.net.URLClassLoader$1.run(Unknown Source)
+<p>编译运行后出现：</p>
+<pre class="highlighted"><code class="java">java.lang.ClassNotFoundException: car
+    at java.net.URLClassLoader$<span class="number">1.</span>run(Unknown Source)
     at java.security.AccessController.doPrivileged(Native Method)
     at java.net.URLClassLoader.findClass(Unknown Source)
     at java.lang.ClassLoader.loadClass(Unknown Source)
@@ -122,9 +122,9 @@ public class Main {
     at java.lang.ClassLoader.loadClassInternal(Unknown Source)
     at java.lang.Class.forName0(Native Method)
     at java.lang.Class.forName(Unknown Source)
-    at com.hou.Main.main(Main.java:6)</code></pre>
-<p>把上面部分改为如下，异常不在出现：<br>
-Object c = Class.forName(&quot;com.hou.car&quot;).newInstance();<br>
+    at com.hou.Main.main(Main.java:<span class="number">6</span>)</code></pre>
+<p>把上面部分改为如下，异常不在出现：
+Object c = Class.forName(&quot;com.hou.car&quot;).newInstance();
 思考：虽然同一个包中的类可以直接引用。但类名前的包名已默认又编译器加上去了。通过Class.forName(className)方式加载类的时候，如果不加包名则默认在 default 包中去找，所以找不到。因此用Class.forName(className)方式加载类的时候应加上包名。</p>
 </div>
 </article>
@@ -137,27 +137,7 @@ Object c = Class.forName(&quot;com.hou.car&quot;).newInstance();<br>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
 				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -165,7 +145,15 @@ Object c = Class.forName(&quot;com.hou.car&quot;).newInstance();<br>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
+				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -177,11 +165,23 @@ Object c = Class.forName(&quot;com.hou.car&quot;).newInstance();<br>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
+				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
 				<a href="/posts/2012-09-16-set-oracle-services-in-linux">Linux下设置oracle 10g 服务以及实例自动启动方法</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">把 svnserve 注册成 windows service 的正确命令</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
 			
 				<li><span>Mon Sep 17 2012</span>
 				&raquo;
@@ -217,13 +217,13 @@ Object c = Class.forName(&quot;com.hou.car&quot;).newInstance();<br>
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/highlight.js/highlight.pack.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

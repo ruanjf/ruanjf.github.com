@@ -34,7 +34,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/vendor/highlight.js/styles/magula.css" /><link  rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
 	<!-- Markup -->
@@ -96,12 +96,12 @@
 	</blockquote>
 	<div class="post-content"><h3>1、准备工作</h3>
 <p>验证依赖：</p>
-<pre><code>#rpm -q binutils compat-libstdc++-33 elfutils elfutils-libelf-devel gcc gcc-c++ glibc glibc-common glibc-devel glibc-headers libaio libaio-devel libgcc libstdc++ libstdc++-devel make sysstat unixODBC unixODBC-devel libXp gcc</code></pre>
+<pre class="highlighted"><code class="brainfuck"><span class="comment">#rpm</span> <span class="literal">-</span><span class="comment">q</span> <span class="comment">binutils</span> <span class="comment">compat</span>-<span class="comment">libstdc</span>+<span class="literal">+</span><span class="literal">-</span><span class="comment">33</span> <span class="comment">elfutils</span> <span class="comment">elfutils</span>-<span class="comment">libelf</span>-<span class="comment">devel</span> <span class="comment">gcc</span> <span class="comment">gcc</span>-<span class="comment">c</span>+<span class="literal">+</span> <span class="comment">glibc</span> <span class="comment">glibc</span>-<span class="comment">common</span> <span class="comment">glibc</span>-<span class="comment">devel</span> <span class="comment">glibc</span>-<span class="comment">headers</span> <span class="comment">libaio</span> <span class="comment">libaio</span>-<span class="comment">devel</span> <span class="comment">libgcc</span> <span class="comment">libstdc</span>+<span class="literal">+</span> <span class="comment">libstdc</span>+<span class="literal">+</span><span class="literal">-</span><span class="comment">devel</span> <span class="comment">make</span> <span class="comment">sysstat</span> <span class="comment">unixODBC</span> <span class="comment">unixODBC</span>-<span class="comment">devel</span> <span class="comment">libXp</span> <span class="comment">gcc</code></pre>
 <p>如果出现xxxx is not installed 请用rpm -ivh xxx 安装对应包</p>
 <h3>2、设置正确的内核参数Kernel Parameter</h3>
-<pre><code>#vim /etc/sysctl.conf</code></pre>
+<pre class="highlighted"><code class="vala"><span class="preprocessor">#vim /etc/sysctl.conf</span></code></pre>
 <p>在文件末尾添加如下参数：</p>
-<pre><code class="lang-sh"># Kernel Parameters for Oracle Database 10g
+<pre class="highlighted"><code class="bash"><span class="comment"># Kernel Parameters for Oracle Database 10g</span>
 fs.file-max = 6553600
 kernel.shmall = 2097152
 kernel.shmmax = 2147483648
@@ -113,68 +113,68 @@ net.core.rmem_max = 4194304
 net.core.wmem_default = 262144
 net.core.wmem_max = 262144</code></pre>
 <p>因为默认CentOS 6.0不支持10.2.0需修改配置文件，使CentOS 6.0支持Oracle10g .</p>
-<pre><code># vim /etc/redhat-release
-CentOS Linux release 4.0 (Final)</code></pre>
+<pre class="highlighted"><code class="nginx"><span class="comment"># vim /etc/redhat-release</span>
+<span class="title">CentOS</span> Linux release <span class="number">4</span>.<span class="number">0</span> (Final)</code></pre>
 <h3>3、设置系统资源限制</h3>
-<pre><code>#vim /etc/security/limits.conf</code></pre>
-<pre><code class="lang-sh">#Add for Install Oracle Database 10g
+<pre class="highlighted"><code class="vala"><span class="preprocessor">#vim /etc/security/limits.conf</span></code></pre>
+<pre class="highlighted"><code class="bash"><span class="comment">#Add for Install Oracle Database 10g</span>
 oraclesoft   nproc   2047
 oracle  hard  nproc   16384
 oracle  soft   nofile  1024
 oracle  hard   nofile  65536</code></pre>
 <p>接着，设置/etc/pam.d/login，启动系统资源限制</p>
-<pre><code>#vim /etc/pam.d/login</code></pre>
-<pre><code class="lang-sh">#Add for Install Oracle Database 10g
+<pre class="highlighted"><code class="vala"><span class="preprocessor">#vim /etc/pam.d/login</span></code></pre>
+<pre class="highlighted"><code class="bash"><span class="comment">#Add for Install Oracle Database 10g</span>
 session    required     /lib/security/pam_limits.so
 session    required     pam_limits.so</code></pre>
 <p>最后，为了能让用户oracle在每次登录操作系统后，都会自动设置其最大可启动进程数与最多可开户文件数：</p>
-<pre><code># vim /etc/profile</code></pre>
-<pre><code>#Add for Install Oracle Database 10g
-if [ $USER = &quot;oracle&quot; ]; then
-        if [ $SHELL = &quot;/bin/ksh&quot; ]; then
+<pre class="highlighted"><code class="vala"><span class="preprocessor"># vim /etc/profile</span></code></pre>
+<pre class="highlighted"><code class="bash"><span class="comment">#Add for Install Oracle Database 10g</span>
+<span class="keyword">if</span> <span class="test_condition">[ <span class="variable">$USER</span> = <span class="string">"oracle"</span> ]</span>; <span class="keyword">then</span>
+        <span class="keyword">if</span> <span class="test_condition">[ <span class="variable">$SHELL</span> = <span class="string">"/bin/ksh"</span> ]</span>; <span class="keyword">then</span>
               ulimit -p 16384
               ulimit -n 65536
-        else
+        <span class="keyword">else</span>
               ulimit -u 16384 -n 65536
-        fi
-fi</code></pre>
+        <span class="keyword">fi</span>
+<span class="keyword">fi</span></code></pre>
 <h3>4、网络设置</h3>
 <p>关闭SELinux</p>
-<pre><code>#vim /etc/selinux/config</code></pre>
+<pre class="highlighted"><code class="vala"><span class="preprocessor">#vim /etc/selinux/config</span></code></pre>
 <p>确保以下内容</p>
-<pre><code>SELINUX=disabled</code></pre>
+<pre class="highlighted"><code class="ini"><span class="setting">SELINUX=<span class="value">disabled</span></span></code></pre>
 <p>另外在安装oracle数据库的时候要注意/etc/hosts与/etc/sysconfig/network文件主机名的一致性，否则会在后面运行netca和
 dbca可能出现错误提示。</p>
 <h3>5、创建用户组与用户账户</h3>
-<pre><code>#groupadd oinstall
-#groupadd dba
-#groupadd oper
-#useradd -g oinstall -G dba,oper oracle
-#passwd oracle</code></pre>
+<pre class="highlighted"><code class="vala"><span class="preprocessor">#groupadd oinstall</span>
+<span class="preprocessor">#groupadd dba</span>
+<span class="preprocessor">#groupadd oper</span>
+<span class="preprocessor">#useradd -g oinstall -G dba,oper oracle</span>
+<span class="preprocessor">#passwd oracle</span></code></pre>
 <h3>6、设置用户环境变量</h3>
-<pre><code>#vim /home/oracle/.bash_profile</code></pre>
+<pre class="highlighted"><code class="vala"><span class="preprocessor">#vim /home/oracle/.bash_profile</span></code></pre>
 <p>在文件末尾添加如下参数：</p>
-<pre><code class="lang-sh">#Add for Install Oracle Database 10g
+<pre class="highlighted"><code class="bash"><span class="comment">#Add for Install Oracle Database 10g</span>
 umask 022
 ORACLE_BASE=/u01/app/oracle
-ORACLE_HOME=$ORACLE_BASE/product/10.2.0/db_1
+ORACLE_HOME=<span class="variable">$ORACLE_BASE</span>/product/10.2.0/db_1
 ORACLE_SID=orcl
-PATH=$ORACLE_HOME/bin:$PATH
+PATH=<span class="variable">$ORACLE_HOME</span>/bin:<span class="variable">$PATH</span>
 
 export PATH
 export ORACLE_BASE ORACLE_HOME ORACLE_SID</code></pre>
 <h3>7、设置安装路径</h3>
-<pre><code># mkdir -p -m 775 /u01/app
-# chown -R oracle:oinstall /u01/app</code></pre>
+<pre class="highlighted"><code class="vala"><span class="preprocessor"># mkdir -p -m 775 /u01/app</span>
+<span class="preprocessor"># chown -R oracle:oinstall /u01/app</span></code></pre>
 <h3>8、安装Oracle Database 10g</h3>
 <p>注意：要使用非root用户账号安装Oracle数据库，注销root账户以oracle登录。到oracle用户主目录（Home Directory）下。</p>
-<pre><code>[oracle@linuxde ~]$ wget http://download.oracle.com/otn/linux/oracle10g/10201/10201_database_linux32.zip
-[oracle@linuxde ~]$ unzip 10201_database_linux32.zip //解压安装文件为database
-[oracle@linuxde ~]$ cd database
-[oracle@linuxde database]$ ./runInstaller  //执行安装程序文件</code></pre>
+<pre class="highlighted"><code class="coffeescript">[oracle<span class="property">@linuxde</span> ~]$ wget http:<span class="regexp">//</span>download.oracle.com<span class="regexp">/otn/linux/oracle10g/10201/</span><span class="number">10201</span>_database_linux32.zip
+[oracle<span class="property">@linuxde</span> ~]$ unzip <span class="number">10201</span>_database_linux32.zip <span class="regexp">//</span>解压安装文件为database
+[oracle<span class="property">@linuxde</span> ~]$ cd database
+[oracle<span class="property">@linuxde</span> database]$ .<span class="regexp">/runInstaller  //</span>执行安装程序文件</code></pre>
 <p>linux安装Oracle安装界面乱码解决方法！</p>
-<pre><code>#export NLS_LANG=AMERICAN_AMERICA.UTF8
-#export LC_ALL=C</code></pre>
+<pre class="highlighted"><code class="vala"><span class="preprocessor">#export NLS_LANG=AMERICAN_AMERICA.UTF8</span>
+<span class="preprocessor">#export LC_ALL=C</span></code></pre>
 </div>
 </article>
 
@@ -186,38 +186,6 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID</code></pre>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
-			
-				<li><span>Sat Sep 15 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-linux-connection-number-query">linux connection number query</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
 				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
 			
 				<li><span>Sat Sep 15 2012</span>
@@ -226,11 +194,43 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID</code></pre>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
+				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
+			
+				<li><span>Sat Sep 15 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-linux-connection-number-query">linux connection number query</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
 				<a href="/posts/2012-09-16-set-oracle-services-in-linux">Linux下设置oracle 10g 服务以及实例自动启动方法</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">把 svnserve 注册成 windows service 的正确命令</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
 			
 				<li><span>Mon Sep 17 2012</span>
 				&raquo;
@@ -267,13 +267,13 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID</code></pre>
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/highlight.js/highlight.pack.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

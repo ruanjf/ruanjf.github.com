@@ -34,7 +34,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/vendor/highlight.js/styles/magula.css" /><link  rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
 	<!-- Markup -->
@@ -94,48 +94,48 @@
 			</div>
 		</div>
 	</blockquote>
-	<div class="post-content"><pre><code class="lang-java"> Unable to load configuration. - [unknown location]
-    at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:69)
-    at org.apache.struts2.dispatcher.Dispatcher.init_PreloadConfiguration(Dispatcher.java:371)
-    at org.apache.struts2.dispatcher.Dispatcher.init(Dispatcher.java:415)
-    at org.apache.struts2.dispatcher.ng.InitOperations.initDispatcher(InitOperations.java:69)
-    at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.init(StrutsPrepareAndExecuteFilter.java:51)
-    at org.apache.catalina.core.ApplicationFilterConfig.getFilter(ApplicationFilterConfig.java:295)
-    at org.apache.catalina.core.ApplicationFilterConfig.setFilterDef(ApplicationFilterConfig.java:422)
-    at org.apache.catalina.core.ApplicationFilterConfig.&lt;init&gt;(ApplicationFilterConfig.java:115)
-    at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4001)
-    at org.apache.catalina.core.StandardContext.start(StandardContext.java:4651)
-    at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
-    at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
-    at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
-    at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1041)
-    at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:964)
-    at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
-    at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
-    at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
-    at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
-    at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
-    at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
-    at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
-    at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
-    at org.apache.catalina.core.StandardService.start(StandardService.java:519)
-    at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
-    at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	<div class="post-content"><pre class="highlighted"><code class="java"> Unable to load configuration. - [unknown location]
+    at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:<span class="number">69</span>)
+    at org.apache.struts2.dispatcher.Dispatcher.init_PreloadConfiguration(Dispatcher.java:<span class="number">371</span>)
+    at org.apache.struts2.dispatcher.Dispatcher.init(Dispatcher.java:<span class="number">415</span>)
+    at org.apache.struts2.dispatcher.ng.InitOperations.initDispatcher(InitOperations.java:<span class="number">69</span>)
+    at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.init(StrutsPrepareAndExecuteFilter.java:<span class="number">51</span>)
+    at org.apache.catalina.core.ApplicationFilterConfig.getFilter(ApplicationFilterConfig.java:<span class="number">295</span>)
+    at org.apache.catalina.core.ApplicationFilterConfig.setFilterDef(ApplicationFilterConfig.java:<span class="number">422</span>)
+    at org.apache.catalina.core.ApplicationFilterConfig.&lt;init&gt;(ApplicationFilterConfig.java:<span class="number">115</span>)
+    at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:<span class="number">4001</span>)
+    at org.apache.catalina.core.StandardContext.start(StandardContext.java:<span class="number">4651</span>)
+    at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:<span class="number">791</span>)
+    at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:<span class="number">771</span>)
+    at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:<span class="number">546</span>)
+    at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:<span class="number">1041</span>)
+    at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:<span class="number">964</span>)
+    at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:<span class="number">502</span>)
+    at org.apache.catalina.startup.HostConfig.start(HostConfig.java:<span class="number">1277</span>)
+    at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:<span class="number">321</span>)
+    at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:<span class="number">119</span>)
+    at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:<span class="number">1053</span>)
+    at org.apache.catalina.core.StandardHost.start(StandardHost.java:<span class="number">785</span>)
+    at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:<span class="number">1045</span>)
+    at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:<span class="number">445</span>)
+    at org.apache.catalina.core.StandardService.start(StandardService.java:<span class="number">519</span>)
+    at org.apache.catalina.core.StandardServer.start(StandardServer.java:<span class="number">710</span>)
+    at org.apache.catalina.startup.Catalina.start(Catalina.java:<span class="number">581</span>)
     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-    at java.lang.reflect.Method.invoke(Method.java:597)
-    at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
-    at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:<span class="number">39</span>)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:<span class="number">25</span>)
+    at java.lang.reflect.Method.invoke(Method.java:<span class="number">597</span>)
+    at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:<span class="number">289</span>)
+    at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:<span class="number">414</span>)
 Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.struts2.spring.StrutsSpringObjectFactory - [unknown location] 
-    at org.apache.struts2.config.BeanSelectionProvider.alias(BeanSelectionProvider.java:293)
-    at org.apache.struts2.config.BeanSelectionProvider.alias(BeanSelectionProvider.java:264)
-    at org.apache.struts2.config.BeanSelectionProvider.register(BeanSelectionProvider.java:202)
-    at com.opensymphony.xwork2.config.impl.DefaultConfiguration.reloadContainer(DefaultConfiguration.java:180)
-    at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:66)
-    ... 31 more</code></pre>
+    at org.apache.struts2.config.BeanSelectionProvider.alias(BeanSelectionProvider.java:<span class="number">293</span>)
+    at org.apache.struts2.config.BeanSelectionProvider.alias(BeanSelectionProvider.java:<span class="number">264</span>)
+    at org.apache.struts2.config.BeanSelectionProvider.register(BeanSelectionProvider.java:<span class="number">202</span>)
+    at com.opensymphony.xwork2.config.impl.DefaultConfiguration.reloadContainer(DefaultConfiguration.java:<span class="number">180</span>)
+    at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:<span class="number">66</span>)
+    ... <span class="number">31</span> more</code></pre>
 <p>主要是这句</p>
-<pre><code class="lang-java">Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.struts2.spring.StrutsSpringObjectFactory - [unknown location]</code></pre>
+<pre class="highlighted"><code class="java">Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.struts2.spring.StrutsSpringObjectFactory - [unknown location]</code></pre>
 <p>原因struts.xm中有配置插件，但是包没导入。包名：struts2-spring-plugin-xxx.jar</p>
 </div>
 </article>
@@ -148,7 +148,35 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
+				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
+			
+				<li><span>Sat Sep 15 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
 				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
+			
+				<li><span>Sat Sep 15 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-linux-connection-number-query">linux connection number query</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -157,34 +185,6 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
-			
-				<li><span>Sat Sep 15 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-linux-connection-number-query">linux connection number query</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
-			
-				<li><span>Sat Sep 15 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -229,13 +229,13 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/highlight.js/highlight.pack.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

@@ -3,7 +3,7 @@
 	<title>奔跑</title>
 	<link href="http://runjf.com/atom.xml" rel="self"/>
 	<link href="http://runjf.com"/>
-	<updated>2013-05-04T03:15:07.817Z</updated>
+	<updated>2013-05-04T07:10:05.620Z</updated>
 	<id>http://runjf.com</id>
 	<author>
 		<name>ruanjiefeng</name>
@@ -52,7 +52,7 @@
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -118,10 +118,10 @@
 &lt;li&gt;安装&lt;a href=&quot;http://github-windows.s3.amazonaws.com/GitHubSetup.exe&quot;&gt;windows客户端&lt;/a&gt;基本上不会出现什么特殊情况&lt;/li&gt;
 &lt;li&gt;安装&lt;a href=&quot;http://code.google.com/p/msysgit/downloads/list&quot;&gt;msysgit&lt;/a&gt;现在最新的就好了，不会配置的&lt;a href=&quot;https://help.github.com/articles/set-up-git&quot;&gt;看图&lt;/a&gt;一步步来。
 接下来就是&lt;a href=&quot;https://help.github.com/articles/generating-ssh-keys&quot;&gt;生成SSH keys&lt;/a&gt;按照其中的步骤做完，至于&lt;a href=&quot;http://zh.wikipedia.org/wiki/SSH&quot;&gt;ssh&lt;/a&gt;不知是何物的同学要科普了解下就可以了。
-这里要注意的就是权限问题，用命令查看下有没有ssh key&lt;pre&gt;&lt;code class=&quot;lang-sh&quot;&gt;ssh-add -l 
-#没有的话就添加下
+这里要注意的就是权限问题，用命令查看下有没有ssh key&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;ssh-add -l 
+&lt;span class=&quot;comment&quot;&gt;#没有的话就添加下&lt;/span&gt;
 ssh-add 
-#或者
+&lt;span class=&quot;comment&quot;&gt;#或者&lt;/span&gt;
 ssh-add 路径&lt;/code&gt;&lt;/pre&gt;
 到此git安装就算到一个阶段&lt;/li&gt;
 &lt;/ul&gt;
@@ -131,11 +131,11 @@ ssh-add 路径&lt;/code&gt;&lt;/pre&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;安装前提环境，git上面就讲过了剩下的就是基于ruby的应用了。这样有&lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;安装包&lt;/a&gt;windows下安装挺方便的（还提供了压缩包的对于喜欢绿色的同学还是不错的）。接下来就是配置下&lt;a href=&quot;http://baike.baidu.com/view/95930.htm&quot;&gt;环境变量&lt;/a&gt; 新建&lt;code&gt;RUBY_HOME=F:\ruby\ruby-1.9.3-p194-i386-mingw32&lt;/code&gt; 和 编辑&lt;code&gt;Path&lt;/code&gt;添加&lt;code&gt;;%RUBY_HOME%\bin;&lt;/code&gt; 由于octopress对python依赖挺大的，所以也要&lt;a href=&quot;http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi&quot;&gt;安装&lt;/a&gt;。接下来还是一样的配置环境变量，新建&lt;code&gt;PYTHON_HOME=F:\python\Python27&lt;/code&gt; 和 编辑&lt;code&gt;Path&lt;/code&gt;添加&lt;code&gt;;%PYTHON_HOME%;&lt;/code&gt;
 看下安装的是否可用&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;python --version
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;python --version
 ruby --version&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://octopress.org/docs/setup/&quot;&gt;安装octopress&lt;/a&gt;安装其中说的做，其中&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;rbenv rehash    # If you use rbenv, rehash to be able to run the bundle command&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;rbenv rehash    &lt;span class=&quot;comment&quot;&gt;# If you use rbenv, rehash to be able to run the bundle command&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这个出错可以忽然&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://octopress.org/docs/deploying/github/&quot;&gt;关联github&lt;/a&gt;如果配置&lt;a href=&quot;http://username.github.com这样的就看(With&quot;&gt;http://username.github.com这样的就看(With&lt;/a&gt; Github User/Organization pages)部分，如果配置&lt;a href=&quot;http://username.github.com/project这个的就看（With&quot;&gt;http://username.github.com/project这个的就看（With&lt;/a&gt; Github Project pages (gh-pages)）最后有域名的可以加下&lt;code&gt;CNAME&lt;/code&gt;，注意不用它说的命令加文件在windows会产生编码问题，自己新建下也是挺快的（域名只支持一个不要填多个会无效的）。&lt;/p&gt;
@@ -144,28 +144,28 @@ ruby --version&lt;/code&gt;&lt;/pre&gt;
 &lt;hr&gt;
 &lt;h3&gt;写博客&lt;/h3&gt;
 &lt;p&gt;主要是以下几个命令&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-sh&quot;&gt;rake new_post[&amp;quot;title&amp;quot;]
-#新建标题为title的文章
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;rake new_post[&lt;span class=&quot;string&quot;&gt;&quot;title&quot;&lt;/span&gt;]
+&lt;span class=&quot;comment&quot;&gt;#新建标题为title的文章&lt;/span&gt;
 
 rake generate
-#生成文章等
+&lt;span class=&quot;comment&quot;&gt;#生成文章等&lt;/span&gt;
 
 rake preview
-#预览博客默认htt://localhost:4000地址
+&lt;span class=&quot;comment&quot;&gt;#预览博客默认htt://localhost:4000地址&lt;/span&gt;
 
 rake deploy
-#发布博客到github，这样就可以用http://username.github.com访问了&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;comment&quot;&gt;#发布博客到github，这样就可以用http://username.github.com访问了&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;生成文章建议用&lt;code&gt;utf-8&lt;/code&gt;编码原因是html编码是&lt;code&gt;utf-8&lt;/code&gt;，因此有两个文件要改
 ruby安装路径下的&lt;/p&gt;
 &lt;p&gt;``` ruby convertible.rb&lt;/p&gt;
 &lt;h1&gt;27行self.content = File.read(File.join(base, name))换成&lt;/h1&gt;
 &lt;p&gt;self.content = File.read(File.join(base, name), :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;objectivec&quot;&gt;
 和octopress文件夹下的
 
-``` ruby pygments_code.rb
-#22行highlighted_code = File.read(path)换成
-highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+``` ruby pygments_code&lt;span class=&quot;variable&quot;&gt;.rb&lt;/span&gt;
+&lt;span class=&quot;preprocessor&quot;&gt;#22行highlighted_code = File.read(path)换成&lt;/span&gt;
+highlighted_code = File&lt;span class=&quot;variable&quot;&gt;.read&lt;/span&gt;(path, :encoding =&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这样生成是就不会报错了，血淋淋的经验啊！&lt;/p&gt;
 &lt;/div&gt;
 &lt;/article&gt;
@@ -176,9 +176,13 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -186,23 +190,19 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -210,15 +210,11 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -227,6 +223,10 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -258,13 +258,13 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -317,7 +317,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -378,12 +378,12 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 		&lt;/div&gt;
 	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;这2个东西应该是java里很常见，很简单，他们都和classpath设定有关，但区别在哪里呢？ 我们都知道java里生成对象有如下两种方式：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;//1
-Object obj = new ClassName(); //直接new一个对象
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//1&lt;/span&gt;
+Object obj = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ClassName(); &lt;span class=&quot;comment&quot;&gt;//直接new一个对象&lt;/span&gt;
 
-//2
+&lt;span class=&quot;comment&quot;&gt;//2&lt;/span&gt;
 Class clazz = Class.forName(ClassName);
-Object obj = clazz.newInstance(); //通过class loader动态装载一个类，然后获取这个类的实例&lt;/code&gt;&lt;/pre&gt;
+Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过class loader动态装载一个类，然后获取这个类的实例&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;同样是生成对象，1在编译期间检查classpath, 如果没有类定义，编译没法通过。而2在编译期间是不会检查的，不过需要抛出或者自己catch ClassNotFoundException。 运行期间，如果1编译时依赖的类不在classpath中（导致classloader装载失败），此时抛出的异常就是 NoClassDefFoundError。而如果2在运行期间需要装载的类不在classpath中，抛出的则是 ClassNotFoundException。&lt;/p&gt;
 &lt;p&gt;NoClassDefFoundError是编译期间能找到，但runtime找不到。而ClassNotFoundException则是说runtime找不到，因为编译期间是不做检查的&lt;/p&gt;
 &lt;/div&gt;
@@ -397,23 +397,19 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -421,19 +417,19 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -442,6 +438,10 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -478,13 +478,13 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -537,7 +537,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -598,12 +598,12 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 		&lt;/div&gt;
 	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;将oralce 10G的安装镜像解压都硬盘，找到/stage/prereq/db/ 下的refhost.xml文件添加如下内容：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-xml&quot;&gt;&amp;lt;!--Microsoft Windows 7--&amp;gt;
-&amp;lt;OPERATING_SYSTEM&amp;gt;
-&amp;lt;VERSION VALUE=&amp;quot;6.1&amp;quot;/&amp;gt;
-&amp;lt;/OPERATING_SYSTEM&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;xml&quot;&gt;&lt;span class=&quot;comment&quot;&gt;&amp;lt;!--Microsoft Windows 7--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;OPERATING_SYSTEM&lt;/span&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;&lt;span class=&quot;title&quot;&gt;VERSION&lt;/span&gt; &lt;span class=&quot;attribute&quot;&gt;VALUE&lt;/span&gt;=&lt;span class=&quot;value&quot;&gt;&quot;6.1&quot;&lt;/span&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;tag&quot;&gt;&amp;lt;/&lt;span class=&quot;title&quot;&gt;OPERATING_SYSTEM&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;再到install目录中找到oraparam.ini文件，添加如下内容：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-ini&quot;&gt;[Windows-6.1-required]
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;undefined&quot;&gt;[Windows-6.1-required]
 #Minimum display colours for OUI to run
 MIN_DISPLAY_COLORS=256
 #Minimum CPU speed required for OUI
@@ -621,21 +621,9 @@ MIN_DISPLAY_COLORS=256
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -643,7 +631,19 @@ MIN_DISPLAY_COLORS=256
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -651,15 +651,11 @@ MIN_DISPLAY_COLORS=256
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -668,6 +664,10 @@ MIN_DISPLAY_COLORS=256
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -704,13 +704,13 @@ MIN_DISPLAY_COLORS=256
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -763,7 +763,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -823,86 +823,86 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/blockquote&gt;
-	&lt;div class=&quot;post-content&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;package com;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
-/**
+	&lt;div class=&quot;post-content&quot;&gt;&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;package&lt;/span&gt; com;
+&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; java.io.File;
+&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; java.util.ArrayList;
+&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; java.util.List;
+&lt;span class=&quot;javadoc&quot;&gt;/**
  * MyEclipse 安装插件代码生成器
  * 修改configuration/org.eclipse.equinox.simpleconfigurator/bundles.info文件，生成的路径
  *
- */
-public class CreatePluginsConfig {
-    private String path;
-    public CreatePluginsConfig(String path) {
-        this.path = path;
+ */&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;CreatePluginsConfig&lt;/span&gt; {&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;private&lt;/span&gt; String path;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; CreatePluginsConfig(String path) {
+        &lt;span class=&quot;keyword&quot;&gt;this&lt;/span&gt;.path = path;
     }
-    public void print() {
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; print() {
         List list = getFileList(path);
-        if (list == null) {
-            return;
+        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (list == &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) {
+            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt;;
         }
-        int length = list.size();
-        for (int i = 0; i &amp;lt; length; i++) {
-            String result = &amp;quot;&amp;quot;;
+        &lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; length = list.size();
+        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; length; i++) {
+            String result = &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;;
             String thePath = getFormatPath(getString(list.get(i)));
-            File file = new File(thePath);
-            if (file.isDirectory()) {
+            File file = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; File(thePath);
+            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (file.isDirectory()) {
                 String fileName = file.getName();
-                if (fileName.indexOf(&amp;quot;_&amp;quot;) &amp;lt; 0) {
-                    continue;
+                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (fileName.indexOf(&lt;span class=&quot;string&quot;&gt;&quot;_&quot;&lt;/span&gt;) &amp;lt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) {
+                    &lt;span class=&quot;keyword&quot;&gt;continue&lt;/span&gt;;
                 }
-                String[] filenames = fileName.split(&amp;quot;_&amp;quot;);
-                String filename1 = filenames[0];
-                String filename2 = filenames[1];
-                result = filename1 + &amp;quot;,&amp;quot; + filename2 + &amp;quot;,file:/&amp;quot; + path + &amp;quot;//&amp;quot;
-                        + fileName + &amp;quot;//,4,false&amp;quot;;
+                String[] filenames = fileName.split(&lt;span class=&quot;string&quot;&gt;&quot;_&quot;&lt;/span&gt;);
+                String filename1 = filenames[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];
+                String filename2 = filenames[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;];
+                result = filename1 + &lt;span class=&quot;string&quot;&gt;&quot;,&quot;&lt;/span&gt; + filename2 + &lt;span class=&quot;string&quot;&gt;&quot;,file:/&quot;&lt;/span&gt; + path + &lt;span class=&quot;string&quot;&gt;&quot;//&quot;&lt;/span&gt;
+                        + fileName + &lt;span class=&quot;string&quot;&gt;&quot;//,4,false&quot;&lt;/span&gt;;
                 System.out.println(result);
-            } else if (file.isFile()) {
+            } &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (file.isFile()) {
                 String fileName = file.getName();
-                if (fileName.indexOf(&amp;quot;_&amp;quot;) &amp;lt; 0) {
-                    continue;
+                &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (fileName.indexOf(&lt;span class=&quot;string&quot;&gt;&quot;_&quot;&lt;/span&gt;) &amp;lt; &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;) {
+                    &lt;span class=&quot;keyword&quot;&gt;continue&lt;/span&gt;;
                 }
-                String[] filenames = fileName.split(&amp;quot;_&amp;quot;);
-                String filename1 = filenames[0] + &amp;quot;_&amp;quot; + filenames[1];
+                String[] filenames = fileName.split(&lt;span class=&quot;string&quot;&gt;&quot;_&quot;&lt;/span&gt;);
+                String filename1 = filenames[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;] + &lt;span class=&quot;string&quot;&gt;&quot;_&quot;&lt;/span&gt; + filenames[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;];
                 String filename2;
-                String filename3 = filenames[0];
-                filename2 = filenames[1].substring(0, filenames[1]
-                        .lastIndexOf(&amp;quot;.&amp;quot;));
-                result = filename3 + &amp;quot;,&amp;quot; + filename2 + &amp;quot;,file:/&amp;quot; + path + &amp;quot;//&amp;quot;
-                        + fileName + &amp;quot;,4,false&amp;quot;;
+                String filename3 = filenames[&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;];
+                filename2 = filenames[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;].substring(&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;, filenames[&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;]
+                        .lastIndexOf(&lt;span class=&quot;string&quot;&gt;&quot;.&quot;&lt;/span&gt;));
+                result = filename3 + &lt;span class=&quot;string&quot;&gt;&quot;,&quot;&lt;/span&gt; + filename2 + &lt;span class=&quot;string&quot;&gt;&quot;,file:/&quot;&lt;/span&gt; + path + &lt;span class=&quot;string&quot;&gt;&quot;//&quot;&lt;/span&gt;
+                        + fileName + &lt;span class=&quot;string&quot;&gt;&quot;,4,false&quot;&lt;/span&gt;;
                 System.out.println(result);
             }
         }
     }
-    public List getFileList(String path) {
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; List getFileList(String path) {
         path = getFormatPath(path);
-        path = path + &amp;quot;/&amp;quot;;
-        File filePath = new File(path);
-        if (!filePath.isDirectory()) {
-            return null;
+        path = path + &lt;span class=&quot;string&quot;&gt;&quot;/&quot;&lt;/span&gt;;
+        File filePath = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; File(path);
+        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (!filePath.isDirectory()) {
+            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;;
         }
         String[] filelist = filePath.list();
-        List filelistFilter = new ArrayList();
-        for (int i = 0; i &amp;lt; filelist.length; i++) {
+        List filelistFilter = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; ArrayList();
+        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; (&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; filelist.length; i++) {
             String tempfilename = getFormatPath(path + filelist[i]);
             filelistFilter.add(tempfilename);
         }
-        return filelistFilter;
+        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; filelistFilter;
     }
-    public String getString(Object object) {
-        if (object == null) {
-            return &amp;quot;&amp;quot;;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String getString(Object object) {
+        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; (object == &lt;span class=&quot;keyword&quot;&gt;null&lt;/span&gt;) {
+            &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;&quot;&lt;/span&gt;;
         }
-        return String.valueOf(object);
+        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; String.valueOf(object);
     }
-    public String getFormatPath(String path) {
-        path = path.replaceAll(&amp;quot;////&amp;quot;, &amp;quot;/&amp;quot;);
-        path = path.replaceAll(&amp;quot;//&amp;quot;, &amp;quot;/&amp;quot;);
-        return path;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; String getFormatPath(String path) {
+        path = path.replaceAll(&lt;span class=&quot;string&quot;&gt;&quot;////&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;/&quot;&lt;/span&gt;);
+        path = path.replaceAll(&lt;span class=&quot;string&quot;&gt;&quot;//&quot;&lt;/span&gt;, &lt;span class=&quot;string&quot;&gt;&quot;/&quot;&lt;/span&gt;);
+        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; path;
     }
-    public static void main(String[] args) {
-        new CreatePluginsConfig(&amp;quot;D://MyEclipse-8.6//myplugins//svn//plugins&amp;quot;).print(); // 插件路径
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; main(String[] args) {
+        &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; CreatePluginsConfig(&lt;span class=&quot;string&quot;&gt;&quot;D://MyEclipse-8.6//myplugins//svn//plugins&quot;&lt;/span&gt;).print(); &lt;span class=&quot;comment&quot;&gt;// 插件路径&lt;/span&gt;
     }
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -914,21 +914,17 @@ public class CreatePluginsConfig {
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -940,14 +936,6 @@ public class CreatePluginsConfig {
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
@@ -956,11 +944,23 @@ public class CreatePluginsConfig {
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -997,13 +997,13 @@ public class CreatePluginsConfig {
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -1056,7 +1056,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -1116,48 +1116,48 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/blockquote&gt;
-	&lt;div class=&quot;post-content&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt; Unable to load configuration. - [unknown location]
-    at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:69)
-    at org.apache.struts2.dispatcher.Dispatcher.init_PreloadConfiguration(Dispatcher.java:371)
-    at org.apache.struts2.dispatcher.Dispatcher.init(Dispatcher.java:415)
-    at org.apache.struts2.dispatcher.ng.InitOperations.initDispatcher(InitOperations.java:69)
-    at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.init(StrutsPrepareAndExecuteFilter.java:51)
-    at org.apache.catalina.core.ApplicationFilterConfig.getFilter(ApplicationFilterConfig.java:295)
-    at org.apache.catalina.core.ApplicationFilterConfig.setFilterDef(ApplicationFilterConfig.java:422)
-    at org.apache.catalina.core.ApplicationFilterConfig.&amp;lt;init&amp;gt;(ApplicationFilterConfig.java:115)
-    at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:4001)
-    at org.apache.catalina.core.StandardContext.start(StandardContext.java:4651)
-    at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:791)
-    at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:771)
-    at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:546)
-    at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:1041)
-    at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:964)
-    at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:502)
-    at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1277)
-    at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:321)
-    at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:119)
-    at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1053)
-    at org.apache.catalina.core.StandardHost.start(StandardHost.java:785)
-    at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1045)
-    at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:445)
-    at org.apache.catalina.core.StandardService.start(StandardService.java:519)
-    at org.apache.catalina.core.StandardServer.start(StandardServer.java:710)
-    at org.apache.catalina.startup.Catalina.start(Catalina.java:581)
+	&lt;div class=&quot;post-content&quot;&gt;&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;java&quot;&gt; Unable to load configuration. - [unknown location]
+    at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:&lt;span class=&quot;number&quot;&gt;69&lt;/span&gt;)
+    at org.apache.struts2.dispatcher.Dispatcher.init_PreloadConfiguration(Dispatcher.java:&lt;span class=&quot;number&quot;&gt;371&lt;/span&gt;)
+    at org.apache.struts2.dispatcher.Dispatcher.init(Dispatcher.java:&lt;span class=&quot;number&quot;&gt;415&lt;/span&gt;)
+    at org.apache.struts2.dispatcher.ng.InitOperations.initDispatcher(InitOperations.java:&lt;span class=&quot;number&quot;&gt;69&lt;/span&gt;)
+    at org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter.init(StrutsPrepareAndExecuteFilter.java:&lt;span class=&quot;number&quot;&gt;51&lt;/span&gt;)
+    at org.apache.catalina.core.ApplicationFilterConfig.getFilter(ApplicationFilterConfig.java:&lt;span class=&quot;number&quot;&gt;295&lt;/span&gt;)
+    at org.apache.catalina.core.ApplicationFilterConfig.setFilterDef(ApplicationFilterConfig.java:&lt;span class=&quot;number&quot;&gt;422&lt;/span&gt;)
+    at org.apache.catalina.core.ApplicationFilterConfig.&amp;lt;init&amp;gt;(ApplicationFilterConfig.java:&lt;span class=&quot;number&quot;&gt;115&lt;/span&gt;)
+    at org.apache.catalina.core.StandardContext.filterStart(StandardContext.java:&lt;span class=&quot;number&quot;&gt;4001&lt;/span&gt;)
+    at org.apache.catalina.core.StandardContext.start(StandardContext.java:&lt;span class=&quot;number&quot;&gt;4651&lt;/span&gt;)
+    at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:&lt;span class=&quot;number&quot;&gt;791&lt;/span&gt;)
+    at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:&lt;span class=&quot;number&quot;&gt;771&lt;/span&gt;)
+    at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:&lt;span class=&quot;number&quot;&gt;546&lt;/span&gt;)
+    at org.apache.catalina.startup.HostConfig.deployDirectory(HostConfig.java:&lt;span class=&quot;number&quot;&gt;1041&lt;/span&gt;)
+    at org.apache.catalina.startup.HostConfig.deployDirectories(HostConfig.java:&lt;span class=&quot;number&quot;&gt;964&lt;/span&gt;)
+    at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:&lt;span class=&quot;number&quot;&gt;502&lt;/span&gt;)
+    at org.apache.catalina.startup.HostConfig.start(HostConfig.java:&lt;span class=&quot;number&quot;&gt;1277&lt;/span&gt;)
+    at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:&lt;span class=&quot;number&quot;&gt;321&lt;/span&gt;)
+    at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:&lt;span class=&quot;number&quot;&gt;119&lt;/span&gt;)
+    at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:&lt;span class=&quot;number&quot;&gt;1053&lt;/span&gt;)
+    at org.apache.catalina.core.StandardHost.start(StandardHost.java:&lt;span class=&quot;number&quot;&gt;785&lt;/span&gt;)
+    at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:&lt;span class=&quot;number&quot;&gt;1045&lt;/span&gt;)
+    at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:&lt;span class=&quot;number&quot;&gt;445&lt;/span&gt;)
+    at org.apache.catalina.core.StandardService.start(StandardService.java:&lt;span class=&quot;number&quot;&gt;519&lt;/span&gt;)
+    at org.apache.catalina.core.StandardServer.start(StandardServer.java:&lt;span class=&quot;number&quot;&gt;710&lt;/span&gt;)
+    at org.apache.catalina.startup.Catalina.start(Catalina.java:&lt;span class=&quot;number&quot;&gt;581&lt;/span&gt;)
     at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
-    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
-    at java.lang.reflect.Method.invoke(Method.java:597)
-    at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
-    at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+    at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:&lt;span class=&quot;number&quot;&gt;39&lt;/span&gt;)
+    at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:&lt;span class=&quot;number&quot;&gt;25&lt;/span&gt;)
+    at java.lang.reflect.Method.invoke(Method.java:&lt;span class=&quot;number&quot;&gt;597&lt;/span&gt;)
+    at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:&lt;span class=&quot;number&quot;&gt;289&lt;/span&gt;)
+    at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:&lt;span class=&quot;number&quot;&gt;414&lt;/span&gt;)
 Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.struts2.spring.StrutsSpringObjectFactory - [unknown location] 
-    at org.apache.struts2.config.BeanSelectionProvider.alias(BeanSelectionProvider.java:293)
-    at org.apache.struts2.config.BeanSelectionProvider.alias(BeanSelectionProvider.java:264)
-    at org.apache.struts2.config.BeanSelectionProvider.register(BeanSelectionProvider.java:202)
-    at com.opensymphony.xwork2.config.impl.DefaultConfiguration.reloadContainer(DefaultConfiguration.java:180)
-    at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:66)
-    ... 31 more&lt;/code&gt;&lt;/pre&gt;
+    at org.apache.struts2.config.BeanSelectionProvider.alias(BeanSelectionProvider.java:&lt;span class=&quot;number&quot;&gt;293&lt;/span&gt;)
+    at org.apache.struts2.config.BeanSelectionProvider.alias(BeanSelectionProvider.java:&lt;span class=&quot;number&quot;&gt;264&lt;/span&gt;)
+    at org.apache.struts2.config.BeanSelectionProvider.register(BeanSelectionProvider.java:&lt;span class=&quot;number&quot;&gt;202&lt;/span&gt;)
+    at com.opensymphony.xwork2.config.impl.DefaultConfiguration.reloadContainer(DefaultConfiguration.java:&lt;span class=&quot;number&quot;&gt;180&lt;/span&gt;)
+    at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:&lt;span class=&quot;number&quot;&gt;66&lt;/span&gt;)
+    ... &lt;span class=&quot;number&quot;&gt;31&lt;/span&gt; more&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;主要是这句&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.struts2.spring.StrutsSpringObjectFactory - [unknown location]&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;java&quot;&gt;Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.struts2.spring.StrutsSpringObjectFactory - [unknown location]&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;原因struts.xm中有配置插件，但是包没导入。包名：struts2-spring-plugin-xxx.jar&lt;/p&gt;
 &lt;/div&gt;
 &lt;/article&gt;
@@ -1170,23 +1170,15 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1194,7 +1186,15 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1202,11 +1202,11 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1251,13 +1251,13 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -1310,7 +1310,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -1370,17 +1370,17 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/blockquote&gt;
-	&lt;div class=&quot;post-content&quot;&gt;&lt;pre&gt;&lt;code&gt;#netstat -n | awk &amp;#39;/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}&amp;#39; ;netstat -nat |wc -l&lt;/code&gt;&lt;/pre&gt;
+	&lt;div class=&quot;post-content&quot;&gt;&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;brainfuck&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#netstat&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;awk&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;'/^tcp/&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;{&lt;/span&gt;+&lt;span class=&quot;literal&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;S&lt;/span&gt;[&lt;span class=&quot;comment&quot;&gt;$NF&lt;/span&gt;]&lt;span class=&quot;comment&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;END&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;{for(a&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;S)&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;a&lt;/span&gt;, &lt;span class=&quot;comment&quot;&gt;S&lt;/span&gt;[&lt;span class=&quot;comment&quot;&gt;a&lt;/span&gt;]&lt;span class=&quot;comment&quot;&gt;}'&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;;netstat&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;nat&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;|wc&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;l&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;得到类似如下的输出：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;LAST_ACK 5
-SYN_RECV 28
-CLOSE_WAIT 475
-ESTABLISHED 646
-FIN_WAIT1 35
-FIN_WAIT2 111
-CLOSING 28
-TIME_WAIT 1448
-2849&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;nginx&quot;&gt;&lt;span class=&quot;title&quot;&gt;LAST_ACK&lt;/span&gt; &lt;span class=&quot;number&quot;&gt;5&lt;/span&gt;
+SYN_RECV &lt;span class=&quot;number&quot;&gt;28&lt;/span&gt;
+CLOSE_WAIT &lt;span class=&quot;number&quot;&gt;475&lt;/span&gt;
+ESTABLISHED &lt;span class=&quot;number&quot;&gt;646&lt;/span&gt;
+FIN_WAIT1 &lt;span class=&quot;number&quot;&gt;35&lt;/span&gt;
+FIN_WAIT2 &lt;span class=&quot;number&quot;&gt;111&lt;/span&gt;
+CLOSING &lt;span class=&quot;number&quot;&gt;28&lt;/span&gt;
+TIME_WAIT &lt;span class=&quot;number&quot;&gt;1448&lt;/span&gt;
+&lt;span class=&quot;number&quot;&gt;2849&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;最后一行是总的连接数。前面那些，左列是连接状态，右列是数量。&lt;/p&gt;
 &lt;p&gt;连接状态说明：（man netstat）&lt;/p&gt;
 &lt;p&gt;ESTABLISHED
@@ -1415,9 +1415,33 @@ The state of the socket is unknown.&lt;/p&gt;
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1429,39 +1453,15 @@ The state of the socket is unknown.&lt;/p&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1498,13 +1498,13 @@ The state of the socket is unknown.&lt;/p&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -1557,7 +1557,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -1619,81 +1619,81 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;Linux中在Oracle安装完毕以后,如果重新启动Linux ,Oracle是不会自动启动的,你可以通过手动调用dbstart命令来进行启动,不过这样似乎也很繁琐.我们可以通过配置Oracle的自动启动脚本,然后利用Linux的Service来启动Oracle服务器.
 首先在/etc/init.d/目录下配置Oracle的服务文件.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[root@oracle10g ~]#touch oracle10g
-[root@oracle10g ~]#chmod a+x oracle10g&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;[root@oracle10g ~]&lt;span class=&quot;comment&quot;&gt;#touch oracle10g&lt;/span&gt;
+[root@oracle10g ~]&lt;span class=&quot;comment&quot;&gt;#chmod a+x oracle10g&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;然后编辑此oracle10g文件.内容如下.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[root@oracle10g ~]#vi /etc/init.d/oracle10g&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-sh&quot;&gt;# !/bin/bash
-# whoami
-# root
-# chkconfig: 345 51 49
-# /etc/init.d/oracle10g
-# description: starts the oracle dabase deamons
-#
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;[root@oracle10g ~]&lt;span class=&quot;comment&quot;&gt;#vi /etc/init.d/oracle10g&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# !/bin/bash&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# whoami&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# root&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# chkconfig: 345 51 49&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# /etc/init.d/oracle10g&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# description: starts the oracle dabase deamons&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;
 ORA_HOME=/oracle/app/oracle/product/10.2.0/db_1
 ORA_OWNER=oracle
-case &amp;quot;$1&amp;quot; in
+case &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$1&lt;/span&gt;&quot;&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt;
 start)
-echo -n &amp;quot;Starting oracle10g: &amp;quot;
-su - $ORA_OWNER -c &amp;quot;$ORA_HOME/bin/dbstart&amp;quot; &amp;amp;
-su - $ORA_OWNER -c &amp;quot;$ORA_HOME/bin/lsnrctl start&amp;quot;
-su - $ORA_OWNER -c &amp;quot;$ORA_HOME/bin/emctl start dbconsole&amp;quot;
+&lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt; -n &lt;span class=&quot;string&quot;&gt;&quot;Starting oracle10g: &quot;&lt;/span&gt;
+su - &lt;span class=&quot;variable&quot;&gt;$ORA_OWNER&lt;/span&gt; -c &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$ORA_HOME&lt;/span&gt;/bin/dbstart&quot;&lt;/span&gt; &amp;amp;
+su - &lt;span class=&quot;variable&quot;&gt;$ORA_OWNER&lt;/span&gt; -c &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$ORA_HOME&lt;/span&gt;/bin/lsnrctl start&quot;&lt;/span&gt;
+su - &lt;span class=&quot;variable&quot;&gt;$ORA_OWNER&lt;/span&gt; -c &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$ORA_HOME&lt;/span&gt;/bin/emctl start dbconsole&quot;&lt;/span&gt;
 touch /var/lock/subsys/oracle10g
-echo
+&lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt;
 ;;
 stop)
-echo -n &amp;quot;shutting down oracle10g: &amp;quot;
-su - $ORA_OWNER -c &amp;quot;$ORA_HOME/bin/dbshut&amp;quot; &amp;amp;
-su - $ORA_OWNER -c &amp;quot;$ORA_HOME/bin/lsnrctl stop&amp;quot;
-su - $ORA_OWNER -c &amp;quot;$ORA_HOME/bin/emctl stop dbconsole&amp;quot;
+&lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt; -n &lt;span class=&quot;string&quot;&gt;&quot;shutting down oracle10g: &quot;&lt;/span&gt;
+su - &lt;span class=&quot;variable&quot;&gt;$ORA_OWNER&lt;/span&gt; -c &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$ORA_HOME&lt;/span&gt;/bin/dbshut&quot;&lt;/span&gt; &amp;amp;
+su - &lt;span class=&quot;variable&quot;&gt;$ORA_OWNER&lt;/span&gt; -c &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$ORA_HOME&lt;/span&gt;/bin/lsnrctl stop&quot;&lt;/span&gt;
+su - &lt;span class=&quot;variable&quot;&gt;$ORA_OWNER&lt;/span&gt; -c &lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$ORA_HOME&lt;/span&gt;/bin/emctl stop dbconsole&quot;&lt;/span&gt;
 rm -f /var/lock/subsys/oracle10g
-echo
+&lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt;
 ;;
 restart)
-echo -n &amp;quot;restarting oracle10g: &amp;quot;
-$0 stop
-$0 start
-echo
+&lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt; -n &lt;span class=&quot;string&quot;&gt;&quot;restarting oracle10g: &quot;&lt;/span&gt;
+&lt;span class=&quot;variable&quot;&gt;$0&lt;/span&gt; stop
+&lt;span class=&quot;variable&quot;&gt;$0&lt;/span&gt; start
+&lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt;
 ;;
 *)
-echo &amp;quot;Usage: `basename $0` start|stop|restart&amp;quot;
-exit 1
+&lt;span class=&quot;keyword&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;string&quot;&gt;&quot;Usage: `basename &lt;span class=&quot;variable&quot;&gt;$0&lt;/span&gt;` start|stop|restart&quot;&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;exit&lt;/span&gt; 1
 esac
-exit 0&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;keyword&quot;&gt;exit&lt;/span&gt; 0&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;把配置好的拷贝到启动目录（添加linux服务时使用）&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[root@oracle10g ~]#cp oracle10g /etc/init.d/&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;[root@oracle10g ~]&lt;span class=&quot;comment&quot;&gt;#cp oracle10g /etc/init.d/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;保存文件,退出以后,添加并启动察看服务.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[root@oracle10g ~]#chkconfig --add oracle10g
-[root@oracle10g ~]#chkconfig --list oracle10g
-[root@oracle10g ~]#chkconfig --level 345 oracle10g on&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;[root@oracle10g ~]&lt;span class=&quot;comment&quot;&gt;#chkconfig --add oracle10g&lt;/span&gt;
+[root@oracle10g ~]&lt;span class=&quot;comment&quot;&gt;#chkconfig --list oracle10g&lt;/span&gt;
+[root@oracle10g ~]&lt;span class=&quot;comment&quot;&gt;#chkconfig --level 345 oracle10g on&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;重新启动Linux的时候,如果看到启动项Oracle出现OK,代表Oracle成功随Linux启动了.
 注意:
 这样的脚本启动一般不会启动实例,如果想让实例也随脚本一起启动的话,就需要修改文件&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[root@oracle10g ~]#ls /etc/oratab&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;[root@oracle10g ~]&lt;span class=&quot;comment&quot;&gt;#ls /etc/oratab&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;如果这个文件不存在,那么就得运行脚本文件产生它&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[root@oracle10g ~]#sh /oracle/product/10.2.0/db_1/root.sh&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;[root@oracle10g ~]&lt;span class=&quot;comment&quot;&gt;#sh /oracle/product/10.2.0/db_1/root.sh&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;比如我的oratab代码如下:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-sh&quot;&gt;#
-# This file is used by ORACLE utilities.  It is created by root.sh
-# and updated by the Database Configuration Assistant when creating
-# a database.
-# A colon, &amp;#39;:&amp;#39;, is used as the field terminator.  A new line terminates
-# the entry.  Lines beginning with a pound sign, &amp;#39;#&amp;#39;, are comments.
-#
-# Entries are of the form:
-#   $ORACLE_SID:$ORACLE_HOME:&amp;lt;N|Y&amp;gt;:
-#
-# The first and second fields are the system identifier and home
-# directory of the database respectively.  The third filed indicates
-# to the dbstart utility that the database should , &amp;quot;Y&amp;quot;, or should not,
-# &amp;quot;N&amp;quot;, be brought up at system boot time.
-#
-# Multiple entries with the same $ORACLE_SID are not allowed.
-#
-#
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# This file is used by ORACLE utilities.  It is created by root.sh&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# and updated by the Database Configuration Assistant when creating&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# a database.&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# A colon, ':', is used as the field terminator.  A new line terminates&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# the entry.  Lines beginning with a pound sign, '#', are comments.&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# Entries are of the form:&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;#   $ORACLE_SID:$ORACLE_HOME:&amp;lt;N|Y&amp;gt;:&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# The first and second fields are the system identifier and home&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# directory of the database respectively.  The third filed indicates&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# to the dbstart utility that the database should , &quot;Y&quot;, or should not,&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# &quot;N&quot;, be brought up at system boot time.&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# Multiple entries with the same $ORACLE_SID are not allowed.&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;#&lt;/span&gt;
 orcl:/oracle/product/10.2.0/db_1:N
 gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
-#看设置,可以看出实例 gzgi 是自动启动的(表识是Y),而orcl的表识是N,则不启动&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;comment&quot;&gt;#看设置,可以看出实例 gzgi 是自动启动的(表识是Y),而orcl的表识是N,则不启动&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;只要在这里设置好后,在配合上面的脚本,即可实现开机自动启动oracle以及实例了.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/article&gt;
@@ -1704,25 +1704,17 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1730,19 +1722,11 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1750,7 +1734,23 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1787,13 +1787,13 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -1846,7 +1846,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -1908,12 +1908,12 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;h3&gt;1、准备工作&lt;/h3&gt;
 &lt;p&gt;验证依赖：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#rpm -q binutils compat-libstdc++-33 elfutils elfutils-libelf-devel gcc gcc-c++ glibc glibc-common glibc-devel glibc-headers libaio libaio-devel libgcc libstdc++ libstdc++-devel make sysstat unixODBC unixODBC-devel libXp gcc&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;brainfuck&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#rpm&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;binutils&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;compat&lt;/span&gt;-&lt;span class=&quot;comment&quot;&gt;libstdc&lt;/span&gt;+&lt;span class=&quot;literal&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;33&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;elfutils&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;elfutils&lt;/span&gt;-&lt;span class=&quot;comment&quot;&gt;libelf&lt;/span&gt;-&lt;span class=&quot;comment&quot;&gt;devel&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;gcc&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;gcc&lt;/span&gt;-&lt;span class=&quot;comment&quot;&gt;c&lt;/span&gt;+&lt;span class=&quot;literal&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;glibc&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;glibc&lt;/span&gt;-&lt;span class=&quot;comment&quot;&gt;common&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;glibc&lt;/span&gt;-&lt;span class=&quot;comment&quot;&gt;devel&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;glibc&lt;/span&gt;-&lt;span class=&quot;comment&quot;&gt;headers&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;libaio&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;libaio&lt;/span&gt;-&lt;span class=&quot;comment&quot;&gt;devel&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;libgcc&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;libstdc&lt;/span&gt;+&lt;span class=&quot;literal&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;libstdc&lt;/span&gt;+&lt;span class=&quot;literal&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;devel&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;make&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;sysstat&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;unixODBC&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;unixODBC&lt;/span&gt;-&lt;span class=&quot;comment&quot;&gt;devel&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;libXp&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;gcc&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;如果出现xxxx is not installed 请用rpm -ivh xxx 安装对应包&lt;/p&gt;
 &lt;h3&gt;2、设置正确的内核参数Kernel Parameter&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;#vim /etc/sysctl.conf&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;vala&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#vim /etc/sysctl.conf&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在文件末尾添加如下参数：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-sh&quot;&gt;# Kernel Parameters for Oracle Database 10g
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# Kernel Parameters for Oracle Database 10g&lt;/span&gt;
 fs.file-max = 6553600
 kernel.shmall = 2097152
 kernel.shmmax = 2147483648
@@ -1925,68 +1925,68 @@ net.core.rmem_max = 4194304
 net.core.wmem_default = 262144
 net.core.wmem_max = 262144&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;因为默认CentOS 6.0不支持10.2.0需修改配置文件，使CentOS 6.0支持Oracle10g .&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# vim /etc/redhat-release
-CentOS Linux release 4.0 (Final)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;nginx&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# vim /etc/redhat-release&lt;/span&gt;
+&lt;span class=&quot;title&quot;&gt;CentOS&lt;/span&gt; Linux release &lt;span class=&quot;number&quot;&gt;4&lt;/span&gt;.&lt;span class=&quot;number&quot;&gt;0&lt;/span&gt; (Final)&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;3、设置系统资源限制&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;#vim /etc/security/limits.conf&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-sh&quot;&gt;#Add for Install Oracle Database 10g
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;vala&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#vim /etc/security/limits.conf&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#Add for Install Oracle Database 10g&lt;/span&gt;
 oraclesoft   nproc   2047
 oracle  hard  nproc   16384
 oracle  soft   nofile  1024
 oracle  hard   nofile  65536&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;接着，设置/etc/pam.d/login，启动系统资源限制&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#vim /etc/pam.d/login&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-sh&quot;&gt;#Add for Install Oracle Database 10g
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;vala&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#vim /etc/pam.d/login&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#Add for Install Oracle Database 10g&lt;/span&gt;
 session    required     /lib/security/pam_limits.so
 session    required     pam_limits.so&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;最后，为了能让用户oracle在每次登录操作系统后，都会自动设置其最大可启动进程数与最多可开户文件数：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# vim /etc/profile&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;#Add for Install Oracle Database 10g
-if [ $USER = &amp;quot;oracle&amp;quot; ]; then
-        if [ $SHELL = &amp;quot;/bin/ksh&amp;quot; ]; then
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;vala&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;# vim /etc/profile&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#Add for Install Oracle Database 10g&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;test_condition&quot;&gt;[ &lt;span class=&quot;variable&quot;&gt;$USER&lt;/span&gt; = &lt;span class=&quot;string&quot;&gt;&quot;oracle&quot;&lt;/span&gt; ]&lt;/span&gt;; &lt;span class=&quot;keyword&quot;&gt;then&lt;/span&gt;
+        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;test_condition&quot;&gt;[ &lt;span class=&quot;variable&quot;&gt;$SHELL&lt;/span&gt; = &lt;span class=&quot;string&quot;&gt;&quot;/bin/ksh&quot;&lt;/span&gt; ]&lt;/span&gt;; &lt;span class=&quot;keyword&quot;&gt;then&lt;/span&gt;
               ulimit -p 16384
               ulimit -n 65536
-        else
+        &lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;
               ulimit -u 16384 -n 65536
-        fi
-fi&lt;/code&gt;&lt;/pre&gt;
+        &lt;span class=&quot;keyword&quot;&gt;fi&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;fi&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;4、网络设置&lt;/h3&gt;
 &lt;p&gt;关闭SELinux&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#vim /etc/selinux/config&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;vala&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#vim /etc/selinux/config&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;确保以下内容&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;SELINUX=disabled&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;ini&quot;&gt;&lt;span class=&quot;setting&quot;&gt;SELINUX=&lt;span class=&quot;value&quot;&gt;disabled&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;另外在安装oracle数据库的时候要注意/etc/hosts与/etc/sysconfig/network文件主机名的一致性，否则会在后面运行netca和
 dbca可能出现错误提示。&lt;/p&gt;
 &lt;h3&gt;5、创建用户组与用户账户&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;#groupadd oinstall
-#groupadd dba
-#groupadd oper
-#useradd -g oinstall -G dba,oper oracle
-#passwd oracle&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;vala&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#groupadd oinstall&lt;/span&gt;
+&lt;span class=&quot;preprocessor&quot;&gt;#groupadd dba&lt;/span&gt;
+&lt;span class=&quot;preprocessor&quot;&gt;#groupadd oper&lt;/span&gt;
+&lt;span class=&quot;preprocessor&quot;&gt;#useradd -g oinstall -G dba,oper oracle&lt;/span&gt;
+&lt;span class=&quot;preprocessor&quot;&gt;#passwd oracle&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;6、设置用户环境变量&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;#vim /home/oracle/.bash_profile&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;vala&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#vim /home/oracle/.bash_profile&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在文件末尾添加如下参数：&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-sh&quot;&gt;#Add for Install Oracle Database 10g
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#Add for Install Oracle Database 10g&lt;/span&gt;
 umask 022
 ORACLE_BASE=/u01/app/oracle
-ORACLE_HOME=$ORACLE_BASE/product/10.2.0/db_1
+ORACLE_HOME=&lt;span class=&quot;variable&quot;&gt;$ORACLE_BASE&lt;/span&gt;/product/10.2.0/db_1
 ORACLE_SID=orcl
-PATH=$ORACLE_HOME/bin:$PATH
+PATH=&lt;span class=&quot;variable&quot;&gt;$ORACLE_HOME&lt;/span&gt;/bin:&lt;span class=&quot;variable&quot;&gt;$PATH&lt;/span&gt;
 
 export PATH
 export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;7、设置安装路径&lt;/h3&gt;
-&lt;pre&gt;&lt;code&gt;# mkdir -p -m 775 /u01/app
-# chown -R oracle:oinstall /u01/app&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;vala&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;# mkdir -p -m 775 /u01/app&lt;/span&gt;
+&lt;span class=&quot;preprocessor&quot;&gt;# chown -R oracle:oinstall /u01/app&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;h3&gt;8、安装Oracle Database 10g&lt;/h3&gt;
 &lt;p&gt;注意：要使用非root用户账号安装Oracle数据库，注销root账户以oracle登录。到oracle用户主目录（Home Directory）下。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[oracle@linuxde ~]$ wget http://download.oracle.com/otn/linux/oracle10g/10201/10201_database_linux32.zip
-[oracle@linuxde ~]$ unzip 10201_database_linux32.zip //解压安装文件为database
-[oracle@linuxde ~]$ cd database
-[oracle@linuxde database]$ ./runInstaller  //执行安装程序文件&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;coffeescript&quot;&gt;[oracle&lt;span class=&quot;property&quot;&gt;@linuxde&lt;/span&gt; ~]$ wget http:&lt;span class=&quot;regexp&quot;&gt;//&lt;/span&gt;download.oracle.com&lt;span class=&quot;regexp&quot;&gt;/otn/linux/oracle10g/10201/&lt;/span&gt;&lt;span class=&quot;number&quot;&gt;10201&lt;/span&gt;_database_linux32.zip
+[oracle&lt;span class=&quot;property&quot;&gt;@linuxde&lt;/span&gt; ~]$ unzip &lt;span class=&quot;number&quot;&gt;10201&lt;/span&gt;_database_linux32.zip &lt;span class=&quot;regexp&quot;&gt;//&lt;/span&gt;解压安装文件为database
+[oracle&lt;span class=&quot;property&quot;&gt;@linuxde&lt;/span&gt; ~]$ cd database
+[oracle&lt;span class=&quot;property&quot;&gt;@linuxde&lt;/span&gt; database]$ .&lt;span class=&quot;regexp&quot;&gt;/runInstaller  //&lt;/span&gt;执行安装程序文件&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;linux安装Oracle安装界面乱码解决方法！&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;#export NLS_LANG=AMERICAN_AMERICA.UTF8
-#export LC_ALL=C&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;vala&quot;&gt;&lt;span class=&quot;preprocessor&quot;&gt;#export NLS_LANG=AMERICAN_AMERICA.UTF8&lt;/span&gt;
+&lt;span class=&quot;preprocessor&quot;&gt;#export LC_ALL=C&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/article&gt;
 
@@ -1998,38 +1998,6 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
@@ -2038,11 +2006,43 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2079,13 +2079,13 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -2138,7 +2138,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -2204,8 +2204,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 M2_HOME=D:\Program Files\apache-maven-3.0.4（新建）&lt;/p&gt;
 &lt;p&gt;Path=;%M2_HOME%\bin;（追加到原有的系统变量下）&lt;/p&gt;
 &lt;p&gt;在cmd中输入：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;echo %M2_HOME% #测试环境变量是否生效
-mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;nginx&quot;&gt;&lt;span class=&quot;title&quot;&gt;echo&lt;/span&gt; %M2_HOME% &lt;span class=&quot;comment&quot;&gt;#测试环境变量是否生效&lt;/span&gt;
+mvn -v &lt;span class=&quot;comment&quot;&gt;#测试是否配置正确&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/article&gt;
 
@@ -2215,17 +2215,9 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2233,7 +2225,15 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2241,19 +2241,15 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2262,6 +2258,10 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2298,13 +2298,13 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -2357,7 +2357,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -2417,23 +2417,23 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/blockquote&gt;
-	&lt;div class=&quot;post-content&quot;&gt;&lt;pre&gt;&lt;code&gt;JAVA_OPTS=&amp;quot;-server -Xms1536m -Xmx1536m -XX:NewSize=320m -XX:MaxNewSize=320m -XX:PermSize=96m -XX:MaxPermSize=256m -Xmn500m -XX:MaxTenuringThreshold=5&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+	&lt;div class=&quot;post-content&quot;&gt;&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;brainfuck&quot;&gt;&lt;span class=&quot;comment&quot;&gt;JAVA_OPTS=&quot;&lt;/span&gt;-&lt;span class=&quot;comment&quot;&gt;server&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;Xms1536m&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;Xmx1536m&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;XX:NewSize=320m&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;XX:MaxNewSize=320m&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;XX:PermSize=96m&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;XX:MaxPermSize=256m&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;Xmn500m&lt;/span&gt; &lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;XX:MaxTenuringThreshold=5&quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;JAVA_OPTS并不是已成不变的，不同的应用、软硬件环境下，要想充分发挥应用的性能，这些参数里边的设置可是非常有技巧和具有经验积累的。
 经过查找资料，先看下JAVA_OPTS参数表示的意义。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;-server:一定要作为第一个参数，在多个CPU时性能佳
--Xms：初始Heap大小，使用的最小内存,cpu性能高时此值应设的大一些
--Xmx：java heap最大值，使用的最大内存。上面两个值是分配JVM的最小和最大内存，取决于硬件物理内存的大小，建议均设为物理内存的一半。
--XX:PermSize:设定内存的永久保存区域
--XX:MaxPermSize:设定最大内存的永久保存区域
--XX:MaxNewSize:
--Xss 15120 这使得JBoss每增加一个线程（thread)就会立即消耗15M内存，而最佳值应该是128K,默认值好像是512k.
-+XX:AggressiveHeap 会使得 Xms没有意义。这个参数让jvm忽略Xmx参数,疯狂地吃完一个G物理内存,再吃尽一个G的swap。
--Xss：每个线程的Stack大小
--verbose:gc 现实垃圾收集信息
--Xloggc:gc.log 指定垃圾收集日志文件
--Xmn：young generation的heap大小，一般设置为Xmx的3、4分之一
--XX:+UseParNewGC ：缩短minor收集的时间
--XX:+UseConcMarkSweepGC ：缩短major收集的时间&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;brainfuck&quot;&gt;&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;server:一定要作为第一个参数，在多个CPU时性能佳&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;Xms：初始Heap大小，使用的最小内存&lt;/span&gt;,&lt;span class=&quot;comment&quot;&gt;cpu性能高时此值应设的大一些&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;Xmx：java&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;heap最大值，使用的最大内存。上面两个值是分配JVM的最小和最大内存，取决于硬件物理内存的大小，建议均设为物理内存的一半。&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;XX:PermSize:设定内存的永久保存区域&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;XX:MaxPermSize:设定最大内存的永久保存区域&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;XX:MaxNewSize:&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;Xss&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;15120&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;这使得JBoss每增加一个线程（thread)就会立即消耗15M内存，而最佳值应该是128K&lt;/span&gt;,&lt;span class=&quot;comment&quot;&gt;默认值好像是512k&lt;/span&gt;.
+&lt;span class=&quot;literal&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;XX:AggressiveHeap&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;会使得&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;Xms没有意义。这个参数让jvm忽略Xmx参数&lt;/span&gt;,&lt;span class=&quot;comment&quot;&gt;疯狂地吃完一个G物理内存&lt;/span&gt;,&lt;span class=&quot;comment&quot;&gt;再吃尽一个G的swap。&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;Xss：每个线程的Stack大小&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;verbose:gc&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;现实垃圾收集信息&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;Xloggc:gc&lt;/span&gt;.&lt;span class=&quot;comment&quot;&gt;log&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;指定垃圾收集日志文件&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;Xmn：young&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;generation的heap大小，一般设置为Xmx的3、4分之一&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;XX:&lt;/span&gt;+&lt;span class=&quot;comment&quot;&gt;UseParNewGC&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;：缩短minor收集的时间&lt;/span&gt;
+&lt;span class=&quot;literal&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;comment&quot;&gt;XX:&lt;/span&gt;+&lt;span class=&quot;comment&quot;&gt;UseConcMarkSweepGC&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;：缩短major收集的时间&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;提示：此选项在Heap Size 比较大而且Major收集时间较长的情况下使用更合适。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/article&gt;
@@ -2446,7 +2446,11 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2454,11 +2458,15 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2466,23 +2474,11 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2491,6 +2487,10 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2527,13 +2527,13 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -2586,7 +2586,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -2647,7 +2647,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 		&lt;/div&gt;
 	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;Subversion的文档里的那个命令是错误的，错误的地方一个是 binpath 应该是 binPath, displayname 也应该是 DisplayName:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;sc create svn binPath= &amp;quot;\&amp;quot;C:\Program Files\Subversion\bin\svnserve.exe\&amp;quot; --service -r D:\SVN&amp;quot; DisplayName= &amp;quot;Subversion Server&amp;quot; depend= Tcpip start= auto&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;tex&quot;&gt;sc create svn binPath= &quot;&lt;span class=&quot;command&quot;&gt;\&quot;&lt;/span&gt;C:&lt;span class=&quot;command&quot;&gt;\Program&lt;/span&gt; Files&lt;span class=&quot;command&quot;&gt;\Subversion&lt;/span&gt;&lt;span class=&quot;command&quot;&gt;\bin&lt;/span&gt;&lt;span class=&quot;command&quot;&gt;\svnserve&lt;/span&gt;.exe&lt;span class=&quot;command&quot;&gt;\&quot;&lt;/span&gt; --service -r D:&lt;span class=&quot;command&quot;&gt;\SVN&lt;/span&gt;&quot; DisplayName= &quot;Subversion Server&quot; depend= Tcpip start= auto&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;请注意，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;如果你的svnserve的path中有空格，那么用 \&amp;quot; 是必须的&lt;/li&gt;
@@ -2664,21 +2664,9 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2686,7 +2674,15 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2694,23 +2690,27 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2747,13 +2747,13 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -2806,7 +2806,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -2886,17 +2886,9 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2908,7 +2900,15 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2916,15 +2916,11 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2933,6 +2929,10 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2969,13 +2969,13 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -3028,7 +3028,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -3101,12 +3101,12 @@ export PATH=&amp;quot;$PATH:$gitpath:$gitlibpath&amp;quot;&lt;/p&gt;
 &lt;p&gt;6、测试&lt;/p&gt;
 &lt;p&gt;打开git bash 登陆ssh git@127.0.0.1&lt;/p&gt;
 &lt;p&gt;例如创建一个测试库（按顺序输入）：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;mkdir test
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;mkdir test
 cd test
 git init
 touch a b c d
 git add .
-git commit -m &amp;quot;init&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+git commit -m &lt;span class=&quot;string&quot;&gt;&quot;init&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;然后，就可以在远程clone这个库（test）了。clone命令如下：
 git clone git@192.168.1.103:testgit aa
 到此git windows下搭建环境完成。&lt;/p&gt;
@@ -3121,19 +3121,7 @@ git clone git@192.168.1.103:testgit aa
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3145,19 +3133,27 @@ git clone git@192.168.1.103:testgit aa
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3166,6 +3162,10 @@ git clone git@192.168.1.103:testgit aa
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3202,13 +3202,13 @@ git clone git@192.168.1.103:testgit aa
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
@@ -3261,7 +3261,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;![endif]--&gt;
 
 	&lt;!-- Styles --&gt;
-	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;!-- Markup --&gt;
@@ -3321,26 +3321,26 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;/div&gt;
 		&lt;/div&gt;
 	&lt;/blockquote&gt;
-	&lt;div class=&quot;post-content&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;package com.hou;
-public class Car {}
+	&lt;div class=&quot;post-content&quot;&gt;&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;java&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;package&lt;/span&gt; com.hou;
+&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Car&lt;/span&gt; {&lt;/span&gt;}
 
-package com.hou;
-public class Main {
-    public static void main(String [] args){
-        try {
-            Object c = Class.forName(&amp;quot;car&amp;quot;).newInstance();
-        } catch (InstantiationException e) {
+&lt;span class=&quot;keyword&quot;&gt;package&lt;/span&gt; com.hou;
+&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Main&lt;/span&gt; {&lt;/span&gt;
+    &lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; main(String [] args){
+        &lt;span class=&quot;keyword&quot;&gt;try&lt;/span&gt; {
+            Object c = Class.forName(&lt;span class=&quot;string&quot;&gt;&quot;car&quot;&lt;/span&gt;).newInstance();
+        } &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; (InstantiationException e) {
             e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; (IllegalAccessException e) {
             e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } &lt;span class=&quot;keyword&quot;&gt;catch&lt;/span&gt; (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 }&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;编译运行后出现：&lt;br&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;java.lang.ClassNotFoundException: car
-    at java.net.URLClassLoader$1.run(Unknown Source)
+&lt;p&gt;编译运行后出现：&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;java&quot;&gt;java.lang.ClassNotFoundException: car
+    at java.net.URLClassLoader$&lt;span class=&quot;number&quot;&gt;1.&lt;/span&gt;run(Unknown Source)
     at java.security.AccessController.doPrivileged(Native Method)
     at java.net.URLClassLoader.findClass(Unknown Source)
     at java.lang.ClassLoader.loadClass(Unknown Source)
@@ -3349,9 +3349,9 @@ public class Main {
     at java.lang.ClassLoader.loadClassInternal(Unknown Source)
     at java.lang.Class.forName0(Native Method)
     at java.lang.Class.forName(Unknown Source)
-    at com.hou.Main.main(Main.java:6)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;把上面部分改为如下，异常不在出现：&lt;br&gt;
-Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&gt;
+    at com.hou.Main.main(Main.java:&lt;span class=&quot;number&quot;&gt;6&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;把上面部分改为如下，异常不在出现：
+Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 思考：虽然同一个包中的类可以直接引用。但类名前的包名已默认又编译器加上去了。通过Class.forName(className)方式加载类的时候，如果不加包名则默认在 default 包中去找，所以找不到。因此用Class.forName(className)方式加载类的时候应加上包名。&lt;/p&gt;
 &lt;/div&gt;
 &lt;/article&gt;
@@ -3364,19 +3364,11 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3384,15 +3376,11 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3404,11 +3392,23 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3444,13 +3444,13 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
-	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;script type=&quot;text/javascript&quot;&gt;
 var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);

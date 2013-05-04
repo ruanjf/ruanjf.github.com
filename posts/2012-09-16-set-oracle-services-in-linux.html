@@ -34,7 +34,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/vendor/highlight.js/styles/magula.css" /><link  rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
 	<!-- Markup -->
@@ -96,81 +96,81 @@
 	</blockquote>
 	<div class="post-content"><p>Linux中在Oracle安装完毕以后,如果重新启动Linux ,Oracle是不会自动启动的,你可以通过手动调用dbstart命令来进行启动,不过这样似乎也很繁琐.我们可以通过配置Oracle的自动启动脚本,然后利用Linux的Service来启动Oracle服务器.
 首先在/etc/init.d/目录下配置Oracle的服务文件.</p>
-<pre><code>[root@oracle10g ~]#touch oracle10g
-[root@oracle10g ~]#chmod a+x oracle10g</code></pre>
+<pre class="highlighted"><code class="bash">[root@oracle10g ~]<span class="comment">#touch oracle10g</span>
+[root@oracle10g ~]<span class="comment">#chmod a+x oracle10g</span></code></pre>
 <p>然后编辑此oracle10g文件.内容如下.</p>
-<pre><code>[root@oracle10g ~]#vi /etc/init.d/oracle10g</code></pre>
-<pre><code class="lang-sh"># !/bin/bash
-# whoami
-# root
-# chkconfig: 345 51 49
-# /etc/init.d/oracle10g
-# description: starts the oracle dabase deamons
-#
+<pre class="highlighted"><code class="bash">[root@oracle10g ~]<span class="comment">#vi /etc/init.d/oracle10g</span></code></pre>
+<pre class="highlighted"><code class="bash"><span class="comment"># !/bin/bash</span>
+<span class="comment"># whoami</span>
+<span class="comment"># root</span>
+<span class="comment"># chkconfig: 345 51 49</span>
+<span class="comment"># /etc/init.d/oracle10g</span>
+<span class="comment"># description: starts the oracle dabase deamons</span>
+<span class="comment">#</span>
 ORA_HOME=/oracle/app/oracle/product/10.2.0/db_1
 ORA_OWNER=oracle
-case &quot;$1&quot; in
+case <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span>
 start)
-echo -n &quot;Starting oracle10g: &quot;
-su - $ORA_OWNER -c &quot;$ORA_HOME/bin/dbstart&quot; &amp;
-su - $ORA_OWNER -c &quot;$ORA_HOME/bin/lsnrctl start&quot;
-su - $ORA_OWNER -c &quot;$ORA_HOME/bin/emctl start dbconsole&quot;
+<span class="keyword">echo</span> -n <span class="string">"Starting oracle10g: "</span>
+su - <span class="variable">$ORA_OWNER</span> -c <span class="string">"<span class="variable">$ORA_HOME</span>/bin/dbstart"</span> &amp;
+su - <span class="variable">$ORA_OWNER</span> -c <span class="string">"<span class="variable">$ORA_HOME</span>/bin/lsnrctl start"</span>
+su - <span class="variable">$ORA_OWNER</span> -c <span class="string">"<span class="variable">$ORA_HOME</span>/bin/emctl start dbconsole"</span>
 touch /var/lock/subsys/oracle10g
-echo
+<span class="keyword">echo</span>
 ;;
 stop)
-echo -n &quot;shutting down oracle10g: &quot;
-su - $ORA_OWNER -c &quot;$ORA_HOME/bin/dbshut&quot; &amp;
-su - $ORA_OWNER -c &quot;$ORA_HOME/bin/lsnrctl stop&quot;
-su - $ORA_OWNER -c &quot;$ORA_HOME/bin/emctl stop dbconsole&quot;
+<span class="keyword">echo</span> -n <span class="string">"shutting down oracle10g: "</span>
+su - <span class="variable">$ORA_OWNER</span> -c <span class="string">"<span class="variable">$ORA_HOME</span>/bin/dbshut"</span> &amp;
+su - <span class="variable">$ORA_OWNER</span> -c <span class="string">"<span class="variable">$ORA_HOME</span>/bin/lsnrctl stop"</span>
+su - <span class="variable">$ORA_OWNER</span> -c <span class="string">"<span class="variable">$ORA_HOME</span>/bin/emctl stop dbconsole"</span>
 rm -f /var/lock/subsys/oracle10g
-echo
+<span class="keyword">echo</span>
 ;;
 restart)
-echo -n &quot;restarting oracle10g: &quot;
-$0 stop
-$0 start
-echo
+<span class="keyword">echo</span> -n <span class="string">"restarting oracle10g: "</span>
+<span class="variable">$0</span> stop
+<span class="variable">$0</span> start
+<span class="keyword">echo</span>
 ;;
 *)
-echo &quot;Usage: `basename $0` start|stop|restart&quot;
-exit 1
+<span class="keyword">echo</span> <span class="string">"Usage: `basename <span class="variable">$0</span>` start|stop|restart"</span>
+<span class="keyword">exit</span> 1
 esac
-exit 0</code></pre>
+<span class="keyword">exit</span> 0</code></pre>
 <p>把配置好的拷贝到启动目录（添加linux服务时使用）</p>
-<pre><code>[root@oracle10g ~]#cp oracle10g /etc/init.d/</code></pre>
+<pre class="highlighted"><code class="bash">[root@oracle10g ~]<span class="comment">#cp oracle10g /etc/init.d/</span></code></pre>
 <p>保存文件,退出以后,添加并启动察看服务.</p>
-<pre><code>[root@oracle10g ~]#chkconfig --add oracle10g
-[root@oracle10g ~]#chkconfig --list oracle10g
-[root@oracle10g ~]#chkconfig --level 345 oracle10g on</code></pre>
+<pre class="highlighted"><code class="bash">[root@oracle10g ~]<span class="comment">#chkconfig --add oracle10g</span>
+[root@oracle10g ~]<span class="comment">#chkconfig --list oracle10g</span>
+[root@oracle10g ~]<span class="comment">#chkconfig --level 345 oracle10g on</span></code></pre>
 <p>重新启动Linux的时候,如果看到启动项Oracle出现OK,代表Oracle成功随Linux启动了.
 注意:
 这样的脚本启动一般不会启动实例,如果想让实例也随脚本一起启动的话,就需要修改文件</p>
-<pre><code>[root@oracle10g ~]#ls /etc/oratab</code></pre>
+<pre class="highlighted"><code class="bash">[root@oracle10g ~]<span class="comment">#ls /etc/oratab</span></code></pre>
 <p>如果这个文件不存在,那么就得运行脚本文件产生它</p>
-<pre><code>[root@oracle10g ~]#sh /oracle/product/10.2.0/db_1/root.sh</code></pre>
+<pre class="highlighted"><code class="bash">[root@oracle10g ~]<span class="comment">#sh /oracle/product/10.2.0/db_1/root.sh</span></code></pre>
 <p>比如我的oratab代码如下:</p>
-<pre><code class="lang-sh">#
-# This file is used by ORACLE utilities.  It is created by root.sh
-# and updated by the Database Configuration Assistant when creating
-# a database.
-# A colon, &#39;:&#39;, is used as the field terminator.  A new line terminates
-# the entry.  Lines beginning with a pound sign, &#39;#&#39;, are comments.
-#
-# Entries are of the form:
-#   $ORACLE_SID:$ORACLE_HOME:&lt;N|Y&gt;:
-#
-# The first and second fields are the system identifier and home
-# directory of the database respectively.  The third filed indicates
-# to the dbstart utility that the database should , &quot;Y&quot;, or should not,
-# &quot;N&quot;, be brought up at system boot time.
-#
-# Multiple entries with the same $ORACLE_SID are not allowed.
-#
-#
+<pre class="highlighted"><code class="bash"><span class="comment">#</span>
+<span class="comment"># This file is used by ORACLE utilities.  It is created by root.sh</span>
+<span class="comment"># and updated by the Database Configuration Assistant when creating</span>
+<span class="comment"># a database.</span>
+<span class="comment"># A colon, ':', is used as the field terminator.  A new line terminates</span>
+<span class="comment"># the entry.  Lines beginning with a pound sign, '#', are comments.</span>
+<span class="comment">#</span>
+<span class="comment"># Entries are of the form:</span>
+<span class="comment">#   $ORACLE_SID:$ORACLE_HOME:&lt;N|Y&gt;:</span>
+<span class="comment">#</span>
+<span class="comment"># The first and second fields are the system identifier and home</span>
+<span class="comment"># directory of the database respectively.  The third filed indicates</span>
+<span class="comment"># to the dbstart utility that the database should , "Y", or should not,</span>
+<span class="comment"># "N", be brought up at system boot time.</span>
+<span class="comment">#</span>
+<span class="comment"># Multiple entries with the same $ORACLE_SID are not allowed.</span>
+<span class="comment">#</span>
+<span class="comment">#</span>
 orcl:/oracle/product/10.2.0/db_1:N
 gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
-#看设置,可以看出实例 gzgi 是自动启动的(表识是Y),而orcl的表识是N,则不启动</code></pre>
+<span class="comment">#看设置,可以看出实例 gzgi 是自动启动的(表识是Y),而orcl的表识是N,则不启动</span></code></pre>
 <p>只要在这里设置好后,在配合上面的脚本,即可实现开机自动启动oracle以及实例了.</p>
 </div>
 </article>
@@ -181,9 +181,37 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 		<h3>Related Posts</h3>
 		<nav class="linklist">
 			
+				<li><span>Sat Sep 15 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
+			
+				<li><span>Sat Sep 15 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-linux-connection-number-query">linux connection number query</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -195,39 +223,11 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
-			
-				<li><span>Sat Sep 15 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-linux-connection-number-query">linux connection number query</a></li>
+				<a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">把 svnserve 注册成 windows service 的正确命令</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
-			
-				<li><span>Sat Sep 15 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">把 svnserve 注册成 windows service 的正确命令</a></li>
 			
 				<li><span>Mon Sep 17 2012</span>
 				&raquo;
@@ -264,13 +264,13 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/highlight.js/highlight.pack.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");

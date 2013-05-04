@@ -34,7 +34,7 @@
 	<![endif]-->
 
 	<!-- Styles -->
-	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/styles/style.css" />
+	<link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css" /><link  rel="stylesheet" href="/vendor/bootstrap/css/bootstrap-responsive.min.css" /><link  rel="stylesheet" href="/vendor/highlight.js/styles/magula.css" /><link  rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
 	<!-- Markup -->
@@ -95,12 +95,12 @@
 		</div>
 	</blockquote>
 	<div class="post-content"><p>将oralce 10G的安装镜像解压都硬盘，找到/stage/prereq/db/ 下的refhost.xml文件添加如下内容：</p>
-<pre><code class="lang-xml">&lt;!--Microsoft Windows 7--&gt;
-&lt;OPERATING_SYSTEM&gt;
-&lt;VERSION VALUE=&quot;6.1&quot;/&gt;
-&lt;/OPERATING_SYSTEM&gt;</code></pre>
+<pre class="highlighted"><code class="xml"><span class="comment">&lt;!--Microsoft Windows 7--&gt;</span>
+<span class="tag">&lt;<span class="title">OPERATING_SYSTEM</span>&gt;</span>
+<span class="tag">&lt;<span class="title">VERSION</span> <span class="attribute">VALUE</span>=<span class="value">"6.1"</span>/&gt;</span>
+<span class="tag">&lt;/<span class="title">OPERATING_SYSTEM</span>&gt;</span></code></pre>
 <p>再到install目录中找到oraparam.ini文件，添加如下内容：</p>
-<pre><code class="lang-ini">[Windows-6.1-required]
+<pre class="highlighted"><code class="undefined">[Windows-6.1-required]
 #Minimum display colours for OUI to run
 MIN_DISPLAY_COLORS=256
 #Minimum CPU speed required for OUI
@@ -118,21 +118,9 @@ MIN_DISPLAY_COLORS=256
 		<h3>Related Posts</h3>
 		<nav class="linklist">
 			
-				<li><span>Sun Sep 16 2012</span>
+				<li><span>Sat Sep 15 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-linux-connection-number-query">linux connection number query</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
 			
 				<li><span>Sat Sep 15 2012</span>
 				&raquo;
@@ -140,7 +128,23 @@ MIN_DISPLAY_COLORS=256
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
+				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
 				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-linux-connection-number-query">linux connection number query</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -148,15 +152,7 @@ MIN_DISPLAY_COLORS=256
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
-			
-				<li><span>Sat Sep 15 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
+				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -165,6 +161,10 @@ MIN_DISPLAY_COLORS=256
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">把 svnserve 注册成 windows service 的正确命令</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
 			
 				<li><span>Mon Sep 17 2012</span>
 				&raquo;
@@ -201,13 +201,13 @@ MIN_DISPLAY_COLORS=256
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-04T03:15:07.817Z
+				This website was last updated at 2013-05-04T07:10:05.620Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
-	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/vendor/highlight.js/highlight.pack.js"></script><script defer="defer"  src="/scripts/script.js"></script>
 	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
