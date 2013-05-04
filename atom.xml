@@ -3,7 +3,7 @@
 	<title>奔跑</title>
 	<link href="http://runjf.com/atom.xml" rel="self"/>
 	<link href="http://runjf.com"/>
-	<updated>2013-05-01T14:02:17.672Z</updated>
+	<updated>2013-05-04T03:15:07.817Z</updated>
 	<id>http://runjf.com</id>
 	<author>
 		<name>ruanjiefeng</name>
@@ -77,6 +77,12 @@
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -94,6 +100,18 @@
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;windows下用github搭建静态博客（octopress）全过程&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月1日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;windows下用github搭建静态博客（octopress）全过程&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;windows下用github搭建静态博客（octopress）全过程&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;h3&gt;git安装&lt;/h3&gt;
 &lt;p&gt;git windows 下安装主要有两种，这里简单介绍下这两种方法以及要注意的地方&lt;/p&gt;
 &lt;ul&gt;
@@ -138,11 +156,13 @@ rake preview
 rake deploy
 #发布博客到github，这样就可以用http://username.github.com访问了&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;生成文章建议用&lt;code&gt;utf-8&lt;/code&gt;编码原因是html编码是&lt;code&gt;utf-8&lt;/code&gt;，因此有两个文件要改
-ruby安装路径下的
-``` ruby convertible.rb&lt;/p&gt;
+ruby安装路径下的&lt;/p&gt;
+&lt;p&gt;``` ruby convertible.rb&lt;/p&gt;
 &lt;h1&gt;27行self.content = File.read(File.join(base, name))换成&lt;/h1&gt;
 &lt;p&gt;self.content = File.read(File.join(base, name), :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;和octopress文件夹下的
+&lt;pre&gt;&lt;code&gt;
+和octopress文件夹下的
+
 ``` ruby pygments_code.rb
 #22行highlighted_code = File.read(path)换成
 highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
@@ -158,23 +178,15 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -186,6 +198,10 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
@@ -194,11 +210,15 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -230,21 +250,22 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -316,6 +337,12 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -333,6 +360,18 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月0日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;ClassNotFoundException和NoClassDefFoundError的区别&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;ClassNotFoundException和NoClassDefFoundError的区别&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;这2个东西应该是java里很常见，很简单，他们都和classpath设定有关，但区别在哪里呢？ 我们都知道java里生成对象有如下两种方式：&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;//1
 Object obj = new ClassName(); //直接new一个对象
@@ -351,9 +390,9 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -361,31 +400,23 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -393,15 +424,23 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -426,21 +465,22 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -512,6 +552,12 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -529,6 +575,18 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;win7下安装oracle 10g&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月0日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;win7下安装oracle 10g&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;win7下安装oracle 10g&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;将oralce 10G的安装镜像解压都硬盘，找到/stage/prereq/db/ 下的refhost.xml文件添加如下内容：&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;lang-xml&quot;&gt;&amp;lt;!--Microsoft Windows 7--&amp;gt;
 &amp;lt;OPERATING_SYSTEM&amp;gt;
@@ -555,31 +613,7 @@ MIN_DISPLAY_COLORS=256
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -591,19 +625,43 @@ MIN_DISPLAY_COLORS=256
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -628,21 +686,22 @@ MIN_DISPLAY_COLORS=256
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -714,6 +773,12 @@ MIN_DISPLAY_COLORS=256
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -731,6 +796,18 @@ MIN_DISPLAY_COLORS=256
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;eclipse myeclipse 最好用的安装插件方法&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月0日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;eclipse myeclipse 最好用的安装插件方法&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;eclipse myeclipse 最好用的安装插件方法&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;package com;
 import java.io.File;
 import java.util.ArrayList;
@@ -822,21 +899,21 @@ public class CreatePluginsConfig {
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -852,27 +929,27 @@ public class CreatePluginsConfig {
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -897,21 +974,22 @@ public class CreatePluginsConfig {
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -983,6 +1061,12 @@ public class CreatePluginsConfig {
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -1000,6 +1084,18 @@ public class CreatePluginsConfig {
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;Unable to load configuration unknown location&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月0日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;Unable to load configuration unknown location&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;Unable to load configuration unknown location&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt; Unable to load configuration. - [unknown location]
     at com.opensymphony.xwork2.config.ConfigurationManager.getConfiguration(ConfigurationManager.java:69)
     at org.apache.struts2.dispatcher.Dispatcher.init_PreloadConfiguration(Dispatcher.java:371)
@@ -1052,33 +1148,9 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1086,23 +1158,47 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -1127,21 +1223,22 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -1213,6 +1310,12 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -1230,6 +1333,18 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;linux connection number query&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月0日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;linux connection number query&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;linux connection number query&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;pre&gt;&lt;code&gt;#netstat -n | awk &amp;#39;/^tcp/ {++S[$NF]} END {for(a in S) print a, S[a]}&amp;#39; ;netstat -nat |wc -l&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;得到类似如下的输出：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;LAST_ACK 5
@@ -1275,13 +1390,9 @@ The state of the socket is unknown.&lt;/p&gt;
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1289,7 +1400,15 @@ The state of the socket is unknown.&lt;/p&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1297,19 +1416,7 @@ The state of the socket is unknown.&lt;/p&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1317,15 +1424,23 @@ The state of the socket is unknown.&lt;/p&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -1350,21 +1465,22 @@ The state of the socket is unknown.&lt;/p&gt;
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -1436,6 +1552,12 @@ The state of the socket is unknown.&lt;/p&gt;
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -1453,6 +1575,18 @@ The state of the socket is unknown.&lt;/p&gt;
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月0日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;Linux下设置oracle 10g 服务以及实例自动启动方法&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;Linux下设置oracle 10g 服务以及实例自动启动方法&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;Linux中在Oracle安装完毕以后,如果重新启动Linux ,Oracle是不会自动启动的,你可以通过手动调用dbstart命令来进行启动,不过这样似乎也很繁琐.我们可以通过配置Oracle的自动启动脚本,然后利用Linux的Service来启动Oracle服务器.
 首先在/etc/init.d/目录下配置Oracle的服务文件.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[root@oracle10g ~]#touch oracle10g
@@ -1540,30 +1674,6 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
@@ -1574,23 +1684,47 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -1615,21 +1749,22 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -1701,6 +1836,12 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -1718,6 +1859,18 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;linux下oracle 10g 安装全过程&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月0日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;linux下oracle 10g 安装全过程&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;linux下oracle 10g 安装全过程&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;h3&gt;1、准备工作&lt;/h3&gt;
 &lt;p&gt;验证依赖：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;#rpm -q binutils compat-libstdc++-33 elfutils elfutils-libelf-devel gcc gcc-c++ glibc glibc-common glibc-devel glibc-headers libaio libaio-devel libgcc libstdc++ libstdc++-devel make sysstat unixODBC unixODBC-devel libXp gcc&lt;/code&gt;&lt;/pre&gt;
@@ -1810,23 +1963,11 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1838,7 +1979,11 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1850,15 +1995,23 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -1883,21 +2036,22 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -1969,6 +2123,12 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -1986,6 +2146,18 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;maven 环境变量设置&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月0日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;maven 环境变量设置&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;maven 环境变量设置&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;h3&gt;windows&lt;/h3&gt;
 &lt;p&gt;右键我的电脑-&amp;gt;属性-&amp;gt;高级-&amp;gt;环境变量
 在系统变量里新建：
@@ -2003,13 +2175,9 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2017,7 +2185,11 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2025,15 +2197,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2045,15 +2209,23 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -2078,21 +2250,22 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -2164,6 +2337,12 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -2181,6 +2360,18 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;JAVA_OPTS&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月0日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;JAVA_OPTS&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;JAVA_OPTS&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;pre&gt;&lt;code&gt;JAVA_OPTS=&amp;quot;-server -Xms1536m -Xmx1536m -XX:NewSize=320m -XX:MaxNewSize=320m -XX:PermSize=96m -XX:MaxPermSize=256m -Xmn500m -XX:MaxTenuringThreshold=5&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;JAVA_OPTS并不是已成不变的，不同的应用、软硬件环境下，要想充分发挥应用的性能，这些参数里边的设置可是非常有技巧和具有经验积累的。
 经过查找资料，先看下JAVA_OPTS参数表示的意义。&lt;/p&gt;
@@ -2210,35 +2401,11 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2246,19 +2413,43 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -2283,21 +2474,22 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -2369,6 +2561,12 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -2386,6 +2584,18 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;把 svnserve 注册成 windows service 的正确命令&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月0日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;把 svnserve 注册成 windows service 的正确命令&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;把 svnserve 注册成 windows service 的正确命令&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;Subversion的文档里的那个命令是错误的，错误的地方一个是 binpath 应该是 binPath, displayname 也应该是 DisplayName:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;sc create svn binPath= &amp;quot;\&amp;quot;C:\Program Files\Subversion\bin\svnserve.exe\&amp;quot; --service -r D:\SVN&amp;quot; DisplayName= &amp;quot;Subversion Server&amp;quot; depend= Tcpip start= auto&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;请注意，&lt;/p&gt;
@@ -2404,9 +2614,9 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2414,15 +2624,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2430,7 +2632,11 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2442,11 +2648,15 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2479,21 +2689,22 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -2565,6 +2776,12 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -2582,6 +2799,18 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;把通讯录从s60转移到android&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月0日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;把通讯录从s60转移到android&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;把通讯录从s60转移到android&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;大家都知道GPHONE的联系人可以和GMAIL的联系人同步，所以我们就从这里下手，先把S60手机中的联系人同步到GMAIL中，之后再用同一账户将联系人导入到GPHONE。&lt;/p&gt;
 &lt;p&gt;首先你需要注册一个GMAIL账户，我想这个大家都有吧～&lt;/p&gt;
 &lt;p&gt;以下以S60第三版为例&lt;/p&gt;
@@ -2602,9 +2831,17 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2612,15 +2849,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2632,27 +2861,27 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -2677,21 +2906,22 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -2763,6 +2993,12 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -2780,6 +3016,18 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;git windows下搭建全过程&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月6日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;git windows下搭建全过程&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;git windows下搭建全过程&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;1、 Git，Windows下的Git，地址：&lt;a href=&quot;http://msysgit.googlecode.com/files/Git-1.7.9-preview20120201.exe（方便下载）&quot;&gt;http://msysgit.googlecode.com/files/Git-1.7.9-preview20120201.exe（方便下载）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2 、SSH，可以用CopSSH，地址：&lt;a href=&quot;http://sqmcc2.newhua.com/down/Copssh_4.1.0_Installer.zip（方便下载）&quot;&gt;http://sqmcc2.newhua.com/down/Copssh_4.1.0_Installer.zip（方便下载）&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;3、git、CopSSH安装可以参照（注意：看图片就好了其它的无视）：&lt;a href=&quot;http://www.codeproject.com/Articles/296398/Step-by-Step-Setup-Git-Server-on-Windows-with-CopS&quot;&gt;http://www.codeproject.com/Articles/296398/Step-by-Step-Setup-Git-Server-on-Windows-with-CopS&lt;/a&gt;&lt;/p&gt;
@@ -2815,33 +3063,9 @@ git clone git@192.168.1.103:testgit aa
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2849,19 +3073,43 @@ git clone git@192.168.1.103:testgit aa
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -2886,21 +3134,22 @@ git clone git@192.168.1.103:testgit aa
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -2972,6 +3221,12 @@ git clone git@192.168.1.103:testgit aa
 							&lt;/li&gt;
 						
 					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
 					&lt;ul class=&quot;nav pull-right&quot;&gt;
 						&lt;li&gt;
 							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
@@ -2989,6 +3244,18 @@ git clone git@192.168.1.103:testgit aa
 		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
 			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
 	&lt;h1&gt;java Class.forName(className) ClassNotFoundException异常&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于： 2012年8月6日&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;java Class.forName(className) ClassNotFoundException异常&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;java Class.forName(className) ClassNotFoundException异常&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;pre&gt;&lt;code class=&quot;lang-java&quot;&gt;package com.hou;
 public class Car {}
 
@@ -3032,35 +3299,11 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3068,19 +3311,43 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-17-base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 			
 		&lt;/nav&gt;
 	&lt;/section&gt;
@@ -3104,21 +3371,22 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
 	
 &lt;/ul&gt;
 &lt;div id=&quot;comments&quot;&gt;
-	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
 &lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
 		&lt;/section&gt;
 		&lt;footer&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
 
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
 </content>

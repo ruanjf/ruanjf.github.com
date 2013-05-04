@@ -59,6 +59,12 @@
 							</li>
 						
 					</ul>
+					<div class="nav pull-right" style="margin-top: 9px;">
+						<iframe src="http://follow.v.t.qq.com/index.php?c=follow&a=quick&name=imeego&style=5&t=1367644516249&f=0" frameborder="0" scrolling="auto" width="125" height="24" marginwidth="0" marginheight="0" allowtransparency="true"></iframe>
+					</div>
+		        	<div class="nav pull-right" style="margin-top: 9px;">
+						<wb:follow-button uid="2214252563" type="red_1" width="67" height="24" ></wb:follow-button>
+					</div>
 					<ul class="nav pull-right">
 						<li>
 							<a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a>
@@ -76,6 +82,18 @@
 		<section id="content" class="content">
 			<article id="post" class="post">
 	<h1>windows下用github搭建静态博客（octopress）全过程</h1>
+	<br/>
+	<blockquote>
+		<div class="row">
+			<div class="span">ruanjiefeng 发布于： 2012年8月1日</div>
+			<div class="span" style="height: 24px;">
+				<wb:share-button count="n" type="button" title="windows下用github搭建静态博客（octopress）全过程" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
+			</div>
+			<div class="span" style="height: 24px;">
+				<div id="qqwb_share__" data-appkey="801351994" data-icon="1" data-counter="0" data-content="windows下用github搭建静态博客（octopress）全过程" data-richcontent="" data-pic=""></div>
+			</div>
+		</div>
+	</blockquote>
 	<div class="post-content"><h3>git安装</h3>
 <p>git windows 下安装主要有两种，这里简单介绍下这两种方法以及要注意的地方</p>
 <ul>
@@ -120,11 +138,13 @@ rake preview
 rake deploy
 #发布博客到github，这样就可以用http://username.github.com访问了</code></pre>
 <p>生成文章建议用<code>utf-8</code>编码原因是html编码是<code>utf-8</code>，因此有两个文件要改
-ruby安装路径下的
-``` ruby convertible.rb</p>
+ruby安装路径下的</p>
+<p>``` ruby convertible.rb</p>
 <h1>27行self.content = File.read(File.join(base, name))换成</h1>
 <p>self.content = File.read(File.join(base, name), :encoding =&gt; &quot;utf-8&quot;)</p>
-<pre><code>和octopress文件夹下的
+<pre><code>
+和octopress文件夹下的
+
 ``` ruby pygments_code.rb
 #22行highlighted_code = File.read(path)换成
 highlighted_code = File.read(path, :encoding =&gt; &quot;utf-8&quot;)</code></pre>
@@ -142,21 +162,13 @@ highlighted_code = File.read(path, :encoding =&gt; &quot;utf-8&quot;)</code></pr
 				&raquo;
 				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
 			
-				<li><span>Sat Sep 15 2012</span>
+				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
+				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
-				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
+				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -168,7 +180,11 @@ highlighted_code = File.read(path, :encoding =&gt; &quot;utf-8&quot;)</code></pr
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-maven-environment-variable">maven 环境变量设置</a></li>
+				<a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-contacts-from-s60-to-android">把通讯录从s60转移到android</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -176,11 +192,15 @@ highlighted_code = File.read(path, :encoding =&gt; &quot;utf-8&quot;)</code></pr
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
+				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
+				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
+			
+				<li><span>Sat Sep 15 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-15-git-windows-install">git windows下搭建全过程</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -212,20 +232,21 @@ highlighted_code = File.read(path, :encoding =&gt; &quot;utf-8&quot;)</code></pr
 	
 </ul>
 <div id="comments">
-	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 	<wb:comments url="auto" border="n" brandline="y" width="auto" skin="silver" appkey="2957178576"></wb:comments>
 </div>
+<script src="http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&debug=no"></script>
 		</section>
 		<footer>
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-01T14:02:17.672Z
+				This website was last updated at 2013-05-04T03:15:07.817Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
 
 	<!-- Scripts -->
 	<script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script defer="defer"  src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script><script defer="defer"  src="/vendor/bootstrap/js/bootstrap.min.js"></script><script defer="defer"  src="/scripts/script.js"></script>
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
