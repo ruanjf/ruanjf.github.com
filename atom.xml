@@ -3,7 +3,7 @@
 	<title>奔跑</title>
 	<link href="http://runjf.com/atom.xml" rel="self"/>
 	<link href="http://runjf.com"/>
-	<updated>2013-05-04T07:10:05.620Z</updated>
+	<updated>2013-05-04T07:26:40.751Z</updated>
 	<id>http://runjf.com</id>
 	<author>
 		<name>ruanjiefeng</name>
@@ -157,15 +157,10 @@ rake deploy
 &lt;span class=&quot;comment&quot;&gt;#发布博客到github，这样就可以用http://username.github.com访问了&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;生成文章建议用&lt;code&gt;utf-8&lt;/code&gt;编码原因是html编码是&lt;code&gt;utf-8&lt;/code&gt;，因此有两个文件要改
 ruby安装路径下的&lt;/p&gt;
-&lt;p&gt;``` ruby convertible.rb&lt;/p&gt;
-&lt;h1&gt;27行self.content = File.read(File.join(base, name))换成&lt;/h1&gt;
-&lt;p&gt;self.content = File.read(File.join(base, name), :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;)&lt;/p&gt;
-&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;objectivec&quot;&gt;
-和octopress文件夹下的
-
-``` ruby pygments_code&lt;span class=&quot;variable&quot;&gt;.rb&lt;/span&gt;
-&lt;span class=&quot;preprocessor&quot;&gt;#22行highlighted_code = File.read(path)换成&lt;/span&gt;
-highlighted_code = File&lt;span class=&quot;variable&quot;&gt;.read&lt;/span&gt;(path, :encoding =&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;ruby&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#27行self.content = File.read(File.join(base, name))换成&lt;/span&gt;
+&lt;span class=&quot;keyword&quot;&gt;self&lt;/span&gt;.content = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read(&lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.join(base, name), &lt;span class=&quot;symbol&quot;&gt;:encoding&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;)
+&lt;span class=&quot;comment&quot;&gt;#octopress文件夹下的22行highlighted_code = File.read(path)换成&lt;/span&gt;
+highlighted_code = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read(path, &lt;span class=&quot;symbol&quot;&gt;:encoding&lt;/span&gt; =&amp;gt; &lt;span class=&quot;string&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;这样生成是就不会报错了，血淋淋的经验啊！&lt;/p&gt;
 &lt;/div&gt;
 &lt;/article&gt;
@@ -182,7 +177,7 @@ highlighted_code = File&lt;span class=&quot;variable&quot;&gt;.read&lt;/span&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -194,11 +189,11 @@ highlighted_code = File&lt;span class=&quot;variable&quot;&gt;.read&lt;/span&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -214,15 +209,15 @@ highlighted_code = File&lt;span class=&quot;variable&quot;&gt;.read&lt;/span&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -258,7 +253,7 @@ highlighted_code = File&lt;span class=&quot;variable&quot;&gt;.read&lt;/span&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -409,15 +404,15 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -429,15 +424,15 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -478,7 +473,7 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -623,11 +618,11 @@ MIN_DISPLAY_COLORS=256
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -639,23 +634,19 @@ MIN_DISPLAY_COLORS=256
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -664,6 +655,10 @@ MIN_DISPLAY_COLORS=256
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -704,7 +699,7 @@ MIN_DISPLAY_COLORS=256
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -914,13 +909,13 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -940,15 +935,11 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -957,6 +948,10 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -997,7 +992,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1170,7 +1165,7 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1186,11 +1181,11 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1206,15 +1201,15 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1251,7 +1246,7 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1421,7 +1416,7 @@ The state of the socket is unknown.&lt;/p&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1433,11 +1428,11 @@ The state of the socket is unknown.&lt;/p&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1449,15 +1444,15 @@ The state of the socket is unknown.&lt;/p&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1498,7 +1493,7 @@ The state of the socket is unknown.&lt;/p&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1704,13 +1699,13 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1722,15 +1717,15 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1742,11 +1737,11 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1787,7 +1782,7 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1996,13 +1991,13 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2014,15 +2009,15 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2079,7 +2074,7 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2233,10 +2228,6 @@ mvn -v &lt;span class=&quot;comment&quot;&gt;#测试是否配置正确&lt;/span&
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
@@ -2245,11 +2236,11 @@ mvn -v &lt;span class=&quot;comment&quot;&gt;#测试是否配置正确&lt;/span&
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2258,6 +2249,10 @@ mvn -v &lt;span class=&quot;comment&quot;&gt;#测试是否配置正确&lt;/span&
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2298,7 +2293,7 @@ mvn -v &lt;span class=&quot;comment&quot;&gt;#测试是否配置正确&lt;/span&
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2444,13 +2439,13 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 		&lt;h3&gt;Related Posts&lt;/h3&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2462,23 +2457,19 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2487,6 +2478,10 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2527,7 +2522,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2666,11 +2661,11 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2682,15 +2677,15 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-15-git-windows-install&quot;&gt;git windows下搭建全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2702,11 +2697,11 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2747,7 +2742,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2900,15 +2895,15 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2920,15 +2915,15 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2969,7 +2964,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3133,15 +3128,15 @@ git clone git@192.168.1.103:testgit aa
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3153,15 +3148,15 @@ git clone git@192.168.1.103:testgit aa
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3202,7 +3197,7 @@ git clone git@192.168.1.103:testgit aa
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3376,15 +3371,15 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3396,15 +3391,15 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-			
-				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
 				&lt;a href=&quot;/posts/2012-09-16-to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+			
+				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+				&amp;raquo;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3444,7 +3439,7 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;

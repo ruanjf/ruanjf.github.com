@@ -139,15 +139,10 @@ rake deploy
 <span class="comment">#发布博客到github，这样就可以用http://username.github.com访问了</span></code></pre>
 <p>生成文章建议用<code>utf-8</code>编码原因是html编码是<code>utf-8</code>，因此有两个文件要改
 ruby安装路径下的</p>
-<p>``` ruby convertible.rb</p>
-<h1>27行self.content = File.read(File.join(base, name))换成</h1>
-<p>self.content = File.read(File.join(base, name), :encoding =&gt; &quot;utf-8&quot;)</p>
-<pre class="highlighted"><code class="objectivec">
-和octopress文件夹下的
-
-``` ruby pygments_code<span class="variable">.rb</span>
-<span class="preprocessor">#22行highlighted_code = File.read(path)换成</span>
-highlighted_code = File<span class="variable">.read</span>(path, :encoding =&gt; <span class="string">"utf-8"</span>)</code></pre>
+<pre class="highlighted"><code class="ruby"><span class="comment">#27行self.content = File.read(File.join(base, name))换成</span>
+<span class="keyword">self</span>.content = <span class="constant">File</span>.read(<span class="constant">File</span>.join(base, name), <span class="symbol">:encoding</span> =&gt; <span class="string">"utf-8"</span>)
+<span class="comment">#octopress文件夹下的22行highlighted_code = File.read(path)换成</span>
+highlighted_code = <span class="constant">File</span>.read(path, <span class="symbol">:encoding</span> =&gt; <span class="string">"utf-8"</span>)</code></pre>
 <p>这样生成是就不会报错了，血淋淋的经验啊！</p>
 </div>
 </article>
@@ -164,7 +159,7 @@ highlighted_code = File<span class="variable">.read</span>(path, :encoding =&gt;
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
+				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -176,11 +171,11 @@ highlighted_code = File<span class="variable">.read</span>(path, :encoding =&gt;
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
+				<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
 			
 				<li><span>Sat Sep 15 2012</span>
 				&raquo;
@@ -196,15 +191,15 @@ highlighted_code = File<span class="variable">.read</span>(path, :encoding =&gt;
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
-				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
-			
-				<li><span>Sun Sep 16 2012</span>
-				&raquo;
 				<a href="/posts/2012-09-16-set-oracle-services-in-linux">Linux下设置oracle 10g 服务以及实例自动启动方法</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
 				<a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">把 svnserve 注册成 windows service 的正确命令</a></li>
+			
+				<li><span>Sun Sep 16 2012</span>
+				&raquo;
+				<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
 			
 				<li><span>Sun Sep 16 2012</span>
 				&raquo;
@@ -240,7 +235,7 @@ highlighted_code = File<span class="variable">.read</span>(path, :encoding =&gt;
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-04T07:10:05.620Z
+				This website was last updated at 2013-05-04T07:26:40.751Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
