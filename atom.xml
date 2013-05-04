@@ -78,7 +78,7 @@
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -178,11 +178,11 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -202,7 +202,7 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -266,6 +266,11 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -338,7 +343,7 @@ highlighted_code = File.read(path, :encoding =&amp;gt; &amp;quot;utf-8&amp;quot;
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -392,11 +397,11 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -416,7 +421,7 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -481,6 +486,11 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -553,7 +563,7 @@ Object obj = clazz.newInstance(); //通过class loader动态装载一个类，�
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -613,11 +623,11 @@ MIN_DISPLAY_COLORS=256
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -637,7 +647,7 @@ MIN_DISPLAY_COLORS=256
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -702,6 +712,11 @@ MIN_DISPLAY_COLORS=256
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -774,7 +789,7 @@ MIN_DISPLAY_COLORS=256
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -901,11 +916,11 @@ public class CreatePluginsConfig {
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -925,7 +940,7 @@ public class CreatePluginsConfig {
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -990,6 +1005,11 @@ public class CreatePluginsConfig {
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -1062,7 +1082,7 @@ public class CreatePluginsConfig {
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -1150,11 +1170,11 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1174,7 +1194,7 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1239,6 +1259,11 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -1311,7 +1336,7 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -1392,11 +1417,11 @@ The state of the socket is unknown.&lt;/p&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1416,7 +1441,7 @@ The state of the socket is unknown.&lt;/p&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1481,6 +1506,11 @@ The state of the socket is unknown.&lt;/p&gt;
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -1553,7 +1583,7 @@ The state of the socket is unknown.&lt;/p&gt;
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -1676,11 +1706,11 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1700,7 +1730,7 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1765,6 +1795,11 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -1837,7 +1872,7 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -1963,11 +1998,11 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -1987,7 +2022,7 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2052,6 +2087,11 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -2124,7 +2164,7 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -2177,11 +2217,11 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2201,7 +2241,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2266,6 +2306,11 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -2338,7 +2383,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -2401,11 +2446,11 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2425,7 +2470,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2490,6 +2535,11 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -2562,7 +2612,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -2616,11 +2666,11 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2640,7 +2690,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2705,6 +2755,11 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -2777,7 +2832,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -2833,11 +2888,11 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2857,7 +2912,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -2922,6 +2977,11 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -2994,7 +3054,7 @@ mvn -v #测试是否配置正确&lt;/code&gt;&lt;/pre&gt;
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -3061,11 +3121,11 @@ git clone git@192.168.1.103:testgit aa
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3085,7 +3145,7 @@ git clone git@192.168.1.103:testgit aa
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3150,6 +3210,11 @@ git clone git@192.168.1.103:testgit aa
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
@@ -3222,7 +3287,7 @@ git clone git@192.168.1.103:testgit aa
 						
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
-						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=4&amp;t=1367643914532&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;27&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
 					&lt;/div&gt;
 		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
@@ -3299,11 +3364,11 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-maven-environment-variable&quot;&gt;maven 环境变量设置&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3323,7 +3388,7 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
-				&lt;a href=&quot;/posts/2012-09-16-linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				&lt;a href=&quot;/posts/2012-09-16-contacts-from-s60-to-android&quot;&gt;把通讯录从s60转移到android&lt;/a&gt;&lt;/li&gt;
 			
 				&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 				&amp;raquo;
@@ -3387,6 +3452,11 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();&lt;br&g
 	&lt;!-- Scripts --&gt;
 	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
 	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;
 </content>
