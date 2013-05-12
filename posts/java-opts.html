@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<!-- Our site title and description -->
-	<title>maven 环境变量设置 | 奔跑</title>
+	<title>JAVA_OPTS | 奔跑</title>
 	<meta name="description" content="When your website appears in search results in say Google, the text here will be shown underneath your website's title." />
 	<meta name="keywords" content="place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website" />
 	<meta name="author" content="ruanjiefeng" />
@@ -81,31 +81,78 @@
 	<div class="container">
 		<section id="content" class="content">
 			<article id="post" class="post">
-	<h1>maven 环境变量设置</h1>
+	<h1>JAVA_OPTS</h1>
 	<br/>
 	<blockquote>
 		<div class="row">
-			<div class="span">ruanjiefeng 发布于：2012年9月16日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
+			<div class="span">ruanjiefeng 发布于：2012年9月15日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
 			<div class="span" style="height: 24px;">
-				<wb:share-button count="n" type="button" title="maven 环境变量设置" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
+				<wb:share-button count="n" type="button" title="JAVA_OPTS" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
 			</div>
 			<div class="span" style="height: 24px;">
-				<div id="qqwb_share__" data-appkey="801351994" data-icon="1" data-counter="0" data-content="maven 环境变量设置" data-richcontent="" data-pic=""></div>
+				<div id="qqwb_share__" data-appkey="801351994" data-icon="1" data-counter="0" data-content="JAVA_OPTS" data-richcontent="" data-pic=""></div>
 			</div>
 		</div>
 	</blockquote>
-	<div class="post-content"><h3>windows</h3>
-<p>右键我的电脑-&gt;属性-&gt;高级-&gt;环境变量
-在系统变量里新建：
-M2_HOME=D:\Program Files\apache-maven-3.0.4（新建）</p>
-<p>Path=;%M2_HOME%\bin;（追加到原有的系统变量下）</p>
-<p>在cmd中输入：</p>
-<pre class="highlighted"><code class="nginx"><span class="title">echo</span> %M2_HOME% <span class="comment">#测试环境变量是否生效</span>
-mvn -v <span class="comment">#测试是否配置正确</span></code></pre>
+	<div class="post-content"><pre class="highlighted"><code class="brainfuck"><span class="comment">JAVA_OPTS="</span>-<span class="comment">server</span> <span class="literal">-</span><span class="comment">Xms1536m</span> <span class="literal">-</span><span class="comment">Xmx1536m</span> <span class="literal">-</span><span class="comment">XX:NewSize=320m</span> <span class="literal">-</span><span class="comment">XX:MaxNewSize=320m</span> <span class="literal">-</span><span class="comment">XX:PermSize=96m</span> <span class="literal">-</span><span class="comment">XX:MaxPermSize=256m</span> <span class="literal">-</span><span class="comment">Xmn500m</span> <span class="literal">-</span><span class="comment">XX:MaxTenuringThreshold=5"</code></pre>
+<p>JAVA_OPTS并不是已成不变的，不同的应用、软硬件环境下，要想充分发挥应用的性能，这些参数里边的设置可是非常有技巧和具有经验积累的。
+经过查找资料，先看下JAVA_OPTS参数表示的意义。</p>
+<pre class="highlighted"><code class="brainfuck"><span class="literal">-</span><span class="comment">server:一定要作为第一个参数，在多个CPU时性能佳</span>
+<span class="literal">-</span><span class="comment">Xms：初始Heap大小，使用的最小内存</span>,<span class="comment">cpu性能高时此值应设的大一些</span>
+<span class="literal">-</span><span class="comment">Xmx：java</span> <span class="comment">heap最大值，使用的最大内存。上面两个值是分配JVM的最小和最大内存，取决于硬件物理内存的大小，建议均设为物理内存的一半。</span>
+<span class="literal">-</span><span class="comment">XX:PermSize:设定内存的永久保存区域</span>
+<span class="literal">-</span><span class="comment">XX:MaxPermSize:设定最大内存的永久保存区域</span>
+<span class="literal">-</span><span class="comment">XX:MaxNewSize:</span>
+<span class="literal">-</span><span class="comment">Xss</span> <span class="comment">15120</span> <span class="comment">这使得JBoss每增加一个线程（thread)就会立即消耗15M内存，而最佳值应该是128K</span>,<span class="comment">默认值好像是512k</span>.
+<span class="literal">+</span><span class="comment">XX:AggressiveHeap</span> <span class="comment">会使得</span> <span class="comment">Xms没有意义。这个参数让jvm忽略Xmx参数</span>,<span class="comment">疯狂地吃完一个G物理内存</span>,<span class="comment">再吃尽一个G的swap。</span>
+<span class="literal">-</span><span class="comment">Xss：每个线程的Stack大小</span>
+<span class="literal">-</span><span class="comment">verbose:gc</span> <span class="comment">现实垃圾收集信息</span>
+<span class="literal">-</span><span class="comment">Xloggc:gc</span>.<span class="comment">log</span> <span class="comment">指定垃圾收集日志文件</span>
+<span class="literal">-</span><span class="comment">Xmn：young</span> <span class="comment">generation的heap大小，一般设置为Xmx的3、4分之一</span>
+<span class="literal">-</span><span class="comment">XX:</span>+<span class="comment">UseParNewGC</span> <span class="comment">：缩短minor收集的时间</span>
+<span class="literal">-</span><span class="comment">XX:</span>+<span class="comment">UseConcMarkSweepGC</span> <span class="comment">：缩短major收集的时间</code></pre>
+<p>提示：此选项在Heap Size 比较大而且Major收集时间较长的情况下使用更合适。</p>
 </div>
 </article>
 
 <footer>
+	
+	<section id="related">
+		<h3>Related Posts</h3>
+		<nav class="linklist">
+			
+				
+					<li><span>Thu Aug 12 2010</span>
+					&raquo;
+					<a href="/posts/difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
+				
+			
+				
+					<li><span>Sat Sep 15 2012</span>
+					&raquo;
+					<a href="/posts/java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
+				
+			
+				
+					<li><span>Fri Dec 17 2010</span>
+					&raquo;
+					<a href="/posts/eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+				
+			
+				
+					<li><span>Wed May 05 2010</span>
+					&raquo;
+					<a href="/posts/java-environment-variable">java 环境变量配置</a></li>
+				
+			
+				
+					<li><span>Fri Feb 11 2011</span>
+					&raquo;
+					<a href="/posts/unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
+				
+			
+		</nav>
+	</section>
 	
 </footer>
 
@@ -115,7 +162,7 @@ mvn -v <span class="comment">#测试是否配置正确</span></code></pre>
 <ul class="pager">
 	
 		
-		<li class="previous"><a href="/posts/2012-09-16-oracle-10g-install-in-linux">&larr; Newer</a></li>
+		<li class="previous"><a href="/posts/java-class-dot-forname-classname-classnotfoundexception">&larr; Newer</a></li>
 	
 	
 	<!-- <li typeof="sioc:Page" about="">
@@ -123,7 +170,7 @@ mvn -v <span class="comment">#测试是否配置正确</span></code></pre>
 	</li> -->
  	
 		
-		<li class="next"><a href="/posts/2012-09-16-java-opts">Older &rarr;</a></li>
+		<li class="next"><a href="/posts/linux-connection-number-query">Older &rarr;</a></li>
 	
 </ul>
 <div id="comments">
@@ -135,7 +182,7 @@ mvn -v <span class="comment">#测试是否配置正确</span></code></pre>
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-07T16:08:23.601Z
+				This website was last updated at 2013-05-12T14:16:11.192Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->

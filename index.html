@@ -83,274 +83,56 @@
 			
 <!-- Main hero unit for a primary marketing message or call to action -->
 <div class="hero-unit">
-	<h1>CoffeeScript 常用语法介绍</h1>
+	<h1>nodejs与npm安装</h1>
 </div>
 <article id="" class="post">
-	<div class="post-content"><p>本篇文章假定大家对<a href="http://coffeescript.org">CoffeeScript</a>有一点的了解或者<a href="http://www.python.org/">Python</a>、<a href="http://www.ruby-lang.org/">Ruby</a>也行</p>
-<h3>同步查看编译结果</h3>
-<p>前提已安装<a href="http://nodejs.org/">nodejs</a>和<a href="https://npmjs.org/">npm</a>模块</p>
-<pre class="highlighted"><code class="dos">npm install -g coffee-script
-<span class="comment">rem 该命令会在当前目录生成experimental.js</span>
-coffee --watch --compile experimental.coffee</code></pre>
-<h3>注释添加</h3>
-<pre class="highlighted"><code class="coffeescript"><span class="comment"># A comment</span>
+	<div class="post-content"><h3>Windows环境</h3>
+<h4>下载</h4>
+<ul>
+<li><p><a href="http://nodejs.org/download/">nodejs</a> 快捷地址<a href="http://nodejs.org/dist/v0.10.5/node.exe">v0.10.5 32-bit</a>、<a href="http://nodejs.org/dist/v0.10.5/node.exe">v0.10.5 64-bit</a></p>
+<p> 这里提供的是单一exe的版本，当然也可以下载安装版本的</p>
+</li>
+<li><p><a href="http://nodejs.org/dist/npm/">npm</a> 快捷地址<a href="http://nodejs.org/dist/npm/npm-1.2.9.zip">npm-1.2.9</a></p>
+<p> npm当然要自己动手下载，用<code>npm install npm</code>是有问题的这时npm命令还不可用</p>
+</li>
+</ul>
+<h4>安装</h4>
+<ul>
+<li><p>拷贝下载的<code>node.exe</code>到你想安装的地方</p>
+<p> 建议新建一个<code>node</code>文件夹，然后把<code>node.exe</code>复制到该文件夹</p>
+</li>
+<li><p>解压<code>npm-xxx.zip</code>的内容到<code>node.exe</code>所在的文件夹</p>
+</li>
+</ul>
+<h4>配置</h4>
+<ul>
+<li><p>新建NODE_HOME</p>
+<p> 在环境变量中添加<code>NODE_HOME=C:\Program Files\node</code>其中<code>C:\Program Files\node</code>为<code>node.exe</code>所在的路径</p>
+</li>
+<li><p>新建NODE_PATH</p>
+<p> 在环境变量中添加<code>NODE_PATH=%NODE_HOME%\node_modules</code></p>
+</li>
+</ul>
+<ul>
+<li><p>添加Path的值</p>
+<p> 在环境变量<code>Path</code>值得末尾中添加<code>;%NODE_HOME%;</code></p>
+</li>
+</ul>
+<h4>测试</h4>
+<p>进入<code>cmd</code>命令行</p>
+<pre class="highlighted"><code class="dos">Microsoft Windows [版本 <span class="number">6</span>.<span class="number">2</span>.<span class="number">9200</span>]
+(c) <span class="number">2012</span> Microsoft Corporation。保留所有权利。
 
-<span class="comment">###
-  A multiline comment, perhaps a LICENSE.
-###</span></code></pre>
-<h3>变量定义</h3>
-<pre class="highlighted"><code class="coffeescript">myVariable = <span class="string">"test"</span>
+C:\Users\rjf&gt;node -v
+v0.<span class="number">10</span>.<span class="number">5</span>
 
-<span class="comment"># 对象定义</span>
-object2 = one: <span class="number">1</span>
-object2 = one: <span class="number">1</span>, two: <span class="number">2</span>
-<span class="comment"># 多行可不加逗号</span>
-object2 = 
-  one: <span class="number">1</span>
-  two: <span class="number">2</span>
+C:\Users\rjf&gt;npm -v
+<span class="number">1</span>.<span class="number">2</span>.<span class="number">19</span>
 
-<span class="comment"># 数组定义</span>
-array1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
-<span class="comment"># 多行可不加逗号</span>
-array1 = [
-  <span class="number">1</span>
-  <span class="number">2</span>
-  <span class="number">3</span>
-]
-
-<span class="comment"># 定义值为1到5的数组</span>
-range = [<span class="number">1.</span><span class="number">.5</span>]
-<span class="comment">#  编译后的javascript代码为：</span>
-<span class="comment"># var range;</span>
-<span class="comment"># range = [1, 2, 3, 4, 5];</span>
-
-<span class="comment"># 重新赋值最后三个</span>
-range[<span class="number">2.</span><span class="number">.4</span>] = [-<span class="number">2</span>, -<span class="number">3</span>, -<span class="number">4</span>]
-my = <span class="string">"my string"</span>[<span class="number">0.</span><span class="number">.2</span>]
-
-firstTwo = [<span class="string">"one"</span>, <span class="string">"two"</span>, <span class="string">"three"</span>][<span class="number">0.</span><span class="number">.1</span>]
-<span class="comment"># 编译后的javascript代码为：</span>
-<span class="comment"># var firstTwo;</span>
-<span class="comment"># firstTwo = ["one", "two", "three"].slice(0, 2);</span>
-
-<span class="comment"># 全局变量定义</span>
-<span class="comment"># without browsers</span>
-exports = @
-exports.MyVariable = <span class="string">"foo-bar"</span>
-
-<span class="comment"># window in browsers</span>
-window.MyVariable = <span class="string">"foo-bar"</span></code></pre>
-<h3>别名和存在的操作</h3>
-<pre class="highlighted"><code class="coffeescript"><span class="property">@saviour</span> = <span class="literal">true</span>
-<span class="comment"># @代替this. 编译后的javascript代码为：</span>
-<span class="comment"># this.saviour = true;</span>
-
-User::<span class="function"><span class="title">first</span></span> = -&gt; <span class="property">@records</span>[<span class="number">0</span>]
-<span class="comment"># ::代替.prototype. 编译后的javascript代码为：</span>
-<span class="comment">#User.prototype.first = function() {</span>
-<span class="comment">#  return this.records[0];</span>
-<span class="comment">#};</span>
-
-praise <span class="keyword">if</span> brian?
-<span class="comment"># 编译后的javascript代码为：</span>
-<span class="comment"># if (typeof brian !== "undefined" &amp;&amp; brian !== null) {</span>
-<span class="comment">#  praise;</span>
-<span class="comment">#}</span>
-
-<span class="comment"># 注意不带问号的区别</span>
-praise <span class="keyword">if</span> brian
-<span class="comment"># 编译后的javascript代码为：</span>
-<span class="comment"># if (brian) {</span>
-<span class="comment">#  praise;</span>
-<span class="comment">#}</span>
-praise = brian ? <span class="string">"none"</span>
-<span class="comment"># 不存在赋值"none" 编译后的javascript代码为：</span>
-<span class="comment"># praise = typeof brian !== "undefined" &amp;&amp; brian !== null ? brian : "none";</span>
-
-blackKnight.getLegs()?.kick()
-<span class="comment"># 如果blackKnight.getLegs()返回值存在则调用kick方法 编译后的javascript代码为：</span>
-<span class="comment"># var _ref;</span>
-<span class="comment"># if ((_ref = blackKnight.getLegs()) != null) {</span>
-<span class="comment">#  _ref.kick();</span>
-<span class="comment">#}</span>
-
-blackKnight.getLegs().kick?()
-<span class="comment"># 如果blackKnight.getLegs()返回值存在且是一个方法则调用kick方法 编译后的javascript代码为：</span>
-<span class="comment"># var _base;</span>
-<span class="comment"># if (typeof (_base = blackKnight.getLegs()).kick === "function") {</span>
-<span class="comment">#   _base.kick();</span>
-<span class="comment"># }</span></code></pre>
-<h3>方法定义</h3>
-<pre class="highlighted"><code class="coffeescript"><span class="comment"># 单行</span>
-<span class="function"><span class="title">func</span></span> = -&gt; <span class="string">"bar"</span>
-<span class="comment"># 多行</span>
-<span class="function"><span class="title">func</span></span> = -&gt;
-  <span class="comment"># An extra line</span>
-  <span class="string">"bar"</span>
-<span class="comment"># 编译后的javascript代码为：</span>
-<span class="comment">#  func = function() {</span>
-<span class="comment">#    return "bar";</span>
-<span class="comment">#  };</span>
-
-<span class="comment"># 带参数</span>
-<span class="function"><span class="title">times</span></span> = (a, b) -&gt; a * b
-<span class="comment"># 编译后的javascript代码为：</span>
-<span class="comment">#  times = function(a, b) {</span>
-<span class="comment">#    return a * b;</span>
-<span class="comment">#  };</span>
-
-<span class="comment"># 参数带默认值</span>
-<span class="function"><span class="title">times</span></span> = (a = <span class="number">1</span>, b = <span class="number">2</span>) -&gt; a * b
-<span class="comment"># 编译后的javascript代码为：</span>
-<span class="comment">#  times = function(a, b) {</span>
-<span class="comment">#    if (a == null) {</span>
-<span class="comment">#      a = 1;</span>
-<span class="comment">#    }</span>
-<span class="comment">#    if (b == null) {</span>
-<span class="comment">#      b = 2;</span>
-<span class="comment">#    }</span>
-<span class="comment">#    return a * b;</span>
-<span class="comment">#  };</span>
-
-<span class="comment"># 数组参数支持其中nums为数组，类似java中的Object...</span>
-<span class="function"><span class="title">sum</span></span> = (nums...) -&gt; 
-  result = <span class="number">0</span>
-  nums.forEach (n) -&gt; result += n
-  result
-<span class="comment"># 编译后的javascript代码为：</span>
-<span class="comment">#  sum = function() {</span>
-<span class="comment">#    var nums, result;</span>
-<span class="comment">#</span>
-<span class="comment">#    nums = 1 &lt;= arguments.length ? __slice.call(arguments, 0) : [];</span>
-<span class="comment">#    result = 0;</span>
-<span class="comment">#    nums.forEach(function(n) {</span>
-<span class="comment">#      return result += n;</span>
-<span class="comment">#    });</span>
-<span class="comment">#    return result;</span>
-<span class="comment">#  };</span></code></pre>
-<h3>方法调用</h3>
-<pre class="highlighted"><code class="coffeescript">a = <span class="string">"Howdy!"</span>
-
-alert a
-<span class="comment"># 编译后的javascript代码为：</span>
-<span class="comment"># alert(a)</span>
-
-alert inspect a
-<span class="comment"># 编译后的javascript代码为：</span>
-<span class="comment"># alert(inspect(a))</span>
-
-<span class="comment"># 匿名函数参数传递</span>
-clickHandler =&gt; alert <span class="string">"clicked"</span>
-<span class="comment"># 编译后的javascript代码为：</span>
-<span class="comment">#  clickHandler(function() {</span>
-<span class="comment">#    return alert("clicked");</span>
-<span class="comment">#  });</span>
-
-
-<span class="comment"># 上下文保持一致免去 self=this的代码</span>
-<span class="property">@clickHandler</span> = -&gt; alert <span class="string">"clicked"</span>
-element.addEventListener <span class="string">"click"</span>, (e) =&gt; <span class="property">@clickHandler</span>(e)
-
-<span class="comment">#建议括号在参数复杂的情况下不要省略</span></code></pre>
-<h3>标识替换</h3>
-<pre class="highlighted"><code class="coffeescript">favourite_color = <span class="string">"Blue. No, yel..."</span>
-<span class="comment"># question中的#{favourite_color}将被替换</span>
-question = <span class="string">"Bridgekeeper: What... is your favourite color?
-            Galahad: <span class="subst">#{favourite_color}</span>
-            Bridgekeeper: Wrong!
-            "</span></code></pre>
-<h3>控制语句</h3>
-<p>对于表达式参考<a href="http://coffeescript.org/#operators">这里</a></p>
-<pre class="highlighted"><code class="coffeescript"><span class="comment"># 单行</span>
-<span class="keyword">if</span> a <span class="keyword">then</span> alert a
-<span class="keyword">if</span> a <span class="keyword">then</span> alert a <span class="keyword">else</span> alert <span class="string">'none'</span>
-alert a <span class="keyword">if</span> a
-<span class="comment"># 多行</span>
-<span class="keyword">if</span> a
-    alert a
-<span class="comment"># 判断包含if in </span>
-words = [<span class="string">"rattled"</span>, <span class="string">"roudy"</span>, <span class="string">"rebbles"</span>, <span class="string">"ranks"</span>]
-alert <span class="string">"Stop wagging me"</span> <span class="keyword">if</span> <span class="string">"ranks"</span> <span class="keyword">in</span> words 
-
-<span class="comment"># 循环</span>
-alert <span class="string">"Release <span class="subst">#{name}</span>"</span> <span class="keyword">for</span> name <span class="keyword">in</span> [<span class="string">"Roger"</span>, <span class="string">"Roderick"</span>, <span class="string">"Brian"</span>]
-<span class="keyword">for</span> name <span class="keyword">in</span> [<span class="string">"Roger"</span>, <span class="string">"Roderick"</span>, <span class="string">"Brian"</span>]
-  alert <span class="string">"Release <span class="subst">#{name}</span>"</span>
-
-<span class="comment"># 带序号表达式中i</span>
-<span class="keyword">for</span> name, i <span class="keyword">in</span> [<span class="string">"Roger the pickpocket"</span>, <span class="string">"Roderick the robber"</span>]
-  alert <span class="string">"<span class="subst">#{i}</span> - Release <span class="subst">#{name}</span>"</span>
-
-<span class="comment"># 带过滤条件使用关键字when，以"B"开头</span>
-namelist = [<span class="string">"Roger"</span>, <span class="string">"Roderick"</span>, <span class="string">"Brian"</span>]
-alert <span class="string">"Release <span class="subst">#{name}</span>"</span> <span class="keyword">for</span> name <span class="keyword">in</span> namelist <span class="keyword">when</span> name[<span class="number">0</span>] <span class="keyword">is</span> <span class="string">"B"</span>
-
-<span class="comment"># 注意when和if的区别</span>
-alert <span class="string">"Release <span class="subst">#{name}</span>"</span> <span class="keyword">for</span> name <span class="keyword">in</span> namelist <span class="keyword">if</span> namelist
-
-<span class="comment"># 遍历对象属性使用关键字of，别跟in混了</span>
-names = sam: seaborn, donna: moss
-alert <span class="string">"<span class="subst">#{first}</span> <span class="subst">#{last}</span>"</span> <span class="keyword">for</span> first, last <span class="keyword">of</span> names
-<span class="comment"># 编译后的javascript代码为：</span>
-<span class="comment">#  names = {</span>
-<span class="comment">#    sam: seaborn,</span>
-<span class="comment">#    donna: moss</span>
-<span class="comment">#  };</span>
-<span class="comment">#  for (first in names) {</span>
-<span class="comment">#    last = names[first];</span>
-<span class="comment">#    alert("" + first + " " + last);</span>
-<span class="comment">#  }</span>
-
-<span class="comment"># 以数组的形式返回循环结果</span>
-num = <span class="number">6</span>
-list = <span class="keyword">while</span> num -= <span class="number">1</span>
-  num + <span class="string">" Brave Sir Robin ran away"</span></code></pre>
-<p>详细查看The Little Book on CoffeeScript <a href="http://arcturo.github.io/library/coffeescript/02_syntax.html">Syntax</a> 和<a href="http://coffeescript.org/#language">官方文档</a></p>
-<h3>Classes</h3>
-<h4>定于对象</h4>
-<pre class="highlighted"><code class="coffeescript"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>
-
-<span class="comment"># 包含构造函数</span>
-<span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>
-  constructor: (name) -&gt;
-    <span class="property">@name</span> = name
-
-<span class="comment"># 自动赋值实例变量name</span>
-<span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>
-  constructor: (<span class="property">@name</span>) -&gt;
-
-<span class="comment"># 包含实例属性</span>
-<span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>
-  price: <span class="number">5</span>
-  sell: (customer) -&gt;
-      alert <span class="string">"Give me <span class="subst">#{@price}</span> shillings!"</span>
-
-<span class="comment"># 使用=&gt;确保this一定指向当前实例，即使存在继承</span>
-<span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>
-  price: <span class="number">5</span>
-  sell: (customer) =&gt;
-    alert <span class="string">"Give me <span class="subst">#{@price}</span> shillings!"</span>
-<span class="comment"># 添加静态属性，使用@或者this</span>
-<span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>
-  <span class="property">@price</span>: <span class="number">5</span>
-  <span class="property">@sell</span>: (customer) -&gt;
-      alert <span class="string">"Give me <span class="subst">#{@price}</span> shillings!"</span></code></pre>
-<h4>创建实例</h4>
-<pre class="highlighted"><code class="coffeescript">animal = <span class="keyword">new</span> Animal</code></pre>
-<h4>继承</h4>
-<pre class="highlighted"><code class="coffeescript"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span>
-  constructor: (<span class="property">@name</span>) -&gt;
-
-  alive: -&gt;
-    <span class="literal">false</span>
-
-<span class="class"><span class="keyword">class</span> <span class="title">Parrot</span> <span class="keyword">extends</span> <span class="title">Animal</span></span>
-  constructor: -&gt;
-    <span class="keyword">super</span>(<span class="string">"Parrot"</span>)
-
-  dead: -&gt;
-    <span class="keyword">not</span> <span class="property">@alive</span>()</code></pre>
-<p>Mixins、Extending classes这个得理解才好用，大家还是看<a href="http://arcturo.github.io/library/coffeescript/03_classes.html">原文</a>吧</p>
+C:\Users\rjf&gt;</code></pre>
+<p>如出现<code>v0.10.5</code>则表明nodejs安装成功了。如出现<code>1.2.19</code>则说明npm安装成功了，这时候就可以使用<code>npm install xxx</code>或者<code>npm install -g xxx</code>来安装其他包了</p>
+<h3>Linux环境</h3>
+<p>Soon...</p>
 <div>
 </article>
 		</section>
@@ -358,7 +140,7 @@ list = <span class="keyword">while</span> num -= <span class="number">1</span>
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-07T16:08:23.601Z
+				This website was last updated at 2013-05-12T14:16:11.192Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->

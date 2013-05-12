@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<!-- Our site title and description -->
-	<title>ClassNotFoundException和NoClassDefFoundError的区别 | 奔跑</title>
+	<title>nodejs与npm安装 | 奔跑</title>
 	<meta name="description" content="When your website appears in search results in say Google, the text here will be shown underneath your website's title." />
 	<meta name="keywords" content="place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website" />
 	<meta name="author" content="ruanjiefeng" />
@@ -81,69 +81,70 @@
 	<div class="container">
 		<section id="content" class="content">
 			<article id="post" class="post">
-	<h1>ClassNotFoundException和NoClassDefFoundError的区别</h1>
+	<h1>nodejs与npm安装</h1>
 	<br/>
 	<blockquote>
 		<div class="row">
-			<div class="span">ruanjiefeng 发布于：2012年9月16日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
+			<div class="span">ruanjiefeng 发布于：2013年5月12日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
 			<div class="span" style="height: 24px;">
-				<wb:share-button count="n" type="button" title="ClassNotFoundException和NoClassDefFoundError的区别" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
+				<wb:share-button count="n" type="button" title="nodejs与npm安装" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
 			</div>
 			<div class="span" style="height: 24px;">
-				<div id="qqwb_share__" data-appkey="801351994" data-icon="1" data-counter="0" data-content="ClassNotFoundException和NoClassDefFoundError的区别" data-richcontent="" data-pic=""></div>
+				<div id="qqwb_share__" data-appkey="801351994" data-icon="1" data-counter="0" data-content="nodejs与npm安装" data-richcontent="" data-pic=""></div>
 			</div>
 		</div>
 	</blockquote>
-	<div class="post-content"><p>这2个东西应该是java里很常见，很简单，他们都和classpath设定有关，但区别在哪里呢？ 我们都知道java里生成对象有如下两种方式：</p>
-<pre class="highlighted"><code class="java"><span class="comment">//1</span>
-Object obj = <span class="keyword">new</span> ClassName(); <span class="comment">//直接new一个对象</span>
+	<div class="post-content"><h3>Windows环境</h3>
+<h4>下载</h4>
+<ul>
+<li><p><a href="http://nodejs.org/download/">nodejs</a> 快捷地址<a href="http://nodejs.org/dist/v0.10.5/node.exe">v0.10.5 32-bit</a>、<a href="http://nodejs.org/dist/v0.10.5/node.exe">v0.10.5 64-bit</a></p>
+<p> 这里提供的是单一exe的版本，当然也可以下载安装版本的</p>
+</li>
+<li><p><a href="http://nodejs.org/dist/npm/">npm</a> 快捷地址<a href="http://nodejs.org/dist/npm/npm-1.2.9.zip">npm-1.2.9</a></p>
+<p> npm当然要自己动手下载，用<code>npm install npm</code>是有问题的这时npm命令还不可用</p>
+</li>
+</ul>
+<h4>安装</h4>
+<ul>
+<li><p>拷贝下载的<code>node.exe</code>到你想安装的地方</p>
+<p> 建议新建一个<code>node</code>文件夹，然后把<code>node.exe</code>复制到该文件夹</p>
+</li>
+<li><p>解压<code>npm-xxx.zip</code>的内容到<code>node.exe</code>所在的文件夹</p>
+</li>
+</ul>
+<h4>配置</h4>
+<ul>
+<li><p>新建NODE_HOME</p>
+<p> 在环境变量中添加<code>NODE_HOME=C:\Program Files\node</code>其中<code>C:\Program Files\node</code>为<code>node.exe</code>所在的路径</p>
+</li>
+<li><p>新建NODE_PATH</p>
+<p> 在环境变量中添加<code>NODE_PATH=%NODE_HOME%\node_modules</code></p>
+</li>
+</ul>
+<ul>
+<li><p>添加Path的值</p>
+<p> 在环境变量<code>Path</code>值得末尾中添加<code>;%NODE_HOME%;</code></p>
+</li>
+</ul>
+<h4>测试</h4>
+<p>进入<code>cmd</code>命令行</p>
+<pre class="highlighted"><code class="dos">Microsoft Windows [版本 <span class="number">6</span>.<span class="number">2</span>.<span class="number">9200</span>]
+(c) <span class="number">2012</span> Microsoft Corporation。保留所有权利。
 
-<span class="comment">//2</span>
-Class clazz = Class.forName(ClassName);
-Object obj = clazz.newInstance(); <span class="comment">//通过class loader动态装载一个类，然后获取这个类的实例</span></code></pre>
-<p>同样是生成对象，1在编译期间检查classpath, 如果没有类定义，编译没法通过。而2在编译期间是不会检查的，不过需要抛出或者自己catch ClassNotFoundException。 运行期间，如果1编译时依赖的类不在classpath中（导致classloader装载失败），此时抛出的异常就是 NoClassDefFoundError。而如果2在运行期间需要装载的类不在classpath中，抛出的则是 ClassNotFoundException。</p>
-<p>NoClassDefFoundError是编译期间能找到，但runtime找不到。而ClassNotFoundException则是说runtime找不到，因为编译期间是不做检查的</p>
+C:\Users\rjf&gt;node -v
+v0.<span class="number">10</span>.<span class="number">5</span>
+
+C:\Users\rjf&gt;npm -v
+<span class="number">1</span>.<span class="number">2</span>.<span class="number">19</span>
+
+C:\Users\rjf&gt;</code></pre>
+<p>如出现<code>v0.10.5</code>则表明nodejs安装成功了。如出现<code>1.2.19</code>则说明npm安装成功了，这时候就可以使用<code>npm install xxx</code>或者<code>npm install -g xxx</code>来安装其他包了</p>
+<h3>Linux环境</h3>
+<p>Soon...</p>
 </div>
 </article>
 
 <footer>
-	
-	<section id="related">
-		<h3>Related Posts</h3>
-		<nav class="linklist">
-			
-				
-					<li><span>Sat Sep 15 2012</span>
-					&raquo;
-					<a href="/posts/2012-09-15-java-environment-variable">java 环境变量配置</a></li>
-				
-			
-				
-					<li><span>Sun Sep 16 2012</span>
-					&raquo;
-					<a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
-				
-			
-				
-					<li><span>Sun Sep 16 2012</span>
-					&raquo;
-					<a href="/posts/2012-09-16-java-opts">JAVA_OPTS</a></li>
-				
-			
-				
-					<li><span>Sun Sep 16 2012</span>
-					&raquo;
-					<a href="/posts/2012-09-16-unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
-				
-			
-				
-					<li><span>Sat Sep 15 2012</span>
-					&raquo;
-					<a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
-				
-			
-		</nav>
-	</section>
 	
 </footer>
 
@@ -152,8 +153,7 @@ Object obj = clazz.newInstance(); <span class="comment">//通过class loader动�
 
 <ul class="pager">
 	
-		
-		<li class="previous"><a href="/posts/2012-09-17-base-on-github-blog-system">&larr; Newer</a></li>
+		<li class="previous disabled"><a href="javascript:void(0)">&larr; Newer</a></li>
 	
 	
 	<!-- <li typeof="sioc:Page" about="">
@@ -161,7 +161,7 @@ Object obj = clazz.newInstance(); <span class="comment">//通过class loader动�
 	</li> -->
  	
 		
-		<li class="next"><a href="/posts/2012-09-16-install-oracle-10g-in-win7">Older &rarr;</a></li>
+		<li class="next"><a href="/posts/CoffeeScript-introduce">Older &rarr;</a></li>
 	
 </ul>
 <div id="comments">
@@ -173,7 +173,7 @@ Object obj = clazz.newInstance(); <span class="comment">//通过class loader动�
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-07T16:08:23.601Z
+				This website was last updated at 2013-05-12T14:16:11.192Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->

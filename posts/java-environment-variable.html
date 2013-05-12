@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<!-- Our site title and description -->
-	<title>win7下安装oracle 10g | 奔跑</title>
+	<title>java 环境变量配置 | 奔跑</title>
 	<meta name="description" content="When your website appears in search results in say Google, the text here will be shown underneath your website's title." />
 	<meta name="keywords" content="place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website" />
 	<meta name="author" content="ruanjiefeng" />
@@ -81,34 +81,43 @@
 	<div class="container">
 		<section id="content" class="content">
 			<article id="post" class="post">
-	<h1>win7下安装oracle 10g</h1>
+	<h1>java 环境变量配置</h1>
 	<br/>
 	<blockquote>
 		<div class="row">
-			<div class="span">ruanjiefeng 发布于：2012年9月16日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
+			<div class="span">ruanjiefeng 发布于：2010年5月5日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
 			<div class="span" style="height: 24px;">
-				<wb:share-button count="n" type="button" title="win7下安装oracle 10g" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
+				<wb:share-button count="n" type="button" title="java 环境变量配置" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
 			</div>
 			<div class="span" style="height: 24px;">
-				<div id="qqwb_share__" data-appkey="801351994" data-icon="1" data-counter="0" data-content="win7下安装oracle 10g" data-richcontent="" data-pic=""></div>
+				<div id="qqwb_share__" data-appkey="801351994" data-icon="1" data-counter="0" data-content="java 环境变量配置" data-richcontent="" data-pic=""></div>
 			</div>
 		</div>
 	</blockquote>
-	<div class="post-content"><p>将oralce 10G的安装镜像解压都硬盘，找到/stage/prereq/db/ 下的refhost.xml文件添加如下内容：</p>
-<pre class="highlighted"><code class="xml"><span class="comment">&lt;!--Microsoft Windows 7--&gt;</span>
-<span class="tag">&lt;<span class="title">OPERATING_SYSTEM</span>&gt;</span>
-<span class="tag">&lt;<span class="title">VERSION</span> <span class="attribute">VALUE</span>=<span class="value">"6.1"</span>/&gt;</span>
-<span class="tag">&lt;/<span class="title">OPERATING_SYSTEM</span>&gt;</span></code></pre>
-<p>再到install目录中找到oraparam.ini文件，添加如下内容：</p>
-<pre class="highlighted"><code class="undefined">[Windows-6.1-required]
-#Minimum display colours for OUI to run
-MIN_DISPLAY_COLORS=256
-#Minimum CPU speed required for OUI
-#CPU=300
-[Windows-6.1-optional]</code></pre>
-<p>最重要的是下面这一步： 改兼容
-如下图：</p>
-<p><img src="/resources/201209/0_1284269026TwgZ.gif" alt="windows配置"></p>
+	<div class="post-content"><h3>windows</h3>
+<p>右键我的电脑-属性-高级-环境变量
+在系统变量里新建(jdk的安装路径)
+JAVA_HOME=F:\Java\jdk1.6.0_12
+Path=;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+注意，这个要添加到系统原来的PATH前面，要像有些人说的加后面可能会不能编译。 
+Classpath=.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\jre\lib\rt.jar
+然后就是试下看是否配置成功了 
+关于设置JAVA HOME的必要性：你若装TOMCAT或ORACLE等都会改变你的环境设置，总是改path，classpath容易出错也不方便，
+所以JAVA HOME就有了统一指向性，方便不易出错。
+开始-运行-CMD然后&quot;java&quot;、&quot;javac&quot;会出现很多操作说明，也可以&quot;java -version&quot;查看版本信息。
+再就是自己编个简单的JAVA文件试下了。</p>
+<h3>linux</h3>
+<p>在文件/etc/profile末尾添加如下内容(你的jdk所在位置)</p>
+<pre class="highlighted"><code class="smalltalk"><span class="class">JAVA_HOME</span>=/usr/java/jdk1<span class="number">.6</span><span class="number">.0</span>_25
+<span class="class">PATH</span>=<span class="char">$J</span>AVA_HOME/<span class="method">bin:</span><span class="char">$J</span>AVA_HOME/jre/<span class="method">bin:</span><span class="char">$P</span>ATH
+<span class="class">CLASSPATH</span>=.:<span class="char">$J</span>AVA_HOME/lib/dt.<span class="method">jar:</span><span class="char">$J</span>AVA_HOME/lib/tools.<span class="method">jar:</span><span class="char">$J</span>AVA_HOME/jre/lib/rt.jar
+export <span class="class">JAVA_HOME</span>
+export <span class="class">PATH</span>
+export <span class="class">CLASSPATH</span></code></pre>
+<p>注意:linux下面用冒号分割
+解决 java/lang/NoClassDefFoundError: java/lang/Object 错误
+$JAVA_HOME/lib/ tools.pack  转为  tools.jar<br>$JAVA_HOME/jre/lib/rt.pack   转为  rt.jar</p>
+<pre class="highlighted"><code class="bash">[root@localhost lib]<span class="comment"># unpack200 rt.pack rt.jar</span></code></pre>
 </div>
 </article>
 
@@ -119,21 +128,33 @@ MIN_DISPLAY_COLORS=256
 		<nav class="linklist">
 			
 				
-					<li><span>Sun Sep 16 2012</span>
+					<li><span>Thu Aug 12 2010</span>
 					&raquo;
-					<a href="/posts/2012-09-16-oracle-10g-install-in-linux">linux下oracle 10g 安装全过程</a></li>
+					<a href="/posts/difference-noclassdeffounderror-and-classnotfoundexception">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
 				
 			
 				
-					<li><span>Sun Sep 16 2012</span>
+					<li><span>Sat Sep 15 2012</span>
 					&raquo;
-					<a href="/posts/2012-09-16-set-oracle-services-in-linux">Linux下设置oracle 10g 服务以及实例自动启动方法</a></li>
+					<a href="/posts/java-class-dot-forname-classname-classnotfoundexception">java Class.forName(className) ClassNotFoundException异常</a></li>
 				
 			
 				
-					<li><span>Sun Sep 16 2012</span>
+					<li><span>Sat Sep 15 2012</span>
 					&raquo;
-					<a href="/posts/2012-09-16-to-svnserve-registered-into-windows-service">把 svnserve 注册成 windows service 的正确命令</a></li>
+					<a href="/posts/java-opts">JAVA_OPTS</a></li>
+				
+			
+				
+					<li><span>Fri Dec 17 2010</span>
+					&raquo;
+					<a href="/posts/eclipse-or-myeclipse-add-plugin">eclipse myeclipse 最好用的安装插件方法</a></li>
+				
+			
+				
+					<li><span>Fri Feb 11 2011</span>
+					&raquo;
+					<a href="/posts/unable-to-load-configuration-unknown-location">Unable to load configuration unknown location</a></li>
 				
 			
 		</nav>
@@ -147,15 +168,14 @@ MIN_DISPLAY_COLORS=256
 <ul class="pager">
 	
 		
-		<li class="previous"><a href="/posts/2012-09-16-difference-noclassdeffounderror-and-classnotfoundexception">&larr; Newer</a></li>
+		<li class="previous"><a href="/posts/difference-noclassdeffounderror-and-classnotfoundexception">&larr; Newer</a></li>
 	
 	
 	<!-- <li typeof="sioc:Page" about="">
 		<a href="" property="dc:title"></a>
 	</li> -->
  	
-		
-		<li class="next"><a href="/posts/2012-09-16-eclipse-or-myeclipse-add-plugin">Older &rarr;</a></li>
+		<li class="next disabled"><a href="javascript:void(0)">Older &rarr;</a></li>
 	
 </ul>
 <div id="comments">
@@ -167,7 +187,7 @@ MIN_DISPLAY_COLORS=256
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-07T16:08:23.601Z
+				This website was last updated at 2013-05-12T14:16:11.192Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->

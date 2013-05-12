@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<!-- Our site title and description -->
-	<title>git windows 下搭建全过程 | 奔跑</title>
+	<title>把 svnserve 注册成 windows service 的正确命令 | 奔跑</title>
 	<meta name="description" content="When your website appears in search results in say Google, the text here will be shown underneath your website's title." />
 	<meta name="keywords" content="place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website" />
 	<meta name="author" content="ruanjiefeng" />
@@ -81,41 +81,28 @@
 	<div class="container">
 		<section id="content" class="content">
 			<article id="post" class="post">
-	<h1>git windows 下搭建全过程</h1>
+	<h1>把 svnserve 注册成 windows service 的正确命令</h1>
 	<br/>
 	<blockquote>
 		<div class="row">
-			<div class="span">ruanjiefeng 发布于：2012年9月15日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
+			<div class="span">ruanjiefeng 发布于：2011年5月26日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
 			<div class="span" style="height: 24px;">
-				<wb:share-button count="n" type="button" title="git windows 下搭建全过程" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
+				<wb:share-button count="n" type="button" title="把 svnserve 注册成 windows service 的正确命令" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
 			</div>
 			<div class="span" style="height: 24px;">
-				<div id="qqwb_share__" data-appkey="801351994" data-icon="1" data-counter="0" data-content="git windows 下搭建全过程" data-richcontent="" data-pic=""></div>
+				<div id="qqwb_share__" data-appkey="801351994" data-icon="1" data-counter="0" data-content="把 svnserve 注册成 windows service 的正确命令" data-richcontent="" data-pic=""></div>
 			</div>
 		</div>
 	</blockquote>
-	<div class="post-content"><p>1、 Git，Windows下的Git，地址：<a href="http://msysgit.googlecode.com/files/Git-1.7.9-preview20120201.exe（方便下载）">http://msysgit.googlecode.com/files/Git-1.7.9-preview20120201.exe（方便下载）</a></p>
-<p>2 、SSH，可以用CopSSH，地址：<a href="http://sqmcc2.newhua.com/down/Copssh_4.1.0_Installer.zip（方便下载）">http://sqmcc2.newhua.com/down/Copssh_4.1.0_Installer.zip（方便下载）</a></p>
-<p>3、git、CopSSH安装可以参照（注意：看图片就好了其它的无视）：<a href="http://www.codeproject.com/Articles/296398/Step-by-Step-Setup-Git-Server-on-Windows-with-CopS">http://www.codeproject.com/Articles/296398/Step-by-Step-Setup-Git-Server-on-Windows-with-CopS</a></p>
-<p>强调下：在安装CopSSH是需要创建用户，这里创建的用户是git，所以下面的地址才可能是git@127.0.0.1</p>
-<p>4、配置（windows系统的）git环境变量，在Path后面追加（复制下面代码改下git的安装路径就可以了）</p>
-<pre class="highlighted"><code class="dos">;D:\Program Files\Git\bin;D:\Program Files\Git\libexec\git-core;</code></pre>
-<p>5、配置copssh的（文件在安装目录下的etc文件夹里）profile（复制下面代码改下git的安装路径就可以了）</p>
-<pre class="highlighted"><code class="bash">gitpath=`/bin/cygpath  D:/Program\ Files/Git/bin`  <span class="comment">#这里不是引号，路径是Git下的cmd，斜杠也要用Unix的习惯</span>
-gitlibpath=`/bin/cygpath  D:/Program\ Files/Git/libexec/git-core`
-export PATH=<span class="string">"<span class="variable">$PATH</span>:<span class="variable">$gitpath</span>:<span class="variable">$gitlibpath</span>"</span></code></pre>
-<p>6、测试</p>
-<p>打开git bash 登陆ssh git@127.0.0.1</p>
-<p>例如创建一个测试库（按顺序输入）：</p>
-<pre class="highlighted"><code class="bash">mkdir test
-cd test
-git init
-touch a b c d
-git add .
-git commit -m <span class="string">"init"</span></code></pre>
-<p>然后，就可以在远程clone这个库（test）了。clone命令如下：
-git clone git@192.168.1.103:testgit aa
-到此git windows下搭建环境完成。</p>
+	<div class="post-content"><p>Subversion的文档里的那个命令是错误的，错误的地方一个是 binpath 应该是 binPath, displayname 也应该是 DisplayName:</p>
+<pre class="highlighted"><code class="tex">sc create svn binPath= "<span class="command">\"</span>C:<span class="command">\Program</span> Files<span class="command">\Subversion</span><span class="command">\bin</span><span class="command">\svnserve</span>.exe<span class="command">\"</span> --service -r D:<span class="command">\SVN</span>" DisplayName= "Subversion Server" depend= Tcpip start= auto</code></pre>
+<p>请注意，</p>
+<ul>
+<li>如果你的svnserve的path中有空格，那么用 \&quot; 是必须的</li>
+<li>--service 也是必须的</li>
+<li>&quot;-r D:\SVN&quot; 定义的是你的repository的根目录，也就是包含了”conf“、”dav“、”hooks“等目录的那个目录</li>
+</ul>
+<p>其他的命令详见 sc --help</p>
 </div>
 </article>
 
@@ -126,9 +113,9 @@ git clone git@192.168.1.103:testgit aa
 		<nav class="linklist">
 			
 				
-					<li><span>Mon Sep 17 2012</span>
+					<li><span>Sun Sep 12 2010</span>
 					&raquo;
-					<a href="/posts/2012-09-17-base-on-github-blog-system">windows下用github搭建静态博客（octopress）全过程</a></li>
+					<a href="/posts/install-oracle-10g-in-win7">win7下安装oracle 10g</a></li>
 				
 			
 		</nav>
@@ -142,7 +129,7 @@ git clone git@192.168.1.103:testgit aa
 <ul class="pager">
 	
 		
-		<li class="previous"><a href="/posts/2012-09-16-contacts-from-s60-to-android">&larr; Newer</a></li>
+		<li class="previous"><a href="/posts/maven-environment-variable">&larr; Newer</a></li>
 	
 	
 	<!-- <li typeof="sioc:Page" about="">
@@ -150,7 +137,7 @@ git clone git@192.168.1.103:testgit aa
 	</li> -->
  	
 		
-		<li class="next"><a href="/posts/2012-09-15-java-class-dot-forname-classname-classnotfoundexception">Older &rarr;</a></li>
+		<li class="next"><a href="/posts/contacts-from-s60-to-android">Older &rarr;</a></li>
 	
 </ul>
 <div id="comments">
@@ -162,7 +149,7 @@ git clone git@192.168.1.103:testgit aa
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-07T16:08:23.601Z
+				This website was last updated at 2013-05-12T14:16:11.192Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
