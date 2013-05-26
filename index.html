@@ -83,56 +83,32 @@
 			
 <!-- Main hero unit for a primary marketing message or call to action -->
 <div class="hero-unit">
-	<h1>nodejs与npm安装</h1>
+	<h1>使用YUIDoc生成CoffeeScript的API文档</h1>
 </div>
 <article id="" class="post">
-	<div class="post-content"><h3>Windows环境</h3>
-<h4>下载</h4>
-<ul>
-<li><p><a href="http://nodejs.org/download/">nodejs</a> 快捷地址<a href="http://nodejs.org/dist/v0.10.5/node.exe">v0.10.5 32-bit</a>、<a href="http://nodejs.org/dist/v0.10.5/node.exe">v0.10.5 64-bit</a></p>
-<p> 这里提供的是单一exe的版本，当然也可以下载安装版本的</p>
-</li>
-<li><p><a href="http://nodejs.org/dist/npm/">npm</a> 快捷地址<a href="http://nodejs.org/dist/npm/npm-1.2.9.zip">npm-1.2.9</a></p>
-<p> npm当然要自己动手下载，用<code>npm install npm</code>是有问题的这时npm命令还不可用</p>
-</li>
-</ul>
+	<div class="post-content"><h4>前提环境</h4>
+<p>生成api文档的程序是基于nodejs编写的，因此需安装nodejs参看<a href="http://www.runjf.com/posts/nodejs-install">这里</a></p>
 <h4>安装</h4>
-<ul>
-<li><p>拷贝下载的<code>node.exe</code>到你想安装的地方</p>
-<p> 建议新建一个<code>node</code>文件夹，然后把<code>node.exe</code>复制到该文件夹</p>
-</li>
-<li><p>解压<code>npm-xxx.zip</code>的内容到<code>node.exe</code>所在的文件夹</p>
-</li>
-</ul>
-<h4>配置</h4>
-<ul>
-<li><p>新建NODE_HOME</p>
-<p> 在环境变量中添加<code>NODE_HOME=C:\Program Files\node</code>其中<code>C:\Program Files\node</code>为<code>node.exe</code>所在的路径</p>
-</li>
-<li><p>新建NODE_PATH</p>
-<p> 在环境变量中添加<code>NODE_PATH=%NODE_HOME%\node_modules</code></p>
-</li>
-</ul>
-<ul>
-<li><p>添加Path的值</p>
-<p> 在环境变量<code>Path</code>值得末尾中添加<code>;%NODE_HOME%;</code></p>
-</li>
-</ul>
-<h4>测试</h4>
-<p>进入<code>cmd</code>命令行</p>
-<pre class="highlighted"><code class="dos">Microsoft Windows [版本 <span class="number">6</span>.<span class="number">2</span>.<span class="number">9200</span>]
-(c) <span class="number">2012</span> Microsoft Corporation。保留所有权利。
-
-C:\Users\rjf&gt;node -v
-v0.<span class="number">10</span>.<span class="number">5</span>
-
-C:\Users\rjf&gt;npm -v
-<span class="number">1</span>.<span class="number">2</span>.<span class="number">19</span>
-
-C:\Users\rjf&gt;</code></pre>
-<p>如出现<code>v0.10.5</code>则表明nodejs安装成功了。如出现<code>1.2.19</code>则说明npm安装成功了，这时候就可以使用<code>npm install xxx</code>或者<code>npm install -g xxx</code>来安装其他包了</p>
-<h3>Linux环境</h3>
-<p>Soon...</p>
+<pre class="highlighted"><code class="bash">npm -g install yuidocjs</code></pre>
+<h4>使用</h4>
+<pre class="highlighted"><code class="javascript"><span class="comment">/**
+* This is the description for my class.
+*
+* @class MyClass
+* @constructor
+*/</span></code></pre>
+<p>上面注释为yuidoc提供的文档格式，下面为coffeescript的文档格式。
+按照下面的格式即可使用yuidoc生产帮助文档</p>
+<pre class="highlighted"><code class="coffeescript"><span class="comment">###*
+# This is the description for my class.
+#
+# @class MyClass
+# @constructor
+###</span></code></pre>
+<h4>生成</h4>
+<pre class="highlighted"><code class="bash"><span class="comment"># 先进入coffeescript源码所在的文件夹</span>
+yuidoc --syntaxtype coffee -e .coffee .</code></pre>
+<p>最终类似于<a href="http://yui.github.io/yuidoc/api/">yuidoc api</a></p>
 <div>
 </article>
 		</section>
@@ -140,7 +116,7 @@ C:\Users\rjf&gt;</code></pre>
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-12T14:16:11.192Z
+				This website was last updated at 2013-05-26T12:34:55.942Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->

@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 	<!-- Our site title and description -->
-	<title>java 环境变量配置 | 奔跑</title>
+	<title>使用YUIDoc生成CoffeeScript的API文档 | 奔跑</title>
 	<meta name="description" content="When your website appears in search results in say Google, the text here will be shown underneath your website's title." />
 	<meta name="keywords" content="place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website" />
 	<meta name="author" content="ruanjiefeng" />
@@ -81,43 +81,42 @@
 	<div class="container">
 		<section id="content" class="content">
 			<article id="post" class="post">
-	<h1>java 环境变量配置</h1>
+	<h1>使用YUIDoc生成CoffeeScript的API文档</h1>
 	<br/>
 	<blockquote>
 		<div class="row">
-			<div class="span">ruanjiefeng 发布于：2010年5月5日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
+			<div class="span">ruanjiefeng 发布于：2013年5月26日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
 			<div class="span" style="height: 24px;">
-				<wb:share-button count="n" type="button" title="java 环境变量配置" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
+				<wb:share-button count="n" type="button" title="使用YUIDoc生成CoffeeScript的API文档" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
 			</div>
 			<div class="span" style="height: 24px;">
-				<div id="qqwb_share__" data-appkey="801351994" data-icon="1" data-counter="0" data-content="java 环境变量配置" data-richcontent="" data-pic=""></div>
+				<div id="qqwb_share__" data-appkey="801351994" data-icon="1" data-counter="0" data-content="使用YUIDoc生成CoffeeScript的API文档" data-richcontent="" data-pic=""></div>
 			</div>
 		</div>
 	</blockquote>
-	<div class="post-content"><h3>windows</h3>
-<p>右键我的电脑-属性-高级-环境变量
-在系统变量里新建(jdk的安装路径)
-JAVA_HOME=F:\Java\jdk1.6.0_12
-Path=;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
-注意，这个要添加到系统原来的PATH前面，要像有些人说的加后面可能会不能编译。 
-Classpath=.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\jre\lib\rt.jar
-然后就是试下看是否配置成功了 
-关于设置JAVA HOME的必要性：你若装TOMCAT或ORACLE等都会改变你的环境设置，总是改path，classpath容易出错也不方便，
-所以JAVA HOME就有了统一指向性，方便不易出错。
-开始-运行-CMD然后&quot;java&quot;、&quot;javac&quot;会出现很多操作说明，也可以&quot;java -version&quot;查看版本信息。
-再就是自己编个简单的JAVA文件试下了。</p>
-<h3>linux</h3>
-<p>在文件/etc/profile末尾添加如下内容(你的jdk所在位置)</p>
-<pre class="highlighted"><code class="smalltalk"><span class="class">JAVA_HOME</span>=/usr/java/jdk1<span class="number">.6</span><span class="number">.0</span>_25
-<span class="class">PATH</span>=<span class="char">$J</span>AVA_HOME/<span class="method">bin:</span><span class="char">$J</span>AVA_HOME/jre/<span class="method">bin:</span><span class="char">$P</span>ATH
-<span class="class">CLASSPATH</span>=.:<span class="char">$J</span>AVA_HOME/lib/dt.<span class="method">jar:</span><span class="char">$J</span>AVA_HOME/lib/tools.<span class="method">jar:</span><span class="char">$J</span>AVA_HOME/jre/lib/rt.jar
-export <span class="class">JAVA_HOME</span>
-export <span class="class">PATH</span>
-export <span class="class">CLASSPATH</span></code></pre>
-<p>注意:linux下面用冒号分割
-解决 java/lang/NoClassDefFoundError: java/lang/Object 错误
-$JAVA_HOME/lib/ tools.pack  转为  tools.jar<br>$JAVA_HOME/jre/lib/rt.pack   转为  rt.jar</p>
-<pre class="highlighted"><code class="bash">[root@localhost lib]<span class="comment"># unpack200 rt.pack rt.jar</span></code></pre>
+	<div class="post-content"><h4>前提环境</h4>
+<p>生成api文档的程序是基于nodejs编写的，因此需安装nodejs参看<a href="http://www.runjf.com/posts/nodejs-install">这里</a></p>
+<h4>安装</h4>
+<pre class="highlighted"><code class="bash">npm -g install yuidocjs</code></pre>
+<h4>使用</h4>
+<pre class="highlighted"><code class="javascript"><span class="comment">/**
+* This is the description for my class.
+*
+* @class MyClass
+* @constructor
+*/</span></code></pre>
+<p>上面注释为yuidoc提供的文档格式，下面为coffeescript的文档格式。
+按照下面的格式即可使用yuidoc生产帮助文档</p>
+<pre class="highlighted"><code class="coffeescript"><span class="comment">###*
+# This is the description for my class.
+#
+# @class MyClass
+# @constructor
+###</span></code></pre>
+<h4>生成</h4>
+<pre class="highlighted"><code class="bash"><span class="comment"># 先进入coffeescript源码所在的文件夹</span>
+yuidoc --syntaxtype coffee -e .coffee .</code></pre>
+<p>生成的文档类似于<a href="http://yui.github.io/yuidoc/api/">yuidoc api</a></p>
 </div>
 </article>
 
@@ -128,33 +127,15 @@ $JAVA_HOME/lib/ tools.pack  转为  tools.jar<br>$JAVA_HOME/jre/lib/rt.pack   �
 		<nav class="linklist">
 			
 				
-					<li><span>Sat Sep 15 2012</span>
+					<li><span>Sun May 12 2013</span>
 					&raquo;
-					<a href="/posts/java-class-dot-forname-classname-classnotfoundexception.html">java Class.forName(className) ClassNotFoundException异常</a></li>
+					<a href="/posts/nodejs-install.html">nodejs与npm安装</a></li>
 				
 			
 				
-					<li><span>Sat Sep 15 2012</span>
+					<li><span>Sun May 05 2013</span>
 					&raquo;
-					<a href="/posts/java-opts.html">JAVA_OPTS</a></li>
-				
-			
-				
-					<li><span>Fri Feb 11 2011</span>
-					&raquo;
-					<a href="/posts/unable-to-load-configuration-unknown-location.html">Unable to load configuration unknown location</a></li>
-				
-			
-				
-					<li><span>Fri Dec 17 2010</span>
-					&raquo;
-					<a href="/posts/eclipse-or-myeclipse-add-plugin.html">eclipse myeclipse 最好用的安装插件方法</a></li>
-				
-			
-				
-					<li><span>Thu Aug 12 2010</span>
-					&raquo;
-					<a href="/posts/difference-noclassdeffounderror-and-classnotfoundexception.html">ClassNotFoundException和NoClassDefFoundError的区别</a></li>
+					<a href="/posts/CoffeeScript-introduce.html">CoffeeScript 常用语法介绍</a></li>
 				
 			
 		</nav>
@@ -167,15 +148,15 @@ $JAVA_HOME/lib/ tools.pack  转为  tools.jar<br>$JAVA_HOME/jre/lib/rt.pack   �
 
 <ul class="pager">
 	
-		
-		<li class="previous"><a href="/posts/difference-noclassdeffounderror-and-classnotfoundexception">&larr; Newer</a></li>
+		<li class="previous disabled"><a href="javascript:void(0)">&larr; Newer</a></li>
 	
 	
 	<!-- <li typeof="sioc:Page" about="">
 		<a href="" property="dc:title"></a>
 	</li> -->
  	
-		<li class="next disabled"><a href="javascript:void(0)">Older &rarr;</a></li>
+		
+		<li class="next"><a href="/posts/nodejs-install">Older &rarr;</a></li>
 	
 </ul>
 <div id="comments">
