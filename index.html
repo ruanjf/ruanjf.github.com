@@ -83,7 +83,7 @@
 			
 <!-- Main hero unit for a primary marketing message or call to action -->
 <div class="hero-unit">
-	<h1>Chromium OS手动编译</h1>
+	<h1>手动编译Chromium OS系统</h1>
 </div>
 <article id="" class="post">
 	<div class="post-content"><p>鉴于Google提供的<a href="http://www.chromium.org/chromium-os/quick-start-guide">文档</a>存在很多坑，Google向来简约但是文档也简这就不应该了，其实还提供了一份完整的<a href="http://www.chromium.org/chromium-os/developer-guide">文档</a>巨长无比。因此有了这篇文章主要目的让大家看完后也可以编译<a href="http://zh.wikipedia.org/zh/Chromium_OS">Chromium OS</a></p>
@@ -127,7 +127,7 @@
 <li><p>编译包</p>
 <pre class="highlighted"><code class="bash">rjf@rjf-ubuntu:~/chromiumos<span class="variable">$cros_sdk</span> -- ./build_packages --board=<span class="variable">${BOARD}</span></code></pre>
 </li>
-<li><p>编译映像，存放于<code>${SOURCE_REPO}/src/build/images/${BOARD}/latest/</code></p>
+<li><p>编译映像，存放于<code>${SOURCE_REPO}/src/build/images/${BOARD}/latest/chromiumos_image.bin</code></p>
 <pre class="highlighted"><code class="bash">rjf@rjf-ubuntu:~/chromiumos<span class="variable">$cros_sdk</span> -- ./build_image --board=<span class="variable">${BOARD}</span></code></pre>
 </li>
 <li><p>生成<a href="http://www.vmware.com/">VMware</a>文件与映像存放在同一目录下，对于用虚拟机打开时无网络可在<code>xxx.vmx</code>文件中添加<code>ethernet0.virtualDev = &quot;e1000&quot;</code>。当然也可以选择<a href="http://www.chromium.org/chromium-os/developer-guide#TOC-Building-an-image-to-run-in-a-virtu">其他</a>的</p>
@@ -160,7 +160,7 @@ cros_sdk -- ./image_to_usb.sh --board=<span class="variable">${BOARD}</span></co
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-05-26T13:37:43.457Z
+				This website was last updated at 2013-05-26T13:47:53.187Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
