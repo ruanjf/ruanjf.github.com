@@ -3,7 +3,7 @@
 	<title>奔跑</title>
 	<link href="http://runjf.com/atom.xml" rel="self"/>
 	<link href="http://runjf.com"/>
-	<updated>2013-05-26T13:47:53.187Z</updated>
+	<updated>2013-05-26T13:50:12.048Z</updated>
 	<id>http://runjf.com</id>
 	<author>
 		<name>ruanjiefeng</name>
@@ -189,15 +189,15 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -236,7 +236,7 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -430,7 +430,7 @@ yuidoc --syntaxtype coffee -e .coffee .&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -642,7 +642,7 @@ C:\Users\rjf&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1072,7 +1072,7 @@ list = &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; num -= &lt;span 
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1313,7 +1313,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1528,7 +1528,7 @@ highlighted_code = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1741,15 +1741,15 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sun Sep 12 2010&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/install-oracle-10g-in-win7.html&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -1789,7 +1789,7 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1962,15 +1962,15 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -2010,7 +2010,7 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2169,15 +2169,15 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -2217,7 +2217,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2382,6 +2382,12 @@ The state of the socket is unknown.&lt;/p&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
+					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/Chromium-OS-build.html&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
@@ -2391,12 +2397,6 @@ The state of the socket is unknown.&lt;/p&gt;
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2430,7 +2430,7 @@ The state of the socket is unknown.&lt;/p&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2640,15 +2640,15 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/Chromium-OS-build.html&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/Chromium-OS-build.html&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -2694,7 +2694,7 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2881,7 +2881,7 @@ git clone git@192.168.1.103:testgit aa
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3041,7 +3041,7 @@ mvn -v &lt;span class=&quot;comment&quot;&gt;#测试是否配置正确&lt;/span&
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3215,7 +3215,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3378,7 +3378,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3610,7 +3610,7 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3881,7 +3881,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4025,15 +4025,15 @@ MIN_DISPLAY_COLORS=256
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -4073,7 +4073,7 @@ MIN_DISPLAY_COLORS=256
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4229,15 +4229,15 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4271,7 +4271,7 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4436,15 +4436,15 @@ $JAVA_HOME/lib/ tools.pack  转为  tools.jar&lt;br&gt;$JAVA_HOME/jre/lib/rt.pac
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -4483,7 +4483,7 @@ $JAVA_HOME/lib/ tools.pack  转为  tools.jar&lt;br&gt;$JAVA_HOME/jre/lib/rt.pac
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-26T13:47:53.187Z
+				This website was last updated at 2013-05-26T13:50:12.048Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
