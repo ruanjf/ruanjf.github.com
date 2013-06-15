@@ -3,7 +3,7 @@
 	<title>奔跑</title>
 	<link href="http://runjf.com/atom.xml" rel="self"/>
 	<link href="http://runjf.com"/>
-	<updated>2013-05-27T15:14:19.236Z</updated>
+	<updated>2013-06-15T07:43:34.145Z</updated>
 	<id>http://runjf.com</id>
 	<author>
 		<name>ruanjiefeng</name>
@@ -190,21 +190,21 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
+					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/linux-connection-number-query.html&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -237,7 +237,7 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -392,13 +392,13 @@ yuidoc --syntaxtype coffee -e .coffee .&lt;/code&gt;&lt;/pre&gt;
 				
 					&lt;li&gt;&lt;span&gt;Sun May 05 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/CoffeeScript-introduce&quot;&gt;CoffeeScript 常用语法介绍&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/CoffeeScript-introduce.html&quot;&gt;CoffeeScript 常用语法介绍&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun May 12 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/nodejs-install&quot;&gt;nodejs与npm安装&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/nodejs-install.html&quot;&gt;nodejs与npm安装&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -432,7 +432,7 @@ yuidoc --syntaxtype coffee -e .coffee .&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -611,7 +611,7 @@ C:\Users\rjf&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 				
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/use-yuidoc-generates-coffeescript-api&quot;&gt;使用YUIDoc生成CoffeeScript的API文档&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/use-yuidoc-generates-coffeescript-api.html&quot;&gt;使用YUIDoc生成CoffeeScript的API文档&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -645,7 +645,7 @@ C:\Users\rjf&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1042,7 +1042,7 @@ list = &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; num -= &lt;span 
 				
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/use-yuidoc-generates-coffeescript-api&quot;&gt;使用YUIDoc生成CoffeeScript的API文档&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/use-yuidoc-generates-coffeescript-api.html&quot;&gt;使用YUIDoc生成CoffeeScript的API文档&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -1076,7 +1076,7 @@ list = &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; num -= &lt;span 
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1318,7 +1318,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1500,7 +1500,7 @@ highlighted_code = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read
 				
 					&lt;li&gt;&lt;span&gt;Thu Mar 08 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/git-windows-install&quot;&gt;git windows 下搭建全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/git-windows-install.html&quot;&gt;git windows 下搭建全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -1534,7 +1534,7 @@ highlighted_code = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1744,25 +1744,25 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 				
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/Chromium-OS-build&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/Chromium-OS-build.html&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun Sep 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/install-oracle-10g-in-win7.html&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/linux-connection-number-query.html&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -1796,7 +1796,7 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1958,33 +1958,33 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-environment-variable.html&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-opts.html&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception.html&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2018,7 +2018,7 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2166,33 +2166,33 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-environment-variable.html&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception.html&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception.html&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2226,7 +2226,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2394,19 +2394,19 @@ The state of the socket is unknown.&lt;/p&gt;
 				
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/Chromium-OS-build&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/Chromium-OS-build.html&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2440,7 +2440,7 @@ The state of the socket is unknown.&lt;/p&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2653,25 +2653,25 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 				
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/Chromium-OS-build&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/Chromium-OS-build.html&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun Sep 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/install-oracle-10g-in-win7.html&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/linux-connection-number-query.html&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2705,7 +2705,7 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2859,7 +2859,7 @@ git clone git@192.168.1.103:testgit aa
 				
 					&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/base-on-github-blog-system.html&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2893,7 +2893,7 @@ git clone git@192.168.1.103:testgit aa
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3054,7 +3054,7 @@ mvn -v &lt;span class=&quot;comment&quot;&gt;#测试是否配置正确&lt;/span&
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3195,7 +3195,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				
 					&lt;li&gt;&lt;span&gt;Sun Sep 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/install-oracle-10g-in-win7.html&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -3229,7 +3229,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3393,7 +3393,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3566,33 +3566,33 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-environment-variable.html&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-opts.html&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception.html&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception.html&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -3626,7 +3626,7 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3838,33 +3838,33 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-environment-variable.html&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-opts.html&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception.html&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception.html&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -3898,7 +3898,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4043,21 +4043,21 @@ MIN_DISPLAY_COLORS=256
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
+					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Thu May 26 2011&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/to-svnserve-registered-into-windows-service.html&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4091,7 +4091,7 @@ MIN_DISPLAY_COLORS=256
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4230,33 +4230,33 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-environment-variable.html&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-opts.html&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception.html&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4290,7 +4290,7 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4444,33 +4444,33 @@ $JAVA_HOME/lib/ tools.pack  转为  tools.jar&lt;br&gt;$JAVA_HOME/jre/lib/rt.pac
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-opts.html&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception.html&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception.html&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4503,7 +4503,7 @@ $JAVA_HOME/lib/ tools.pack  转为  tools.jar&lt;br&gt;$JAVA_HOME/jre/lib/rt.pac
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-05-27T15:14:19.236Z
+				This website was last updated at 2013-06-15T07:43:34.145Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
