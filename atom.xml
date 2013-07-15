@@ -3,13 +3,515 @@
 	<title>奔跑</title>
 	<link href="http://runjf.com/atom.xml" rel="self"/>
 	<link href="http://runjf.com"/>
-	<updated>2013-06-15T07:43:34.145Z</updated>
+	<updated>2013-07-15T14:46:44.173Z</updated>
 	<id>http://runjf.com</id>
 	<author>
 		<name>ruanjiefeng</name>
 		<email>ruanjiefeng@gmail.com</email>
 	</author>
 
+	
+		<entry>
+			<title>获取git两次commit变化的文件</title>
+			<link href="http://runjf.com//posts/git-get-pull-files"/>
+			<updated>2013-07-15T14:24:00.000Z</updated>
+			<id>http://runjf.com//posts/git-get-pull-files</id>
+			<content type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns:wb=&quot;http://open.weibo.com/wb&quot;&gt;
+&lt;head&gt;
+	&lt;!-- Meta --&gt;
+	&lt;meta charset=&quot;utf-8&quot; /&gt;
+	&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+
+	&lt;!-- Use the .htaccess and remove these lines to avoid edge case issues.
+	   More info: h5bp.com/i/378 --&gt;
+	&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
+
+	&lt;!-- Our site title and description --&gt;
+	&lt;title&gt;获取git两次commit变化的文件 | 奔跑&lt;/title&gt;
+	&lt;meta name=&quot;description&quot; content=&quot;When your website appears in search results in say Google, the text here will be shown underneath your website's title.&quot; /&gt;
+	&lt;meta name=&quot;keywords&quot; content=&quot;place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website&quot; /&gt;
+	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
+
+	&lt;!-- Output DocPad produced meta elements --&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
+
+	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+
+	&lt;!-- Icons --&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;icons/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;icons/apple-touch-icon-144-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;icons/apple-touch-icon-114-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;icons/apple-touch-icon-72-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;icons/apple-touch-icon-57-precomposed.png&quot;&gt;
+
+	&lt;!-- Shims: IE6-8 support of HTML5 elements --&gt;
+	&lt;!--[if lt IE 9]&gt;
+		&lt;script async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+	&lt;![endif]--&gt;
+
+	&lt;!-- Styles --&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;!-- Markup --&gt;
+	&lt;div class=&quot;navbar navbar-fixed-top navbar-inverse&quot;&gt;
+		&lt;div class=&quot;navbar-inner&quot;&gt;
+			&lt;div class=&quot;container&quot;&gt;
+	        	&lt;button class=&quot;btn btn-navbar&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.nav-collapse&quot;&gt;
+		            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+		            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+		            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+	        	&lt;/button&gt;
+				&lt;a class=&quot;brand&quot; href=&quot;/&quot;&gt;Blog&lt;/a&gt;
+				&lt;div class=&quot;nav-collapse collapse&quot; style=&quot;height: 0px;&quot;&gt;
+					&lt;ul class=&quot;nav&quot;&gt;
+						
+							&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot; class=&quot;&quot;&gt;
+								&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;
+							&lt;/li&gt;
+						
+							&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/about&quot; class=&quot;&quot;&gt;
+								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
+							&lt;/li&gt;
+						
+						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
+					&lt;ul class=&quot;nav pull-right&quot;&gt;
+						&lt;li&gt;
+							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+		            &lt;form class=&quot;navbar-search pull-right&quot; action=&quot;http://203.208.46.146/search&quot; method=&quot;get&quot;&gt;
+		            	&lt;input type=&quot;hidden&quot; name=&quot;q&quot; value=&quot;site:www.runjf.com&quot;&gt;
+		            	&lt;input type=&quot;text&quot; name=&quot;q&quot; results=&quot;0&quot; class=&quot;search-query&quot; placeholder=&quot;Search&quot;&gt;
+		        	&lt;/form&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;container&quot;&gt;
+		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
+			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;获取git两次commit变化的文件&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于：2013年7月15日&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;转载请注明出处&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;获取git两次commit变化的文件&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;获取git两次commit变化的文件&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
+	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;由于在网络上无法找到git两次提交变化的文件（用&lt;a href=&quot;http://subversion.tigris.org/&quot;&gt;svn&lt;/a&gt;相对就简单多了），于是萌生了自己写个脚本实现该功能。
+至于为啥要这么用呢，为了这货&lt;a href=&quot;https://www.jenkins-ci.org/&quot;&gt;jenkins&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;用法&lt;/h4&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 工程根路径&lt;/span&gt;
+export wkp=&lt;span class=&quot;string&quot;&gt;&quot;/root/.jenkins/jobs/tw/workspace/&quot;&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# 需要提取变化文件的目录（包含子目录，可使用相对路径）&lt;/span&gt;
+export cpp=&lt;span class=&quot;string&quot;&gt;&quot;WebRoot/&quot;&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;# 提取的变化文件存放位置（可使用相对路径）&lt;/span&gt;
+export upn=&lt;span class=&quot;string&quot;&gt;&quot;update_tmp&quot;&lt;/span&gt;
+sh /root/git-get-pull-files.sh&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其中有几个文件需要注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;update_lastPull&lt;/code&gt;记录上次pull的commit SHA hash，&lt;code&gt;update_lastPull&lt;/code&gt;文件不存在则默认为全更新&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;${upn}/delFiles.txt&lt;/code&gt;记录已经被删除的文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;运行过程如下：&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;haskell&quot;&gt;&lt;span class=&quot;title&quot;&gt;rjf&lt;/span&gt;@rjf-ubuntu:~$ export wkp=&lt;span class=&quot;string&quot;&gt;&quot;/root/.jenkins/jobs/tw/workspace/&quot;&lt;/span&gt;
+&lt;span class=&quot;title&quot;&gt;rjf&lt;/span&gt;@rjf-ubuntu:~$ export upn=&lt;span class=&quot;string&quot;&gt;&quot;update_tmp&quot;&lt;/span&gt;
+&lt;span class=&quot;title&quot;&gt;rjf&lt;/span&gt;@rjf-ubuntu:~$ export cpp=&lt;span class=&quot;string&quot;&gt;&quot;WebRoot/&quot;&lt;/span&gt;
+&lt;span class=&quot;title&quot;&gt;rjf&lt;/span&gt;@rjf-ubuntu:~$ sh /root/git-get-pull-files.sh
+&lt;span class=&quot;title&quot;&gt;update&lt;/span&gt; dir &lt;span class=&quot;type&quot;&gt;WebRoot&lt;/span&gt;/
+&lt;span class=&quot;title&quot;&gt;update&lt;/span&gt; tmp update_tmp/
+&lt;span class=&quot;title&quot;&gt;update&lt;/span&gt; key update_lastPull
+&lt;span class=&quot;title&quot;&gt;update&lt;/span&gt; model: true
+&lt;span class=&quot;title&quot;&gt;backup&lt;/span&gt; update_tmp to update_tmp_bf8d59381bd6c62b4fa05cf1458e9a5f8d170a6f
+&lt;span class=&quot;title&quot;&gt;create&lt;/span&gt; update_tmp/
+&lt;span class=&quot;title&quot;&gt;copy&lt;/span&gt; files to update_tmp/
+&lt;span class=&quot;title&quot;&gt;update&lt;/span&gt; to commit &lt;span class=&quot;number&quot;&gt;34&lt;/span&gt;ddb49d49cd82767857c3759a0195a34b0c3deb
+&lt;span class=&quot;title&quot;&gt;rjf&lt;/span&gt;@rjf-ubuntu:~$&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;执行逻辑&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;git diff&lt;/code&gt;获取变化文件&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;awk&lt;/code&gt;拼装复制文件的代码片段&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;eval&lt;/code&gt;执行拼装好的代码片段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;主要代码片段如下：&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#lp  表示最近一次pull的commit id&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;#cpp 表示需要提取变化文件的目录&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;#upn 表示变化文件存放位置&lt;/span&gt;
+&lt;span class=&quot;comment&quot;&gt;#td  临时变量存储代码片段&lt;/span&gt;
+td=`git diff --diff-filter=[ADM] --name-status &lt;span class=&quot;variable&quot;&gt;$lp&lt;/span&gt; -- &lt;span class=&quot;variable&quot;&gt;$cpp&lt;/span&gt; | awk &lt;span class=&quot;string&quot;&gt;'
+    {
+      if ($1 == &quot;D&quot;) { 
+        { print &quot;echo &quot;$2&quot; &amp;gt;&amp;gt; &quot;uw&quot;delFiles.txt;&quot; }
+      } else {
+        { print &quot;mkdir -p \`dirname &quot;uw$2&quot;\`;&quot; }
+        { print &quot;\\\cp -f &quot;$2&quot; &quot;uw$2&quot;;&quot; }
+      } 
+    }
+'&lt;/span&gt; uw=&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;${upn}&lt;/span&gt;/&quot;&lt;/span&gt;`
+eval &lt;span class=&quot;variable&quot;&gt;$td&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;源代码如下：（or&lt;a href=&quot;https://gist.github.com/ruanjf/5999964&quot;&gt;这里&lt;/a&gt;）&lt;/h4&gt;
+&lt;script src=&quot;https://gist.github.com/ruanjf/5999964.js&quot;&gt;&lt;/script&gt;&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;footer&gt;
+	
+	&lt;section id=&quot;related&quot;&gt;
+		&lt;h3&gt;Related Posts&lt;/h3&gt;
+		&lt;nav class=&quot;linklist&quot;&gt;
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/Chromium-OS-build&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Thu Mar 08 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-windows-install&quot;&gt;git windows 下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+			
+				
+			
+		&lt;/nav&gt;
+	&lt;/section&gt;
+	
+&lt;/footer&gt;
+
+
+
+
+&lt;ul class=&quot;pager&quot;&gt;
+	
+		&lt;li class=&quot;previous disabled&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;&amp;larr; Newer&lt;/a&gt;&lt;/li&gt;
+	
+	
+	&lt;!-- &lt;li typeof=&quot;sioc:Page&quot; about=&quot;&quot;&gt;
+		&lt;a href=&quot;&quot; property=&quot;dc:title&quot;&gt;&lt;/a&gt;
+	&lt;/li&gt; --&gt;
+ 	
+		
+		&lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/monitoring&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+	
+&lt;/ul&gt;
+&lt;div id=&quot;comments&quot;&gt;
+	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
+&lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
+		&lt;/section&gt;
+		&lt;footer&gt;
+			&lt;br/&gt;
+			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
+			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
+				This website was last updated at 2013-07-15T14:46:44.173Z
+			&lt;/p&gt; --&gt;
+		&lt;/footer&gt;
+	&lt;/div&gt;&lt;!-- /container --&gt;
+
+	&lt;!-- Scripts --&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+		</entry>
+	
+		<entry>
+			<title>Linux下监控进程状态</title>
+			<link href="http://runjf.com//posts/monitoring"/>
+			<updated>2013-07-14T14:25:00.000Z</updated>
+			<id>http://runjf.com//posts/monitoring</id>
+			<content type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; xmlns:wb=&quot;http://open.weibo.com/wb&quot;&gt;
+&lt;head&gt;
+	&lt;!-- Meta --&gt;
+	&lt;meta charset=&quot;utf-8&quot; /&gt;
+	&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+
+	&lt;!-- Use the .htaccess and remove these lines to avoid edge case issues.
+	   More info: h5bp.com/i/378 --&gt;
+	&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;
+
+	&lt;!-- Our site title and description --&gt;
+	&lt;title&gt;Linux下监控进程状态 | 奔跑&lt;/title&gt;
+	&lt;meta name=&quot;description&quot; content=&quot;When your website appears in search results in say Google, the text here will be shown underneath your website's title.&quot; /&gt;
+	&lt;meta name=&quot;keywords&quot; content=&quot;place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website&quot; /&gt;
+	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
+
+	&lt;!-- Output DocPad produced meta elements --&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
+
+	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
+
+	&lt;!-- Icons --&gt;
+    &lt;link rel=&quot;shortcut icon&quot; href=&quot;icons/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;144x144&quot; href=&quot;icons/apple-touch-icon-144-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;114x114&quot; href=&quot;icons/apple-touch-icon-114-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; sizes=&quot;72x72&quot; href=&quot;icons/apple-touch-icon-72-precomposed.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon-precomposed&quot; href=&quot;icons/apple-touch-icon-57-precomposed.png&quot;&gt;
+
+	&lt;!-- Shims: IE6-8 support of HTML5 elements --&gt;
+	&lt;!--[if lt IE 9]&gt;
+		&lt;script async src=&quot;http://html5shim.googlecode.com/svn/trunk/html5.js&quot;&gt;&lt;/script&gt;
+	&lt;![endif]--&gt;
+
+	&lt;!-- Styles --&gt;
+	&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/bootstrap/css/bootstrap-responsive.min.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/vendor/highlight.js/styles/magula.css&quot; /&gt;&lt;link  rel=&quot;stylesheet&quot; href=&quot;/styles/style.css&quot; /&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;!-- Markup --&gt;
+	&lt;div class=&quot;navbar navbar-fixed-top navbar-inverse&quot;&gt;
+		&lt;div class=&quot;navbar-inner&quot;&gt;
+			&lt;div class=&quot;container&quot;&gt;
+	        	&lt;button class=&quot;btn btn-navbar&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.nav-collapse&quot;&gt;
+		            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+		            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+		            &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
+	        	&lt;/button&gt;
+				&lt;a class=&quot;brand&quot; href=&quot;/&quot;&gt;Blog&lt;/a&gt;
+				&lt;div class=&quot;nav-collapse collapse&quot; style=&quot;height: 0px;&quot;&gt;
+					&lt;ul class=&quot;nav&quot;&gt;
+						
+							&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/posts&quot; class=&quot;&quot;&gt;
+								&lt;a href=&quot;/pages/posts&quot; property=&quot;dc:title&quot;&gt;Archives&lt;/a&gt;
+							&lt;/li&gt;
+						
+							&lt;li typeof=&quot;sioc:Page&quot; about=&quot;/pages/about&quot; class=&quot;&quot;&gt;
+								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
+							&lt;/li&gt;
+						
+						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+					&lt;/ul&gt;
+					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
+					&lt;/div&gt;
+		        	&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
+						&lt;wb:follow-button uid=&quot;2214252563&quot; type=&quot;red_1&quot; width=&quot;67&quot; height=&quot;24&quot; &gt;&lt;/wb:follow-button&gt;
+					&lt;/div&gt;
+					&lt;ul class=&quot;nav pull-right&quot;&gt;
+						&lt;li&gt;
+							&lt;a href=&quot;/atom.xml&quot; rel=&quot;subscribe-rss&quot; title=&quot;subscribe via RSS&quot;&gt;RSS&lt;/a&gt;
+						&lt;/li&gt;
+					&lt;/ul&gt;
+		            &lt;form class=&quot;navbar-search pull-right&quot; action=&quot;http://203.208.46.146/search&quot; method=&quot;get&quot;&gt;
+		            	&lt;input type=&quot;hidden&quot; name=&quot;q&quot; value=&quot;site:www.runjf.com&quot;&gt;
+		            	&lt;input type=&quot;text&quot; name=&quot;q&quot; results=&quot;0&quot; class=&quot;search-query&quot; placeholder=&quot;Search&quot;&gt;
+		        	&lt;/form&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;container&quot;&gt;
+		&lt;section id=&quot;content&quot; class=&quot;content&quot;&gt;
+			&lt;article id=&quot;post&quot; class=&quot;post&quot;&gt;
+	&lt;h1&gt;Linux下监控进程状态&lt;/h1&gt;
+	&lt;br/&gt;
+	&lt;blockquote&gt;
+		&lt;div class=&quot;row&quot;&gt;
+			&lt;div class=&quot;span&quot;&gt;ruanjiefeng 发布于：2013年7月14日&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;转载请注明出处&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;wb:share-button count=&quot;n&quot; type=&quot;button&quot; title=&quot;Linux下监控进程状态&quot; size=&quot;middle&quot; appkey=&quot;2957178576&quot; relateuid=&quot;2214252563&quot; &gt;&lt;/wb:share-button&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;span&quot; style=&quot;height: 24px;&quot;&gt;
+				&lt;div id=&quot;qqwb_share__&quot; data-appkey=&quot;801351994&quot; data-icon=&quot;1&quot; data-counter=&quot;0&quot; data-content=&quot;Linux下监控进程状态&quot; data-richcontent=&quot;&quot; data-pic=&quot;&quot;&gt;&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/blockquote&gt;
+	&lt;div class=&quot;post-content&quot;&gt;&lt;p&gt;鉴于Google提供的&lt;a href=&quot;http://www.chromium.org/chromium-os/quick-start-guide&quot;&gt;文档&lt;/a&gt;存在很多坑，Google向来简约但是文档也简这就不应该了，其实还提供了一份完整的&lt;a href=&quot;http://www.chromium.org/chromium-os/developer-guide&quot;&gt;文档&lt;/a&gt;巨长无比。因此有了这篇文章主要目的让大家看完后也可以编译&lt;a href=&quot;http://zh.wikipedia.org/zh/Chromium_OS&quot;&gt;Chromium OS&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;前提条件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.ubuntu.com/&quot;&gt;Ubuntu&lt;/a&gt; Linux 12.04 版本切记实用&lt;/li&gt;
+&lt;li&gt;64的系统（为了编译可以快点）这里提供&lt;a href=&quot;http://releases.ubuntu.com/12.04/ubuntu-12.04.2-desktop-amd64.iso&quot;&gt;下载&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;一个可以使用sudo的账户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;下载源码&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;安装必要的软件&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt; rjf@rjf-ubuntu:~&lt;span class=&quot;variable&quot;&gt;$sudo&lt;/span&gt; apt-get install aptitude
+ rjf@rjf-ubuntu:~&lt;span class=&quot;variable&quot;&gt;$sudo&lt;/span&gt; aptitude install git-core gitk git-gui subversion curl&lt;/code&gt;&lt;/pre&gt;
+ 安装&lt;a href=&quot;http://dev.chromium.org/developers/how-tos/install-depot-tools&quot;&gt;depot_tools&lt;/a&gt;到你想要的目录（第一个坑，git提供的https访问不了不知为啥现改为http）&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt; rjf@rjf-ubuntu:~/chromiumos&lt;span class=&quot;variable&quot;&gt;$git&lt;/span&gt; clone http://chromium.googlesource.com/chromium/tools/depot_tools.git
+ rjf@rjf-ubuntu:~&lt;span class=&quot;variable&quot;&gt;$vi&lt;/span&gt; ~/.bashrc&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置环境&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt; rjf@rjf-ubuntu:~&lt;span class=&quot;variable&quot;&gt;$vi&lt;/span&gt; ~/.bashrc&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt; 在其最后添加如下内容到&lt;code&gt;.bashrc&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt; &lt;span class=&quot;comment&quot;&gt;# depot_tools安装目录&lt;/span&gt;
+ export PATH=&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$PATH&lt;/span&gt;&quot;&lt;/span&gt;:/usr/local/depot_tools
+ &lt;span class=&quot;comment&quot;&gt;# chromiumos存放目录，最好预留30G以上&lt;/span&gt;
+ export SOURCE_REPO=&lt;span class=&quot;variable&quot;&gt;${HOME}&lt;/span&gt;/chromiumos
+ &lt;span class=&quot;comment&quot;&gt;# 后两个选添一个即可想编译32位选择x86-generic、64选择amd64-generic&lt;/span&gt;
+ export BOARD=x86-generic
+ export BOARD=amd64-generic&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt; 内容添加完后记得关闭当前shell并打开新的shell进行下面的操作，不然配置不会生效&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载源码
+ 这里需要等上较长时间本来话了两个小时，没事可以看片去了&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt; rjf@rjf-ubuntu:~&lt;span class=&quot;variable&quot;&gt;$cd&lt;/span&gt; &lt;span class=&quot;variable&quot;&gt;${SOURCE_REPO}&lt;/span&gt;
+ rjf@rjf-ubuntu:~/chromiumos&lt;span class=&quot;variable&quot;&gt;$repo&lt;/span&gt; init -u https://git.chromium.org/chromiumos/manifest.git
+ rjf@rjf-ubuntu:~/chromiumos&lt;span class=&quot;variable&quot;&gt;$repo&lt;/span&gt; sync&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;编译源码&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;配置编译环境&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;rjf@rjf-ubuntu:~/chromiumos&lt;span class=&quot;variable&quot;&gt;$cros_sdk&lt;/span&gt; -- ./setup_board --board=&lt;span class=&quot;variable&quot;&gt;${BOARD}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编译包&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;rjf@rjf-ubuntu:~/chromiumos&lt;span class=&quot;variable&quot;&gt;$cros_sdk&lt;/span&gt; -- ./build_packages --board=&lt;span class=&quot;variable&quot;&gt;${BOARD}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编译映像，存放于&lt;code&gt;${SOURCE_REPO}/src/build/images/${BOARD}/latest/chromiumos_image.bin&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;rjf@rjf-ubuntu:~/chromiumos&lt;span class=&quot;variable&quot;&gt;$cros_sdk&lt;/span&gt; -- ./build_image --board=&lt;span class=&quot;variable&quot;&gt;${BOARD}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;生成&lt;a href=&quot;http://www.vmware.com/&quot;&gt;VMware&lt;/a&gt;文件与映像存放在同一目录下，对于用虚拟机打开时无网络可在&lt;code&gt;xxx.vmx&lt;/code&gt;文件中添加&lt;code&gt;ethernet0.virtualDev = &amp;quot;e1000&amp;quot;&lt;/code&gt;。当然也可以选择&lt;a href=&quot;http://www.chromium.org/chromium-os/developer-guide#TOC-Building-an-image-to-run-in-a-virtu&quot;&gt;其他&lt;/a&gt;的&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;rjf@rjf-ubuntu:~/chromiumos&lt;span class=&quot;variable&quot;&gt;$cros_sdk&lt;/span&gt; -- ./image_to_vm.sh --board=&lt;span class=&quot;variable&quot;&gt;${BOARD}&lt;/span&gt; --format=vmware&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;生成U盘映像&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;rjf@rjf-ubuntu:~/chromiumos&lt;span class=&quot;variable&quot;&gt;$cros_sdk&lt;/span&gt; -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${BOARD}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;关键命令整理&lt;/h4&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;sudo apt-get install aptitude
+sudo aptitude install git-core gitk git-gui subversion curl
+git clone http://chromium.googlesource.com/chromium/tools/depot_tools.git
+export PATH=&lt;span class=&quot;string&quot;&gt;&quot;&lt;span class=&quot;variable&quot;&gt;$PATH&lt;/span&gt;&quot;&lt;/span&gt;:/usr/local/depot_tools
+export SOURCE_REPO=&lt;span class=&quot;variable&quot;&gt;${HOME}&lt;/span&gt;/chromiumos
+export BOARD=x86-generic
+export BOARD=amd64-generic
+cd &lt;span class=&quot;variable&quot;&gt;${SOURCE_REPO}&lt;/span&gt;
+repo init -u https://git.chromium.org/chromiumos/manifest.git
+repo sync
+cros_sdk -- ./setup_board --board=&lt;span class=&quot;variable&quot;&gt;${BOARD}&lt;/span&gt;
+cros_sdk -- ./build_packages --board=&lt;span class=&quot;variable&quot;&gt;${BOARD}&lt;/span&gt;
+cros_sdk -- ./build_image --board=&lt;span class=&quot;variable&quot;&gt;${BOARD}&lt;/span&gt;
+cros_sdk -- ./image_to_vm.sh --board=&lt;span class=&quot;variable&quot;&gt;${BOARD}&lt;/span&gt; --format=vmware
+cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${BOARD}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/article&gt;
+
+&lt;footer&gt;
+	
+	&lt;section id=&quot;related&quot;&gt;
+		&lt;h3&gt;Related Posts&lt;/h3&gt;
+		&lt;nav class=&quot;linklist&quot;&gt;
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/Chromium-OS-build&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
+				
+			
+		&lt;/nav&gt;
+	&lt;/section&gt;
+	
+&lt;/footer&gt;
+
+
+
+
+&lt;ul class=&quot;pager&quot;&gt;
+	
+		
+		&lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;&amp;larr; Newer&lt;/a&gt;&lt;/li&gt;
+	
+	
+	&lt;!-- &lt;li typeof=&quot;sioc:Page&quot; about=&quot;&quot;&gt;
+		&lt;a href=&quot;&quot; property=&quot;dc:title&quot;&gt;&lt;/a&gt;
+	&lt;/li&gt; --&gt;
+ 	
+		
+		&lt;li class=&quot;next&quot;&gt;&lt;a href=&quot;/posts/Chromium-OS-build&quot;&gt;Older &amp;rarr;&lt;/a&gt;&lt;/li&gt;
+	
+&lt;/ul&gt;
+&lt;div id=&quot;comments&quot;&gt;
+	&lt;wb:comments url=&quot;auto&quot; border=&quot;n&quot; brandline=&quot;y&quot; width=&quot;auto&quot; skin=&quot;silver&quot; appkey=&quot;2957178576&quot;&gt;&lt;/wb:comments&gt;
+&lt;/div&gt;
+&lt;script src=&quot;http://mat1.gtimg.com/app/openjs/openjs.js#autoboot=no&amp;debug=no&quot;&gt;&lt;/script&gt;
+		&lt;/section&gt;
+		&lt;footer&gt;
+			&lt;br/&gt;
+			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
+			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
+				This website was last updated at 2013-07-15T14:46:44.173Z
+			&lt;/p&gt; --&gt;
+		&lt;/footer&gt;
+	&lt;/div&gt;&lt;!-- /container --&gt;
+
+	&lt;!-- Scripts --&gt;
+	&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/vendor/highlight.js/highlight.pack.js&quot;&gt;&lt;/script&gt;&lt;script defer=&quot;defer&quot;  src=&quot;/scripts/script.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2957178576&quot; type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+var _bdhmProtocol = ((&quot;https:&quot; == document.location.protocol) ? &quot; https://&quot; : &quot; http://&quot;);
+document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.baidu.com/h.js%3F774a0532b8cfbef912972f05fc00ff87' type='text/javascript'%3E%3C/script%3E&quot;));
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</content>
+		</entry>
 	
 		<entry>
 			<title>手动编译Chromium OS系统</title>
@@ -34,7 +536,7 @@
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -190,21 +692,33 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
+					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Sun Jul 14 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/linux-connection-number-query.html&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/monitoring&quot;&gt;Linux下监控进程状态&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -217,7 +731,8 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 
 &lt;ul class=&quot;pager&quot;&gt;
 	
-		&lt;li class=&quot;previous disabled&quot;&gt;&lt;a href=&quot;javascript:void(0)&quot;&gt;&amp;larr; Newer&lt;/a&gt;&lt;/li&gt;
+		
+		&lt;li class=&quot;previous&quot;&gt;&lt;a href=&quot;/posts/monitoring&quot;&gt;&amp;larr; Newer&lt;/a&gt;&lt;/li&gt;
 	
 	
 	&lt;!-- &lt;li typeof=&quot;sioc:Page&quot; about=&quot;&quot;&gt;
@@ -237,7 +752,7 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -278,7 +793,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -392,13 +907,13 @@ yuidoc --syntaxtype coffee -e .coffee .&lt;/code&gt;&lt;/pre&gt;
 				
 					&lt;li&gt;&lt;span&gt;Sun May 05 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/CoffeeScript-introduce.html&quot;&gt;CoffeeScript 常用语法介绍&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/CoffeeScript-introduce&quot;&gt;CoffeeScript 常用语法介绍&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun May 12 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/nodejs-install.html&quot;&gt;nodejs与npm安装&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/nodejs-install&quot;&gt;nodejs与npm安装&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -432,7 +947,7 @@ yuidoc --syntaxtype coffee -e .coffee .&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -473,7 +988,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -611,7 +1126,7 @@ C:\Users\rjf&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 				
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/use-yuidoc-generates-coffeescript-api.html&quot;&gt;使用YUIDoc生成CoffeeScript的API文档&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/use-yuidoc-generates-coffeescript-api&quot;&gt;使用YUIDoc生成CoffeeScript的API文档&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -645,7 +1160,7 @@ C:\Users\rjf&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -686,7 +1201,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -1042,7 +1557,7 @@ list = &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; num -= &lt;span 
 				
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/use-yuidoc-generates-coffeescript-api.html&quot;&gt;使用YUIDoc生成CoffeeScript的API文档&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/use-yuidoc-generates-coffeescript-api&quot;&gt;使用YUIDoc生成CoffeeScript的API文档&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -1076,7 +1591,7 @@ list = &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; num -= &lt;span 
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1117,7 +1632,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -1318,7 +1833,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1359,7 +1874,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -1500,7 +2015,13 @@ highlighted_code = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read
 				
 					&lt;li&gt;&lt;span&gt;Thu Mar 08 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/git-windows-install.html&quot;&gt;git windows 下搭建全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/git-windows-install&quot;&gt;git windows 下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -1534,7 +2055,7 @@ highlighted_code = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1575,7 +2096,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -1744,25 +2265,33 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 				
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/Chromium-OS-build.html&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/Chromium-OS-build&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun Sep 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/install-oracle-10g-in-win7.html&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/linux-connection-number-query.html&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Jul 14 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/monitoring&quot;&gt;Linux下监控进程状态&lt;/a&gt;&lt;/li&gt;
+				
+			
 				
 			
 		&lt;/nav&gt;
@@ -1796,7 +2325,7 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1837,7 +2366,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -1958,33 +2487,33 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable.html&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-opts.html&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception.html&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2018,7 +2547,7 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2059,7 +2588,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -2166,33 +2695,33 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable.html&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception.html&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception.html&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2226,7 +2755,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2267,7 +2796,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -2394,19 +2923,31 @@ The state of the socket is unknown.&lt;/p&gt;
 				
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/Chromium-OS-build.html&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/Chromium-OS-build&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Jul 14 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/monitoring&quot;&gt;Linux下监控进程状态&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2440,7 +2981,7 @@ The state of the socket is unknown.&lt;/p&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2481,7 +3022,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -2653,25 +3194,33 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 				
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/Chromium-OS-build.html&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/Chromium-OS-build&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun Sep 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/install-oracle-10g-in-win7.html&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/linux-connection-number-query.html&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Jul 14 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/monitoring&quot;&gt;Linux下监控进程状态&lt;/a&gt;&lt;/li&gt;
+				
+			
 				
 			
 		&lt;/nav&gt;
@@ -2705,7 +3254,7 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2746,7 +3295,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -2859,7 +3408,13 @@ git clone git@192.168.1.103:testgit aa
 				
 					&lt;li&gt;&lt;span&gt;Mon Sep 17 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/base-on-github-blog-system.html&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/base-on-github-blog-system&quot;&gt;windows下用github搭建静态博客（octopress）全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2893,7 +3448,7 @@ git clone git@192.168.1.103:testgit aa
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2934,7 +3489,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -3054,7 +3609,7 @@ mvn -v &lt;span class=&quot;comment&quot;&gt;#测试是否配置正确&lt;/span&
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3095,7 +3650,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -3195,7 +3750,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				
 					&lt;li&gt;&lt;span&gt;Sun Sep 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/install-oracle-10g-in-win7.html&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -3229,7 +3784,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3270,7 +3825,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -3393,7 +3948,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3434,7 +3989,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -3566,33 +4121,33 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable.html&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-opts.html&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception.html&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception.html&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -3626,7 +4181,7 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3667,7 +4222,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -3838,33 +4393,33 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
+					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable.html&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-opts.html&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception.html&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception.html&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -3898,7 +4453,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3939,7 +4494,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -4045,19 +4600,19 @@ MIN_DISPLAY_COLORS=256
 				
 					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux.html&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux.html&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Thu May 26 2011&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/to-svnserve-registered-into-windows-service.html&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4091,7 +4646,7 @@ MIN_DISPLAY_COLORS=256
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4132,7 +4687,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -4230,33 +4785,33 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
+					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable.html&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-opts.html&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception.html&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4290,7 +4845,7 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4331,7 +4886,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;meta name=&quot;author&quot; content=&quot;ruanjiefeng&quot; /&gt;
 
 	&lt;!-- Output DocPad produced meta elements --&gt;
-	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.31.6&quot;/&gt;
+	&lt;meta http-equiv=&quot;X-Powered-By&quot; content=&quot;DocPad v6.45.0&quot;/&gt;
 
 	&lt;!-- Mobile viewport optimized: h5bp.com/viewport --&gt;
 	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
@@ -4444,33 +4999,33 @@ $JAVA_HOME/lib/ tools.pack  转为  tools.jar&lt;br&gt;$JAVA_HOME/jre/lib/rt.pac
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-opts.html&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location.html&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Fri Dec 17 2010&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin.html&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/eclipse-or-myeclipse-add-plugin&quot;&gt;eclipse myeclipse 最好用的安装插件方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception.html&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Thu Aug 12 2010&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/difference-noclassdeffounderror-and-classnotfoundexception.html&quot;&gt;ClassNotFoundException和NoClassDefFoundError的区别&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Fri Feb 11 2011&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/unable-to-load-configuration-unknown-location&quot;&gt;Unable to load configuration unknown location&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4503,7 +5058,7 @@ $JAVA_HOME/lib/ tools.pack  转为  tools.jar&lt;br&gt;$JAVA_HOME/jre/lib/rt.pac
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-06-15T07:43:34.145Z
+				This website was last updated at 2013-07-15T14:46:44.173Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
