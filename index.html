@@ -86,61 +86,58 @@
 		
 		<!-- Main hero unit for a primary marketing message or call to action -->
 		<div class="hero-unit">
-			<h1>获取git两次commit变化的文件</h1>
+			<h1>Linux下监控进程状态</h1>
 		</div>
 		<article id="" class="post">
-			<div class="post-content"><p>由于在网络上无法找到git两次提交变化的文件（用<a href="http://subversion.tigris.org/">svn</a>相对就简单多了），于是萌生了自己写个脚本实现该功能。
-至于为啥要这么用呢，为了这货<a href="https://www.jenkins-ci.org/">jenkins</a></p>
+			<div class="post-content"><p>写什么脚本都是有原因的，由于在写的时候没找到好用的监控工具，不过后面发现了<a href="http://nmon.sourceforge.net/">nmon</a>，脚本中有些东西还是可以记下来的，这边就大概介绍下</p>
 <h4>用法</h4>
-<pre class="highlighted"><code class="bash"><span class="comment"># 工程根路径</span>
-export wkp=<span class="string">"/root/.jenkins/jobs/tw/workspace/"</span>
-<span class="comment"># 需要提取变化文件的目录（包含子目录，可使用相对路径）</span>
-export cpp=<span class="string">"WebRoot/"</span>
-<span class="comment"># 提取的变化文件存放位置（可使用相对路径）</span>
-export upn=<span class="string">"update_tmp"</span>
-sh /root/git-get-pull-files.sh</code></pre>
+<pre class="highlighted"><code class="bash"><span class="comment"># 进入到脚本所在目录</span>
+cd /root/monitoring/
+<span class="comment"># 运行脚本</span>
+nohup monitoring.sh &amp;
+<span class="comment"># 当然也可以一步合成</span>
+cd /root/monitoring/ &amp;&amp; nohup monitoring.sh &amp;</code></pre>
 <p>其中有几个文件需要注意：</p>
 <ul>
-<li><code>update_lastPull</code>记录上次pull的commit SHA hash，<code>update_lastPull</code>文件不存在则默认为全更新</li>
-<li><code>${upn}/delFiles.txt</code>记录已经被删除的文件</li>
+<li><code>config.ini</code>记录了一些配置信息，原始是用来监控java的情况的（ps：本人从事j2ee的开发因此才监控与web容器相关的信息）</li>
+<li><code>monitoring.sh</code>监控程序主体</li>
 </ul>
-<p>运行过程如下：</p>
-<pre class="highlighted"><code class="haskell"><span class="title">rjf</span>@rjf-ubuntu:~$ export wkp=<span class="string">"/root/.jenkins/jobs/tw/workspace/"</span>
-<span class="title">rjf</span>@rjf-ubuntu:~$ export upn=<span class="string">"update_tmp"</span>
-<span class="title">rjf</span>@rjf-ubuntu:~$ export cpp=<span class="string">"WebRoot/"</span>
-<span class="title">rjf</span>@rjf-ubuntu:~$ sh /root/git-get-pull-files.sh
-<span class="title">update</span> dir <span class="type">WebRoot</span>/
-<span class="title">update</span> tmp update_tmp/
-<span class="title">update</span> key update_lastPull
-<span class="title">update</span> model: true
-<span class="title">backup</span> update_tmp to update_tmp_bf8d59381bd6c62b4fa05cf1458e9a5f8d170a6f
-<span class="title">create</span> update_tmp/
-<span class="title">copy</span> files to update_tmp/
-<span class="title">update</span> to commit <span class="number">34</span>ddb49d49cd82767857c3759a0195a34b0c3deb
-<span class="title">rjf</span>@rjf-ubuntu:~$</code></pre>
-<h4>执行逻辑</h4>
+<p>单次监控记录结果如下：</p>
+<pre class="highlighted"><code class="vala">[<span class="number">2012</span>-<span class="number">10</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">02</span>:<span class="number">20</span>] cpu=<span class="number">0</span> mem=<span class="number">8.6</span> netstat_p=<span class="number">13</span> netstat_t=<span class="number">41</span> netstat_a=<span class="number">450</span> lsof_p=<span class="number">436</span> lsof_a=<span class="number">6346</span>
+<span class="preprocessor"># 这里详细介绍下各项的含义（注：记录的信息都是针对监控进程当时的瞬间信息，下面就不在重复）</span>
+<span class="preprocessor"># cpu cpu的使用情况</span>
+<span class="preprocessor"># mem 内存的使用情况</span>
+<span class="preprocessor"># netstat_p 进程相关的网络连接数(相对于WEB应用这个还是挺重要的指标)</span>
+<span class="preprocessor"># netstat_t [TCP](http://zh.wikipedia.org/zh/TCP)相关的网络连接数</span>
+<span class="preprocessor"># netstat_a 总的网络连接数</span>
+<span class="preprocessor"># lsof_p 进程的文件打开数（被这货坑过一次，程序的各项指标正常但是无法访问，这个下次发文细讲）</span>
+<span class="preprocessor"># lsof_a 系统总的文件打开数</span></code></pre>
+<h4>配置说明</h4>
+<p>这边列出几点可能需要修改的配置，配置文件修改后自动识别，并将在下次执行监控是生效，无需重新启动</p>
+<pre class="highlighted"><code class="vala"><span class="preprocessor"># 监控程序(默认监听init)</span>
+p_name=java
+
+<span class="preprocessor"># 监控时间间隔（单位秒）</span>
+s_time=<span class="number">900</span>
+
+<span class="preprocessor"># 监控cpu上限（cpu使用率参考top）</span>
+max_cpu=<span class="number">49</span>
+
+<span class="preprocessor"># 监控内存上限（mem使用百分比参考top）</span>
+max_mem=<span class="number">40</span>
+
+<span class="preprocessor"># 监控连接数（程序的）</span>
+max_netstat=<span class="number">400</span>
+
+<span class="preprocessor"># 文件打开最大数</span>
+max_lsof=<span class="number">10000</span></code></pre>
+<h4>有价值的地方</h4>
 <ul>
-<li>使用<code>git diff</code>获取变化文件</li>
-<li>使用<code>awk</code>拼装复制文件的代码片段</li>
-<li>使用<code>eval</code>执行拼装好的代码片段</li>
+<li><code>$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</code>获得脚步所在的目录</li>
+<li><code>${#runs[@]}</code>获取数组<code>runs</code>的长度，可用于累加赋值<code>runs[${#runs[@]}]=$value</code></li>
+<li><code>for i in $(seq ${#runs[@]})</code>执行命令并返回结果给for</li>
 </ul>
-<p>主要代码片段如下：</p>
-<pre class="highlighted"><code class="bash"><span class="comment">#lp  表示最近一次pull的commit id</span>
-<span class="comment">#cpp 表示需要提取变化文件的目录</span>
-<span class="comment">#upn 表示变化文件存放位置</span>
-<span class="comment">#td  临时变量存储代码片段</span>
-td=`git diff --diff-filter=[ADM] --name-status <span class="variable">$lp</span> -- <span class="variable">$cpp</span> | awk <span class="string">'
-    {
-      if ($1 == "D") { 
-        { print "echo "$2" &gt;&gt; "uw"delFiles.txt;" }
-      } else {
-        { print "mkdir -p \`dirname "uw$2"\`;" }
-        { print "\\\cp -f "$2" "uw$2";" }
-      } 
-    }
-'</span> uw=<span class="string">"<span class="variable">${upn}</span>/"</span>`
-eval <span class="variable">$td</span></code></pre>
-<h4>源代码如下：（or<a href="https://gist.github.com/ruanjf/5999964">这里</a>）</h4>
+<h4>源代码如下：（or <a href="https://gist.github.com/ruanjf/5999964">这里</a>）</h4>
 <script src="https://gist.github.com/ruanjf/5999964.js"></script><div>
 		</article>
 	</div>

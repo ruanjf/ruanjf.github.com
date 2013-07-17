@@ -86,7 +86,7 @@
 	<br/>
 	<blockquote>
 		<div class="row">
-			<div class="span">ruanjiefeng 发布于：2013年7月14日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
+			<div class="span">ruanjiefeng 发布于：2013年7月17日&nbsp;&nbsp;&nbsp;&nbsp;转载请注明出处</div>
 			<div class="span" style="height: 24px;">
 				<wb:share-button count="n" type="button" title="Linux下监控进程状态" size="middle" appkey="2957178576" relateuid="2214252563" ></wb:share-button>
 			</div>
@@ -95,74 +95,56 @@
 			</div>
 		</div>
 	</blockquote>
-	<div class="post-content"><p>鉴于Google提供的<a href="http://www.chromium.org/chromium-os/quick-start-guide">文档</a>存在很多坑，Google向来简约但是文档也简这就不应该了，其实还提供了一份完整的<a href="http://www.chromium.org/chromium-os/developer-guide">文档</a>巨长无比。因此有了这篇文章主要目的让大家看完后也可以编译<a href="http://zh.wikipedia.org/zh/Chromium_OS">Chromium OS</a></p>
-<h4>前提条件</h4>
+	<div class="post-content"><p>写什么脚本都是有原因的，由于在写的时候没找到好用的监控工具，不过后面发现了<a href="http://nmon.sourceforge.net/">nmon</a>，脚本中有些东西还是可以记下来的，这边就大概介绍下</p>
+<h4>用法</h4>
+<pre class="highlighted"><code class="bash"><span class="comment"># 进入到脚本所在目录</span>
+cd /root/monitoring/
+<span class="comment"># 运行脚本</span>
+nohup monitoring.sh &amp;
+<span class="comment"># 当然也可以一步合成</span>
+cd /root/monitoring/ &amp;&amp; nohup monitoring.sh &amp;</code></pre>
+<p>其中有几个文件需要注意：</p>
 <ul>
-<li><a href="http://www.ubuntu.com/">Ubuntu</a> Linux 12.04 版本切记实用</li>
-<li>64的系统（为了编译可以快点）这里提供<a href="http://releases.ubuntu.com/12.04/ubuntu-12.04.2-desktop-amd64.iso">下载</a></li>
-<li>一个可以使用sudo的账户</li>
+<li><code>config.ini</code>记录了一些配置信息，原始是用来监控java的情况的（ps：本人从事j2ee的开发因此才监控与web容器相关的信息）</li>
+<li><code>monitoring.sh</code>监控程序主体</li>
 </ul>
-<h4>下载源码</h4>
+<p>单次监控记录结果如下：</p>
+<pre class="highlighted"><code class="vala">[<span class="number">2012</span>-<span class="number">10</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">02</span>:<span class="number">20</span>] cpu=<span class="number">0</span> mem=<span class="number">8.6</span> netstat_p=<span class="number">13</span> netstat_t=<span class="number">41</span> netstat_a=<span class="number">450</span> lsof_p=<span class="number">436</span> lsof_a=<span class="number">6346</span>
+<span class="preprocessor"># 这里详细介绍下各项的含义（注：记录的信息都是针对监控进程当时的瞬间信息，下面就不在重复）</span>
+<span class="preprocessor"># cpu cpu的使用情况</span>
+<span class="preprocessor"># mem 内存的使用情况</span>
+<span class="preprocessor"># netstat_p 进程相关的网络连接数(相对于WEB应用这个还是挺重要的指标)</span>
+<span class="preprocessor"># netstat_t [TCP](http://zh.wikipedia.org/zh/TCP)相关的网络连接数</span>
+<span class="preprocessor"># netstat_a 总的网络连接数</span>
+<span class="preprocessor"># lsof_p 进程的文件打开数（被这货坑过一次，程序的各项指标正常但是无法访问，这个下次发文细讲）</span>
+<span class="preprocessor"># lsof_a 系统总的文件打开数</span></code></pre>
+<h4>配置说明</h4>
+<p>这边列出几点可能需要修改的配置，配置文件修改后自动识别，并将在下次执行监控是生效，无需重新启动</p>
+<pre class="highlighted"><code class="vala"><span class="preprocessor"># 监控程序(默认监听init)</span>
+p_name=java
+
+<span class="preprocessor"># 监控时间间隔（单位秒）</span>
+s_time=<span class="number">900</span>
+
+<span class="preprocessor"># 监控cpu上限（cpu使用率参考top）</span>
+max_cpu=<span class="number">49</span>
+
+<span class="preprocessor"># 监控内存上限（mem使用百分比参考top）</span>
+max_mem=<span class="number">40</span>
+
+<span class="preprocessor"># 监控连接数（程序的）</span>
+max_netstat=<span class="number">400</span>
+
+<span class="preprocessor"># 文件打开最大数</span>
+max_lsof=<span class="number">10000</span></code></pre>
+<h4>有价值的地方</h4>
 <ul>
-<li>安装必要的软件<pre class="highlighted"><code class="bash"> rjf@rjf-ubuntu:~<span class="variable">$sudo</span> apt-get install aptitude
- rjf@rjf-ubuntu:~<span class="variable">$sudo</span> aptitude install git-core gitk git-gui subversion curl</code></pre>
- 安装<a href="http://dev.chromium.org/developers/how-tos/install-depot-tools">depot_tools</a>到你想要的目录（第一个坑，git提供的https访问不了不知为啥现改为http）<pre class="highlighted"><code class="bash"> rjf@rjf-ubuntu:~/chromiumos<span class="variable">$git</span> clone http://chromium.googlesource.com/chromium/tools/depot_tools.git
- rjf@rjf-ubuntu:~<span class="variable">$vi</span> ~/.bashrc</code></pre>
-</li>
-<li><p>配置环境</p>
-<pre class="highlighted"><code class="bash"> rjf@rjf-ubuntu:~<span class="variable">$vi</span> ~/.bashrc</code></pre>
-<p> 在其最后添加如下内容到<code>.bashrc</code></p>
-<pre class="highlighted"><code class="bash"> <span class="comment"># depot_tools安装目录</span>
- export PATH=<span class="string">"<span class="variable">$PATH</span>"</span>:/usr/local/depot_tools
- <span class="comment"># chromiumos存放目录，最好预留30G以上</span>
- export SOURCE_REPO=<span class="variable">${HOME}</span>/chromiumos
- <span class="comment"># 后两个选添一个即可想编译32位选择x86-generic、64选择amd64-generic</span>
- export BOARD=x86-generic
- export BOARD=amd64-generic</code></pre>
-<p> 内容添加完后记得关闭当前shell并打开新的shell进行下面的操作，不然配置不会生效</p>
-</li>
-<li><p>下载源码
- 这里需要等上较长时间本来话了两个小时，没事可以看片去了</p>
-<pre class="highlighted"><code class="bash"> rjf@rjf-ubuntu:~<span class="variable">$cd</span> <span class="variable">${SOURCE_REPO}</span>
- rjf@rjf-ubuntu:~/chromiumos<span class="variable">$repo</span> init -u https://git.chromium.org/chromiumos/manifest.git
- rjf@rjf-ubuntu:~/chromiumos<span class="variable">$repo</span> sync</code></pre>
-</li>
+<li><code>$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</code>获得脚步所在的目录</li>
+<li><code>${#runs[@]}</code>获取数组<code>runs</code>的长度，可用于累加赋值<code>runs[${#runs[@]}]=$value</code></li>
+<li><code>for i in $(seq ${#runs[@]})</code>执行命令并返回结果给for</li>
 </ul>
-<h4>编译源码</h4>
-<ul>
-<li><p>配置编译环境</p>
-<pre class="highlighted"><code class="bash">rjf@rjf-ubuntu:~/chromiumos<span class="variable">$cros_sdk</span> -- ./setup_board --board=<span class="variable">${BOARD}</span></code></pre>
-</li>
-<li><p>编译包</p>
-<pre class="highlighted"><code class="bash">rjf@rjf-ubuntu:~/chromiumos<span class="variable">$cros_sdk</span> -- ./build_packages --board=<span class="variable">${BOARD}</span></code></pre>
-</li>
-<li><p>编译映像，存放于<code>${SOURCE_REPO}/src/build/images/${BOARD}/latest/chromiumos_image.bin</code></p>
-<pre class="highlighted"><code class="bash">rjf@rjf-ubuntu:~/chromiumos<span class="variable">$cros_sdk</span> -- ./build_image --board=<span class="variable">${BOARD}</span></code></pre>
-</li>
-<li><p>生成<a href="http://www.vmware.com/">VMware</a>文件与映像存放在同一目录下，对于用虚拟机打开时无网络可在<code>xxx.vmx</code>文件中添加<code>ethernet0.virtualDev = &quot;e1000&quot;</code>。当然也可以选择<a href="http://www.chromium.org/chromium-os/developer-guide#TOC-Building-an-image-to-run-in-a-virtu">其他</a>的</p>
-<pre class="highlighted"><code class="bash">rjf@rjf-ubuntu:~/chromiumos<span class="variable">$cros_sdk</span> -- ./image_to_vm.sh --board=<span class="variable">${BOARD}</span> --format=vmware</code></pre>
-</li>
-<li><p>生成U盘映像</p>
-<pre class="highlighted"><code class="bash">rjf@rjf-ubuntu:~/chromiumos<span class="variable">$cros_sdk</span> -- ./image_to_usb.sh --board=<span class="variable">${BOARD}</span></code></pre>
-</li>
-</ul>
-<h4>关键命令整理</h4>
-<pre class="highlighted"><code class="bash">sudo apt-get install aptitude
-sudo aptitude install git-core gitk git-gui subversion curl
-git clone http://chromium.googlesource.com/chromium/tools/depot_tools.git
-export PATH=<span class="string">"<span class="variable">$PATH</span>"</span>:/usr/local/depot_tools
-export SOURCE_REPO=<span class="variable">${HOME}</span>/chromiumos
-export BOARD=x86-generic
-export BOARD=amd64-generic
-cd <span class="variable">${SOURCE_REPO}</span>
-repo init -u https://git.chromium.org/chromiumos/manifest.git
-repo sync
-cros_sdk -- ./setup_board --board=<span class="variable">${BOARD}</span>
-cros_sdk -- ./build_packages --board=<span class="variable">${BOARD}</span>
-cros_sdk -- ./build_image --board=<span class="variable">${BOARD}</span>
-cros_sdk -- ./image_to_vm.sh --board=<span class="variable">${BOARD}</span> --format=vmware
-cros_sdk -- ./image_to_usb.sh --board=<span class="variable">${BOARD}</span></code></pre>
-</div>
+<h4>源代码如下：（or <a href="https://gist.github.com/ruanjf/6000151">这里</a>）</h4>
+<script src="https://gist.github.com/ruanjf/6000151.js"></script></div>
 </article>
 
 <footer>
@@ -211,8 +193,7 @@ cros_sdk -- ./image_to_usb.sh --board=<span class="variable">${BOARD}</span></co
 
 <ul class="pager">
 	
-		
-		<li class="previous"><a href="/posts/git-get-pull-files">&larr; Newer</a></li>
+		<li class="previous disabled"><a href="javascript:void(0)">&larr; Newer</a></li>
 	
 	
 	<!-- <li typeof="sioc:Page" about="">
@@ -220,7 +201,7 @@ cros_sdk -- ./image_to_usb.sh --board=<span class="variable">${BOARD}</span></co
 	</li> -->
  	
 		
-		<li class="next"><a href="/posts/Chromium-OS-build">Older &rarr;</a></li>
+		<li class="next"><a href="/posts/git-get-pull-files">Older &rarr;</a></li>
 	
 </ul>
 <div id="comments">

@@ -111,19 +111,19 @@ sh /root/git-get-pull-files.sh</code></pre>
 <li><code>${upn}/delFiles.txt</code>记录已经被删除的文件</li>
 </ul>
 <p>运行过程如下：</p>
-<pre class="highlighted"><code class="haskell"><span class="title">rjf</span>@rjf-ubuntu:~$ export wkp=<span class="string">"/root/.jenkins/jobs/tw/workspace/"</span>
-<span class="title">rjf</span>@rjf-ubuntu:~$ export upn=<span class="string">"update_tmp"</span>
-<span class="title">rjf</span>@rjf-ubuntu:~$ export cpp=<span class="string">"WebRoot/"</span>
-<span class="title">rjf</span>@rjf-ubuntu:~$ sh /root/git-get-pull-files.sh
-<span class="title">update</span> dir <span class="type">WebRoot</span>/
-<span class="title">update</span> tmp update_tmp/
-<span class="title">update</span> key update_lastPull
-<span class="title">update</span> model: true
-<span class="title">backup</span> update_tmp to update_tmp_bf8d59381bd6c62b4fa05cf1458e9a5f8d170a6f
-<span class="title">create</span> update_tmp/
-<span class="title">copy</span> files to update_tmp/
-<span class="title">update</span> to commit <span class="number">34</span>ddb49d49cd82767857c3759a0195a34b0c3deb
-<span class="title">rjf</span>@rjf-ubuntu:~$</code></pre>
+<pre class="highlighted"><code class="bash">rjf@rjf-ubuntu:~$ export wkp=<span class="string">"/root/.jenkins/jobs/tw/workspace/"</span>
+rjf@rjf-ubuntu:~$ export upn=<span class="string">"update_tmp"</span>
+rjf@rjf-ubuntu:~$ export cpp=<span class="string">"WebRoot/"</span>
+rjf@rjf-ubuntu:~$ sh /root/git-get-pull-files.sh
+update dir WebRoot/
+update tmp update_tmp/
+update key update_lastPull
+update model: <span class="literal">true</span>
+backup update_tmp to update_tmp_bf8d59381bd6c62b4fa05cf1458e9a5f8d170a6f
+create update_tmp/
+copy files to update_tmp/
+update to commit 34ddb49d49cd82767857c3759a0195a34b0c3deb
+rjf@rjf-ubuntu:~$</code></pre>
 <h4>执行逻辑</h4>
 <ul>
 <li>使用<code>git diff</code>获取变化文件</li>
@@ -200,7 +200,8 @@ eval <span class="variable">$td</span></code></pre>
 
 <ul class="pager">
 	
-		<li class="previous disabled"><a href="javascript:void(0)">&larr; Newer</a></li>
+		
+		<li class="previous"><a href="/posts/monitoring">&larr; Newer</a></li>
 	
 	
 	<!-- <li typeof="sioc:Page" about="">
@@ -208,7 +209,7 @@ eval <span class="variable">$td</span></code></pre>
 	</li> -->
  	
 		
-		<li class="next"><a href="/posts/monitoring">Older &rarr;</a></li>
+		<li class="next"><a href="/posts/Chromium-OS-build">Older &rarr;</a></li>
 	
 </ul>
 <div id="comments">
