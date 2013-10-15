@@ -97,15 +97,15 @@
 	</blockquote>
 	<div class="post-content"><h3>windows</h3>
 <p>右键我的电脑-属性-高级-环境变量
-在系统变量里新建(jdk的安装路径)
-JAVA_HOME=F:\Java\jdk1.6.0_12
-Path=;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
-注意，这个要添加到系统原来的PATH前面，要像有些人说的加后面可能会不能编译。 
-Classpath=.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\jre\lib\rt.jar
-然后就是试下看是否配置成功了 
+在系统变量里新建(jdk的安装路径)</p>
+<pre class="highlighted"><code class="ini"><span class="setting">JAVA_HOME=<span class="value">F:\Java\jdk1.<span class="number">6.0</span>_12</span></span>
+<span class="setting">Path=<span class="value">;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</span></span></code></pre>
+<p>注意，这个要添加到系统原来的PATH前面，要像有些人说的加后面可能会不能编译。</p>
+<pre class="highlighted"><code class="perl">Classpath=.;<span class="variable">%JAVA_HOME</span><span class="variable">%\</span>lib\tools.jar;<span class="variable">%JAVA_HOME</span><span class="variable">%\</span>lib\dt.jar;<span class="variable">%JAVA_HOME</span><span class="variable">%\</span>jre\lib\rt.jar</code></pre>
+<p>然后就是试下看是否配置成功了 
 关于设置JAVA HOME的必要性：你若装TOMCAT或ORACLE等都会改变你的环境设置，总是改path，classpath容易出错也不方便，
 所以JAVA HOME就有了统一指向性，方便不易出错。
-开始-运行-CMD然后&quot;java&quot;、&quot;javac&quot;会出现很多操作说明，也可以&quot;java -version&quot;查看版本信息。
+开始-运行-CMD然后<code>java</code>、<code>javac</code>会出现很多操作说明，也可以<code>java -version</code>查看版本信息。
 再就是自己编个简单的JAVA文件试下了。</p>
 <h3>linux</h3>
 <p>在文件/etc/profile末尾添加如下内容(你的jdk所在位置)</p>
@@ -115,9 +115,10 @@ Classpath=.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\jre\lib
 export <span class="class">JAVA_HOME</span>
 export <span class="class">PATH</span>
 export <span class="class">CLASSPATH</span></code></pre>
-<p>注意:linux下面用冒号分割
-解决 java/lang/NoClassDefFoundError: java/lang/Object 错误
-$JAVA_HOME/lib/ tools.pack  转为  tools.jar<br>$JAVA_HOME/jre/lib/rt.pack   转为  rt.jar</p>
+<p>注意：linux下面用冒号分割
+解决<code>java/lang/NoClassDefFoundError: java/lang/Object</code> 错误
+<code>$JAVA_HOME/lib/ tools.pack</code>转为<code>tools.jar</code> 
+<code>$JAVA_HOME/jre/lib/rt.pack</code>转为<code>rt.jar</code></p>
 <pre class="highlighted"><code class="bash">[root@localhost lib]<span class="comment"># unpack200 rt.pack rt.jar</span></code></pre>
 </div>
 </article>
@@ -188,7 +189,7 @@ $JAVA_HOME/lib/ tools.pack  转为  tools.jar<br>$JAVA_HOME/jre/lib/rt.pack   �
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->

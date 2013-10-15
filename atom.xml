@@ -3,7 +3,7 @@
 	<title>奔跑</title>
 	<link href="http://runjf.com/atom.xml" rel="self"/>
 	<link href="http://runjf.com"/>
-	<updated>2013-07-15T14:46:44.173Z</updated>
+	<updated>2013-10-15T18:34:03.230Z</updated>
 	<id>http://runjf.com</id>
 	<author>
 		<name>ruanjiefeng</name>
@@ -161,8 +161,8 @@ max_lsof=&lt;span class=&quot;number&quot;&gt;10000&lt;/span&gt;&lt;/code&gt;&lt
 &lt;li&gt;&lt;code&gt;${#runs[@]}&lt;/code&gt;获取数组&lt;code&gt;runs&lt;/code&gt;的长度，可用于累加赋值&lt;code&gt;runs[${#runs[@]}]=$value&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;for i in $(seq ${#runs[@]})&lt;/code&gt;执行命令并返回结果给for&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;源代码如下：（or &lt;a href=&quot;https://gist.github.com/ruanjf/5999964&quot;&gt;这里&lt;/a&gt;）&lt;/h4&gt;
-&lt;script src=&quot;https://gist.github.com/ruanjf/5999964.js&quot;&gt;&lt;/script&gt;&lt;/div&gt;
+&lt;h4&gt;源代码如下：（or &lt;a href=&quot;https://gist.github.com/ruanjf/6000151&quot;&gt;这里&lt;/a&gt;）&lt;/h4&gt;
+&lt;script src=&quot;https://gist.github.com/ruanjf/6000151.js&quot;&gt;&lt;/script&gt;&lt;/div&gt;
 &lt;/article&gt;
 
 &lt;footer&gt;
@@ -175,6 +175,12 @@ max_lsof=&lt;span class=&quot;number&quot;&gt;10000&lt;/span&gt;&lt;/code&gt;&lt
 					&lt;li&gt;&lt;span&gt;Sun May 26 2013&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/Chromium-OS-build&quot;&gt;手动编译Chromium OS系统&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -193,12 +199,6 @@ max_lsof=&lt;span class=&quot;number&quot;&gt;10000&lt;/span&gt;&lt;/code&gt;&lt
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -231,7 +231,7 @@ max_lsof=&lt;span class=&quot;number&quot;&gt;10000&lt;/span&gt;&lt;/code&gt;&lt
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -437,9 +437,9 @@ eval &lt;span class=&quot;variable&quot;&gt;$td&lt;/span&gt;&lt;/code&gt;&lt;/pr
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Wed Jul 17 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/monitoring&quot;&gt;Linux下监控进程状态&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -477,7 +477,7 @@ eval &lt;span class=&quot;variable&quot;&gt;$td&lt;/span&gt;&lt;/code&gt;&lt;/pr
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -674,9 +674,21 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed Jul 17 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/monitoring&quot;&gt;Linux下监控进程状态&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -689,18 +701,6 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Wed Jul 17 2013&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/monitoring&quot;&gt;Linux下监控进程状态&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -734,7 +734,7 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -929,7 +929,7 @@ yuidoc --syntaxtype coffee -e .coffee .&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1142,7 +1142,7 @@ C:\Users\rjf&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1573,7 +1573,7 @@ list = &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; num -= &lt;span 
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1815,7 +1815,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1995,15 +1995,15 @@ highlighted_code = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Thu Mar 08 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/git-windows-install&quot;&gt;git windows 下搭建全过程&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Thu Mar 08 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-windows-install&quot;&gt;git windows 下搭建全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2037,7 +2037,7 @@ highlighted_code = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2251,6 +2251,12 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 				
 			
 				
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Sun Sep 12 2010&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
@@ -2263,15 +2269,9 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Wed Jul 17 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/monitoring&quot;&gt;Linux下监控进程状态&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -2307,7 +2307,7 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2481,15 +2481,15 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -2529,7 +2529,7 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2689,15 +2689,15 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -2737,7 +2737,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2909,18 +2909,6 @@ The state of the socket is unknown.&lt;/p&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
@@ -2930,6 +2918,18 @@ The state of the socket is unknown.&lt;/p&gt;
 					&lt;li&gt;&lt;span&gt;Wed Jul 17 2013&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/monitoring&quot;&gt;Linux下监控进程状态&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2963,7 +2963,7 @@ The state of the socket is unknown.&lt;/p&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3180,6 +3180,12 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 				
 			
 				
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Sun Sep 12 2010&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
@@ -3192,15 +3198,9 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Wed Jul 17 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/monitoring&quot;&gt;Linux下监控进程状态&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -3236,7 +3236,7 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3430,7 +3430,7 @@ git clone git@192.168.1.103:testgit aa
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3591,7 +3591,7 @@ mvn -v &lt;span class=&quot;comment&quot;&gt;#测试是否配置正确&lt;/span&
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3766,7 +3766,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3930,7 +3930,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4115,12 +4115,6 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
@@ -4130,6 +4124,12 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4163,7 +4163,7 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4381,12 +4381,6 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
@@ -4396,6 +4390,12 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -4435,7 +4435,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4580,6 +4580,12 @@ MIN_DISPLAY_COLORS=256
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
+					&lt;li&gt;&lt;span&gt;Thu May 26 2011&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
@@ -4589,12 +4595,6 @@ MIN_DISPLAY_COLORS=256
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Thu May 26 2011&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4628,7 +4628,7 @@ MIN_DISPLAY_COLORS=256
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4773,12 +4773,6 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
@@ -4788,6 +4782,12 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -4827,7 +4827,7 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4949,15 +4949,15 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 	&lt;/blockquote&gt;
 	&lt;div class=&quot;post-content&quot;&gt;&lt;h3&gt;windows&lt;/h3&gt;
 &lt;p&gt;右键我的电脑-属性-高级-环境变量
-在系统变量里新建(jdk的安装路径)
-JAVA_HOME=F:\Java\jdk1.6.0_12
-Path=;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
-注意，这个要添加到系统原来的PATH前面，要像有些人说的加后面可能会不能编译。 
-Classpath=.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\jre\lib\rt.jar
-然后就是试下看是否配置成功了 
+在系统变量里新建(jdk的安装路径)&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;ini&quot;&gt;&lt;span class=&quot;setting&quot;&gt;JAVA_HOME=&lt;span class=&quot;value&quot;&gt;F:\Java\jdk1.&lt;span class=&quot;number&quot;&gt;6.0&lt;/span&gt;_12&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;setting&quot;&gt;Path=&lt;span class=&quot;value&quot;&gt;;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;注意，这个要添加到系统原来的PATH前面，要像有些人说的加后面可能会不能编译。&lt;/p&gt;
+&lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;perl&quot;&gt;Classpath=.;&lt;span class=&quot;variable&quot;&gt;%JAVA_HOME&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;%\&lt;/span&gt;lib\tools.jar;&lt;span class=&quot;variable&quot;&gt;%JAVA_HOME&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;%\&lt;/span&gt;lib\dt.jar;&lt;span class=&quot;variable&quot;&gt;%JAVA_HOME&lt;/span&gt;&lt;span class=&quot;variable&quot;&gt;%\&lt;/span&gt;jre\lib\rt.jar&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后就是试下看是否配置成功了 
 关于设置JAVA HOME的必要性：你若装TOMCAT或ORACLE等都会改变你的环境设置，总是改path，classpath容易出错也不方便，
 所以JAVA HOME就有了统一指向性，方便不易出错。
-开始-运行-CMD然后&amp;quot;java&amp;quot;、&amp;quot;javac&amp;quot;会出现很多操作说明，也可以&amp;quot;java -version&amp;quot;查看版本信息。
+开始-运行-CMD然后&lt;code&gt;java&lt;/code&gt;、&lt;code&gt;javac&lt;/code&gt;会出现很多操作说明，也可以&lt;code&gt;java -version&lt;/code&gt;查看版本信息。
 再就是自己编个简单的JAVA文件试下了。&lt;/p&gt;
 &lt;h3&gt;linux&lt;/h3&gt;
 &lt;p&gt;在文件/etc/profile末尾添加如下内容(你的jdk所在位置)&lt;/p&gt;
@@ -4967,9 +4967,10 @@ Classpath=.;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\jre\lib
 export &lt;span class=&quot;class&quot;&gt;JAVA_HOME&lt;/span&gt;
 export &lt;span class=&quot;class&quot;&gt;PATH&lt;/span&gt;
 export &lt;span class=&quot;class&quot;&gt;CLASSPATH&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;注意:linux下面用冒号分割
-解决 java/lang/NoClassDefFoundError: java/lang/Object 错误
-$JAVA_HOME/lib/ tools.pack  转为  tools.jar&lt;br&gt;$JAVA_HOME/jre/lib/rt.pack   转为  rt.jar&lt;/p&gt;
+&lt;p&gt;注意：linux下面用冒号分割
+解决&lt;code&gt;java/lang/NoClassDefFoundError: java/lang/Object&lt;/code&gt; 错误
+&lt;code&gt;$JAVA_HOME/lib/ tools.pack&lt;/code&gt;转为&lt;code&gt;tools.jar&lt;/code&gt; 
+&lt;code&gt;$JAVA_HOME/jre/lib/rt.pack&lt;/code&gt;转为&lt;code&gt;rt.jar&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&quot;highlighted&quot;&gt;&lt;code class=&quot;bash&quot;&gt;[root@localhost lib]&lt;span class=&quot;comment&quot;&gt;# unpack200 rt.pack rt.jar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/article&gt;
@@ -5040,7 +5041,7 @@ $JAVA_HOME/lib/ tools.pack  转为  tools.jar&lt;br&gt;$JAVA_HOME/jre/lib/rt.pac
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-07-15T14:46:44.173Z
+				This website was last updated at 2013-10-15T18:34:03.230Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
