@@ -3,7 +3,7 @@
 	<title>奔跑</title>
 	<link href="http://runjf.com/atom.xml" rel="self"/>
 	<link href="http://runjf.com"/>
-	<updated>2013-10-15T18:34:03.230Z</updated>
+	<updated>2013-10-15T18:37:38.912Z</updated>
 	<id>http://runjf.com</id>
 	<author>
 		<name>ruanjiefeng</name>
@@ -76,7 +76,8 @@
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -178,27 +179,27 @@ max_lsof=&lt;span class=&quot;number&quot;&gt;10000&lt;/span&gt;&lt;/code&gt;&lt
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -231,7 +232,7 @@ max_lsof=&lt;span class=&quot;number&quot;&gt;10000&lt;/span&gt;&lt;/code&gt;&lt
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -314,7 +315,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -477,7 +479,7 @@ eval &lt;span class=&quot;variable&quot;&gt;$td&lt;/span&gt;&lt;/code&gt;&lt;/pr
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -560,7 +562,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -674,15 +677,15 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -692,15 +695,15 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -734,7 +737,7 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -817,7 +820,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -929,7 +933,7 @@ yuidoc --syntaxtype coffee -e .coffee .&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1012,7 +1016,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -1142,7 +1147,7 @@ C:\Users\rjf&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1225,7 +1230,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -1573,7 +1579,7 @@ list = &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; num -= &lt;span 
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1656,7 +1662,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -1815,7 +1822,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1898,7 +1905,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -1995,15 +2003,15 @@ highlighted_code = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Thu Mar 08 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/git-windows-install&quot;&gt;git windows 下搭建全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2037,7 +2045,7 @@ highlighted_code = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2120,7 +2128,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -2251,6 +2260,12 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 				
 			
 				
+					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
@@ -2260,12 +2275,6 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 					&lt;li&gt;&lt;span&gt;Sun Sep 12 2010&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -2307,7 +2316,7 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2390,7 +2399,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -2481,15 +2491,15 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -2529,7 +2539,7 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2612,7 +2622,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -2689,15 +2700,15 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -2737,7 +2748,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2820,7 +2831,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -2921,15 +2933,15 @@ The state of the socket is unknown.&lt;/p&gt;
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Sun Sep 16 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/set-oracle-services-in-linux&quot;&gt;Linux下设置oracle 10g 服务以及实例自动启动方法&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -2963,7 +2975,7 @@ The state of the socket is unknown.&lt;/p&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3046,7 +3058,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -3180,6 +3193,12 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 				
 			
 				
+					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Mon Jul 15 2013&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/git-get-pull-files&quot;&gt;获取git两次commit变化的文件&lt;/a&gt;&lt;/li&gt;
@@ -3189,12 +3208,6 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 					&lt;li&gt;&lt;span&gt;Sun Sep 12 2010&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/install-oracle-10g-in-win7&quot;&gt;win7下安装oracle 10g&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Wed May 02 2012&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/linux-connection-number-query&quot;&gt;linux connection number query&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -3236,7 +3249,7 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3319,7 +3332,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -3430,7 +3444,7 @@ git clone git@192.168.1.103:testgit aa
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3513,7 +3527,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -3591,7 +3606,7 @@ mvn -v &lt;span class=&quot;comment&quot;&gt;#测试是否配置正确&lt;/span&
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3674,7 +3689,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -3766,7 +3782,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3849,7 +3865,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -3930,7 +3947,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4013,7 +4030,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -4115,6 +4133,12 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 				
 			
 				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
@@ -4124,12 +4148,6 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4163,7 +4181,7 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4246,7 +4264,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -4381,6 +4400,12 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				
 			
 				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
@@ -4390,12 +4415,6 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -4435,7 +4454,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4518,7 +4537,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -4580,9 +4600,9 @@ MIN_DISPLAY_COLORS=256
 		&lt;nav class=&quot;linklist&quot;&gt;
 			
 				
-					&lt;li&gt;&lt;span&gt;Thu May 26 2011&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -4592,9 +4612,9 @@ MIN_DISPLAY_COLORS=256
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Sun Apr 22 2012&lt;/span&gt;
+					&lt;li&gt;&lt;span&gt;Thu May 26 2011&lt;/span&gt;
 					&amp;raquo;
-					&lt;a href=&quot;/posts/oracle-10g-install-in-linux&quot;&gt;linux下oracle 10g 安装全过程&lt;/a&gt;&lt;/li&gt;
+					&lt;a href=&quot;/posts/to-svnserve-registered-into-windows-service&quot;&gt;把 svnserve 注册成 windows service 的正确命令&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4628,7 +4648,7 @@ MIN_DISPLAY_COLORS=256
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4711,7 +4731,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -4773,6 +4794,12 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 				
 			
 				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-class-dot-forname-classname-classnotfoundexception&quot;&gt;java Class.forName(className) ClassNotFoundException异常&lt;/a&gt;&lt;/li&gt;
@@ -4782,12 +4809,6 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -4827,7 +4848,7 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4910,7 +4931,8 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 								&lt;a href=&quot;/pages/about&quot; property=&quot;dc:title&quot;&gt;About&lt;/a&gt;
 							&lt;/li&gt;
 						
-						&lt;li&gt;&lt;a href=&quot;http://www.runjf.com/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/drag/apidocs/&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
+						&lt;li&gt;&lt;a href=&quot;/sacc-2013.htm&quot; target=&quot;_blank&quot;&gt;DragApi&lt;/a&gt;&lt;/li&gt;
 					&lt;/ul&gt;
 					&lt;div class=&quot;nav pull-right&quot; style=&quot;margin-top: 9px;&quot;&gt;
 						&lt;iframe src=&quot;http://follow.v.t.qq.com/index.php?c=follow&amp;a=quick&amp;name=imeego&amp;style=5&amp;t=1367644516249&amp;f=0&quot; frameborder=&quot;0&quot; scrolling=&quot;auto&quot; width=&quot;125&quot; height=&quot;24&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; allowtransparency=&quot;true&quot;&gt;&lt;/iframe&gt;
@@ -5041,7 +5063,7 @@ export &lt;span class=&quot;class&quot;&gt;CLASSPATH&lt;/span&gt;&lt;/code&gt;&l
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-10-15T18:34:03.230Z
+				This website was last updated at 2013-10-15T18:37:38.912Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
