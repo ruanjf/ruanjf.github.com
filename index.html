@@ -87,59 +87,46 @@
 		
 		<!-- Main hero unit for a primary marketing message or call to action -->
 		<div class="hero-unit">
-			<h1>Linux下监控进程状态</h1>
+			<h1>Chrome Debugger 那些你应该知道的功能</h1>
 		</div>
 		<article id="" class="post">
-			<div class="post-content"><p>写什么脚本都是有原因的，由于在写的时候没找到好用的监控工具，不过后面发现了<a href="http://nmon.sourceforge.net/">nmon</a>，脚本中有些东西还是可以记下来的，这边就大概介绍下</p>
-<h4>用法</h4>
-<pre class="highlighted"><code class="bash"><span class="comment"># 进入到脚本所在目录</span>
-cd /root/monitoring/
-<span class="comment"># 运行脚本</span>
-nohup monitoring.sh &amp;
-<span class="comment"># 当然也可以一步合成</span>
-cd /root/monitoring/ &amp;&amp; nohup monitoring.sh &amp;</code></pre>
-<p>其中有几个文件需要注意：</p>
+			<div class="post-content"><p>做前端开发应该都了解浏览器，这里主要介绍<a href="https://chrome.google.com">Chrome</a>全文参考<a href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging">chrome-developer-tools javascript-debugging</a>。如果有Eclipse Debug的经验应该很好理解。Chrome Debugger还可以用于调试nodejs应用这个以后写文章介绍</p>
+<hr>
+<h2>基础调试</h2>
 <ul>
-<li><code>config.ini</code>记录了一些配置信息，原始是用来监控java的情况的（ps：本人从事j2ee的开发因此才监控与web容器相关的信息）</li>
-<li><code>monitoring.sh</code>监控程序主体</li>
+<li><p>格式化压缩的代码<code>Pretty print</code> <a href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging/image_0.png">see</a></p>
+</li>
+<li><p>运行到指定行<code>Continue to Here</code> <a href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging/image_6.png">see</a></p>
+</li>
+<li><p>条件断点</p>
+<p> 首先设置一个断点，然后右键该断点选择<code>Edit breakpoint</code>在弹出的输入框中填写具体的条件即可</p>
+</li>
+<li><p>在异常的行触发断点 <a href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging#pause-on-uncaught-exceptions">see</a></p>
+</li>
+<li><p>动态修改内容 <a href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging#liveedit">see</a></p>
+<p> 在<code>Sources</code>界面内选择某个js文件直接修改，然后使用<code>Ctrl + S</code>或者<code>Cmd + S</code>。这样即可及时生效</p>
+</li>
+<li><p>异常栈查看 <a href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging#exceptions">see</a></p>
+<p> 在右下角有一个打叉的小图标（以js出错为前提）。点击可以查看详细的栈信息，如需查找对于的代码请先点击左边的小三角形图标在展开的栈中点击靠右边的js文件名。如果在代码中像打印栈可以通过<code>console.log(e.stack)</code>，打印当前代码调用栈可以通过<code>console.trace()</code></p>
+</li>
+<li><p>断言<code>console.assert(var1 !== undefined, &quot;no var1&quot;)</code></p>
+</li>
+<li><p>Source Maps 用于关联代码 <a href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging#source-maps">see</a></p>
+</li>
 </ul>
-<p>单次监控记录结果如下：</p>
-<pre class="highlighted"><code class="vala">[<span class="number">2012</span>-<span class="number">10</span>-<span class="number">01</span> <span class="number">00</span>:<span class="number">02</span>:<span class="number">20</span>] cpu=<span class="number">0</span> mem=<span class="number">8.6</span> netstat_p=<span class="number">13</span> netstat_t=<span class="number">41</span> netstat_a=<span class="number">450</span> lsof_p=<span class="number">436</span> lsof_a=<span class="number">6346</span>
-<span class="preprocessor"># 这里详细介绍下各项的含义（注：记录的信息都是针对监控进程当时的瞬间信息，下面就不在重复）</span>
-<span class="preprocessor"># cpu cpu的使用情况</span>
-<span class="preprocessor"># mem 内存的使用情况</span>
-<span class="preprocessor"># netstat_p 进程相关的网络连接数(相对于WEB应用这个还是挺重要的指标)</span>
-<span class="preprocessor"># netstat_t [TCP](http://zh.wikipedia.org/zh/TCP)相关的网络连接数</span>
-<span class="preprocessor"># netstat_a 总的网络连接数</span>
-<span class="preprocessor"># lsof_p 进程的文件打开数（被这货坑过一次，程序的各项指标正常但是无法访问，这个下次发文细讲）</span>
-<span class="preprocessor"># lsof_a 系统总的文件打开数</span></code></pre>
-<h4>配置说明</h4>
-<p>这边列出几点可能需要修改的配置，配置文件修改后自动识别，并将在下次执行监控是生效，无需重新启动</p>
-<pre class="highlighted"><code class="vala"><span class="preprocessor"># 监控程序(默认监听init)</span>
-p_name=java
-
-<span class="preprocessor"># 监控时间间隔（单位秒）</span>
-s_time=<span class="number">900</span>
-
-<span class="preprocessor"># 监控cpu上限（cpu使用率参考top）</span>
-max_cpu=<span class="number">49</span>
-
-<span class="preprocessor"># 监控内存上限（mem使用百分比参考top）</span>
-max_mem=<span class="number">40</span>
-
-<span class="preprocessor"># 监控连接数（程序的）</span>
-max_netstat=<span class="number">400</span>
-
-<span class="preprocessor"># 文件打开最大数</span>
-max_lsof=<span class="number">10000</span></code></pre>
-<h4>有价值的地方</h4>
+<h2>HTML相关调试</h2>
 <ul>
-<li><code>$(cd &quot;$(dirname &quot;$0&quot;)&quot;; pwd)</code>获得脚步所在的目录</li>
-<li><code>${#runs[@]}</code>获取数组<code>runs</code>的长度，可用于累加赋值<code>runs[${#runs[@]}]=$value</code></li>
-<li><code>for i in $(seq ${#runs[@]})</code>执行命令并返回结果给for</li>
+<li><p>DOM变化断点 <a href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging#breakpoints-mutation-events">see</a></p>
+<p> 切换到<code>Elements</code>界面，右键需要监控的元素选择<code>Break on...</code>(就的版本可能不需要这个) --&gt; <code>Break on Subtree Modifications</code>。这样元素的内部发生变化时会触发断点</p>
+</li>
+<li><p>XMLHttpRequest(平常是由JavaScript发起的请求)请求中断</p>
+<p> 在<code>Sources</code>界面的右边找到<code>XHR Breakpoint</code>添加URL中包含的字符，这样在发送请求时会触发断点    </p>
+</li>
+<li><p>事件断点（鼠标事件、键盘事件等）</p>
+<p> 在<code>Sources</code>界面的右边找到<code>Event Listener Breakpoint</code>勾选需要的事件，这样在发生世界时会触发断点</p>
+</li>
 </ul>
-<h4>源代码如下：（or <a href="https://gist.github.com/ruanjf/6000151">这里</a>）</h4>
-<script src="https://gist.github.com/ruanjf/6000151.js"></script><div>
+<div>
 		</article>
 	</div>
 	<div class="span3">
@@ -154,7 +141,7 @@ max_lsof=<span class="number">10000</span></code></pre>
 			<br/>
 			<p>Copyright &copy; 2013 - ruanjiefeng@gmail.com</p>
 			<!-- <p style="float:right;">
-				This website was last updated at 2013-10-15T18:37:38.912Z
+				This website was last updated at 2013-11-30T14:02:09.869Z
 			</p> -->
 		</footer>
 	</div><!-- /container -->
