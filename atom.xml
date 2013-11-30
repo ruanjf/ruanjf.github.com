@@ -3,7 +3,7 @@
 	<title>奔跑</title>
 	<link href="http://runjf.com/atom.xml" rel="self"/>
 	<link href="http://runjf.com"/>
-	<updated>2013-11-30T14:02:09.869Z</updated>
+	<updated>2013-11-30T14:08:20.340Z</updated>
 	<id>http://runjf.com</id>
 	<author>
 		<name>ruanjiefeng</name>
@@ -135,7 +135,7 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;断言&lt;code&gt;console.assert(var1 !== undefined, &amp;quot;no var1&amp;quot;)&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Source Maps 用于关联代码 &lt;a href=&quot;https://developers.google.com/chrome-developer-tools/docs/javascript-debugging#source-maps&quot;&gt;see&lt;/a&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Source Maps 用于关联源码位置 &lt;a href=&quot;https://developers.google.com/chrome-developer-tools/docs/javascript-debugging#source-maps&quot;&gt;see&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;HTML相关调试&lt;/h2&gt;
@@ -147,7 +147,7 @@
 &lt;p&gt; 在&lt;code&gt;Sources&lt;/code&gt;界面的右边找到&lt;code&gt;XHR Breakpoint&lt;/code&gt;添加URL中包含的字符，这样在发送请求时会触发断点    &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;事件断点（鼠标事件、键盘事件等）&lt;/p&gt;
-&lt;p&gt; 在&lt;code&gt;Sources&lt;/code&gt;界面的右边找到&lt;code&gt;Event Listener Breakpoint&lt;/code&gt;勾选需要的事件，这样在发生世界时会触发断点&lt;/p&gt;
+&lt;p&gt; 在&lt;code&gt;Sources&lt;/code&gt;界面的右边找到&lt;code&gt;Event Listener Breakpoint&lt;/code&gt;勾选需要的事件，这样在发生事件时会触发断点&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -182,7 +182,7 @@
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -422,7 +422,7 @@ max_lsof=&lt;span class=&quot;number&quot;&gt;10000&lt;/span&gt;&lt;/code&gt;&lt
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -669,7 +669,7 @@ eval &lt;span class=&quot;variable&quot;&gt;$td&lt;/span&gt;&lt;/code&gt;&lt;/pr
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -927,7 +927,7 @@ cros_sdk -- ./image_to_usb.sh --board=&lt;span class=&quot;variable&quot;&gt;${B
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1123,7 +1123,7 @@ yuidoc --syntaxtype coffee -e .coffee .&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1337,7 +1337,7 @@ C:\Users\rjf&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -1769,7 +1769,7 @@ list = &lt;span class=&quot;keyword&quot;&gt;while&lt;/span&gt; num -= &lt;span 
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2012,7 +2012,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2235,7 +2235,7 @@ highlighted_code = &lt;span class=&quot;constant&quot;&gt;File&lt;/span&gt;.read
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2506,7 +2506,7 @@ gzgi:/oracle/app/oracle/product/10.2.0/db_1:Y
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2681,15 +2681,15 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -2729,7 +2729,7 @@ Object c = Class.forName(&amp;quot;com.hou.car&amp;quot;).newInstance();
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -2938,7 +2938,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3165,7 +3165,7 @@ The state of the socket is unknown.&lt;/p&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3439,7 +3439,7 @@ export ORACLE_BASE ORACLE_HOME ORACLE_SID&lt;/code&gt;&lt;/pre&gt;
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3634,7 +3634,7 @@ git clone git@192.168.1.103:testgit aa
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3796,7 +3796,7 @@ mvn -v &lt;span class=&quot;comment&quot;&gt;#测试是否配置正确&lt;/span&
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -3972,7 +3972,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4137,7 +4137,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4329,15 +4329,15 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 		&lt;/nav&gt;
@@ -4371,7 +4371,7 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4596,15 +4596,15 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -4644,7 +4644,7 @@ document.write(unescape(&quot;%3Cscript src='&quot; + _bdhmProtocol + &quot;hm.b
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4838,7 +4838,7 @@ MIN_DISPLAY_COLORS=256
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -4990,15 +4990,15 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 				
 			
 				
-					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
-					&amp;raquo;
-					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
-				
-			
-				
 					&lt;li&gt;&lt;span&gt;Sat Sep 15 2012&lt;/span&gt;
 					&amp;raquo;
 					&lt;a href=&quot;/posts/java-opts&quot;&gt;JAVA_OPTS&lt;/a&gt;&lt;/li&gt;
+				
+			
+				
+					&lt;li&gt;&lt;span&gt;Wed May 05 2010&lt;/span&gt;
+					&amp;raquo;
+					&lt;a href=&quot;/posts/java-environment-variable&quot;&gt;java 环境变量配置&lt;/a&gt;&lt;/li&gt;
 				
 			
 				
@@ -5038,7 +5038,7 @@ Object obj = clazz.newInstance(); &lt;span class=&quot;comment&quot;&gt;//通过
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
@@ -5253,7 +5253,7 @@ export &lt;span class=&quot;class&quot;&gt;CLASSPATH&lt;/span&gt;&lt;/code&gt;&l
 			&lt;br/&gt;
 			&lt;p&gt;Copyright &amp;copy; 2013 - ruanjiefeng@gmail.com&lt;/p&gt;
 			&lt;!-- &lt;p style=&quot;float:right;&quot;&gt;
-				This website was last updated at 2013-11-30T14:02:09.869Z
+				This website was last updated at 2013-11-30T14:08:20.340Z
 			&lt;/p&gt; --&gt;
 		&lt;/footer&gt;
 	&lt;/div&gt;&lt;!-- /container --&gt;
