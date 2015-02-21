@@ -55,4 +55,4 @@ Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.str
 ``` java
 Caused by: Cannot locate the chosen ObjectFactory implementation: org.apache.struts2.spring.StrutsSpringObjectFactory - [unknown location]
 ```
-原因`struts.xm`中有配置插件，但是包没导入。包名：`struts2-spring-plugin-xxx.jar`
+原因`struts.xml`中有配置插件，但是包没导入。包名：`struts2-spring-plugin-xxx.jar`
