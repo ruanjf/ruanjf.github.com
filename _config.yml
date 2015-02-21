@@ -86,8 +86,8 @@ kramdown:
     coderay_css: class
 
 prose:
-  siteurl: 'http://hmfaysal.github.io/'
-  relativeLinks: 'http://hmfaysal.github.io/links.jsonp'
+  siteurl: 'http://www.runjf.com/'
+  relativeLinks: 'http://www.runjf.com/links.jsonp'
   media: 'images/post'
   metadata:
     _posts:
