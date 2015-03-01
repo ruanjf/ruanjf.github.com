@@ -7,7 +7,6 @@ comments: true
 category: nodejs
 tags: ['nodejs']
 ---
-
 ## Mac OS X环境
 
 OSX下使用[nvm](https://github.com/creationix/nvm/)来管理nodejs的版本所有这里就介绍`nvm`的安装和使用配置，以及我个人附加的修改
@@ -34,9 +33,7 @@ npm config get prefix # 查看显示的路径是否为你需要安装的nodejs�
 在`shell`环境配置中添加下面配置，注本人用的`zsh`对应的文件为`.zshrc`,如果用的是`bash`的话对应的文件就是`.bashrc`。打开`.zshrc`在末尾添加如下内容
 
 ``` bash
-# 这个是设置了一个别名方便在shell中使用nvm。
-# 官方的配置是直接在启动shell的时候执行source，这样导致启动的时候都得执行这个不太有用的命令。
-# 本人做的修改是在必要的时候去执行snvm来启用nvm
+# 这个是设置了一个别名方便在shell中使用nvm。官方的配置是直接在启动shell的时候执行source，这样导致启动的时候都得执行这个不太有用的命令。本人做的修改是在必要的时候去执行snvm来启用nvm
 alias snvm="source $(brew --prefix nvm)/nvm.sh"
 
 # 设置默认的nodejs安装路径
