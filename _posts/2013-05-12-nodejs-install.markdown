@@ -2,10 +2,69 @@
 layout: post
 title: "nodejs与npm安装"
 date: 2013-05-12 20:12
+modified: 2015-03-01 20:41
 comments: true
 category: nodejs
 tags: ['nodejs']
 ---
+
+## Mac OS X环境
+
+OSX下使用[nvm](https://github.com/creationix/nvm/)来管理nodejs的版本所有这里就介绍`nvm`的安装和使用配置，以及我个人附加的修改
+
+### 下载
+
+在OSX环境下很方便不需要手动去网站下载软件这步就免了。通过[brew](http://brew.sh/)进行下载安装，顺便说下这货类似于Linux下的`apt-get`、`yum`实在方便，忍不住要吐槽Windows不带这样的。
+
+### 安装
+
+打开终端执行下面的命令，注意`#`井号后面的是注释不要连带复制了。
+
+``` bash
+brew install nvm # 安装nvm
+source $(brew --prefix nvm)/nvm.sh # 初始化配置
+nvm install 0.11 # 安装nodejs的0.11.x版本
+nvm use 0.11 # 启用0.11.x版本
+npm config set prefix "$NVM_DIR/`nvm current`" # 设置nodejs的安装路径
+npm config get prefix # 查看显示的路径是否为你需要安装的nodejs，通常是不会错啦
+```
+
+### 配置
+
+在`shell`环境配置中添加下面配置，注本人用的`zsh`对应的文件为`.zshrc`,如果用的是`bash`的话对应的文件就是`.bashrc`。打开`.zshrc`在末尾添加如下内容
+
+``` bash
+# 这个是设置了一个别名方便在shell中使用nvm。
+# 官方的配置是直接在启动shell的时候执行source，这样导致启动的时候都得执行这个不太有用的命令。
+# 本人做的修改是在必要的时候去执行snvm来启用nvm
+alias snvm="source $(brew --prefix nvm)/nvm.sh"
+
+# 设置默认的nodejs安装路径
+export NODE_HOME="/usr/local/opt/nvm/v0.11.14"
+# 帮助文档
+export MANPATH="${NODE_HOME}/share/man:$MANPATH"
+# 添加到可执行环境变量中
+export PATH="$NODE_HOME/bin:$PATH"
+＃ 设置别名用于切换nodejs版本后，修改npm中记录的nodejs安装路径
+alias snpmp="npm config set prefix $NODE_HOME && npm config get prefix"
+
+#export PATH="${NODE_HOME}/bin:$NODE_HOME/lib/node_modules/npm/bin/node-gyp-bin:$PATH"
+```
+
+
+### 测试
+
+``` bash
+rjf-mba:~ $ node -v          
+v0.11.13
+rjf-mba:~ $ npm -v
+1.4.9
+rjf-mba:~ $ 
+
+```
+安装后进行测试有出现对应的版本说明nodejs安装成功了可以正常使用啦
+
+
 
 ## Windows环境
 
