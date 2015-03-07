@@ -7,15 +7,17 @@ category: nodejs
 tags: ['windows', 'javascript']
 ---
 
-## 先介绍下流程
+## 使用流程
 1. 创建两个`bat`文件`package_gateway-nw.bat`和`build_gateway-nw.bat`，文件内容文章下面介绍
 2. 将`package_gateway-nw.bat`文件放于node-webkit应用的源码文件夹，用于打包源码
 3. 将`build_gateway-nw.bat`文件放于`node-wekbit`运行目录下，运行环境下载[地址](https://github.com/nwjs/nw.js#user-content-downloads)
-4. 执行`build_gateway-nw.bat`,进行打包和生成可执行文件。逻辑如下
+4. 执行`build_gateway-nw.bat`,进行打包和生成可执行文件。
 
-	- `build_gateway-nw.bat`内部使用call调用`package_gateway-nw.bat`生成文件`xxx.nw`到`build_gateway-nw.bat`文件所在的文件夹
-	- 使用系统的`copy`命令进行生成可执行程序以`xxx.exe`
-	- 使用`7z`进行压缩生成`xxx.zip`，方便拷贝
+## 批处理逻辑
+
+- `build_gateway-nw.bat`内部使用call调用`package_gateway-nw.bat`生成文件`xxx.nw`到`build_gateway-nw.bat`文件所在的文件夹
+- 使用系统的`copy`命令进行生成可执行程序以`xxx.exe`
+- 使用`7z`进行压缩生成`xxx.zip`，方便拷贝
 
 ## 压缩应用代码
 
