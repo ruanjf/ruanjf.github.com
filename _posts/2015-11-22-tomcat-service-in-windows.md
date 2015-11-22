@@ -4,7 +4,7 @@ title: "配置Tocmat成window的服务"
 date: 2015-11-22 16:21
 comments: true
 category: java
-tags: ['java']
+tags: ['java', 'web']
 ---
 
 ## 缘由
