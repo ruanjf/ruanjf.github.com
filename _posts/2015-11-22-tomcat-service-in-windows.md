@@ -35,4 +35,4 @@ SCHTASKS /Create /RU SYSTEM /SC ONSTART /TN Tomcat9180Gateway /TR "D:\apache-tom
 1. 首先还是要打开`cmd`命令行窗口，然后进入到`Tocmat`所在目录。也可以进入到所在文件夹按住`Shift`后右键可以看到一个命令行的选项，点击即可
 2. 进入到`bin`目录中，输入`service.bat install gateway`其中`gateway`是服务名称。注册成功后命令行窗口会提示`The service 'gateway' has been installed`。
 
-> 需要注意的问题是，如果发现`bin`目录中没有`service.bat`，这大概就是你的Tomcat包下的不对了，apache官网提供了多种方式的包。需要选择有包含附加命令的
+需要注意的问题是，如果发现`bin`目录中没有`service.bat`，这大概就是你的Tomcat包下的不对了，apache官网提供了多种方式的包。需要选择有包含附加命令的
