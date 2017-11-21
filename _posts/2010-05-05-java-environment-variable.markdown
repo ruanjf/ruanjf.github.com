@@ -37,6 +37,9 @@ export JAVA_HOME
 export PATH
 export CLASSPATH
 ```
+
+source /etc/profile
+
  
 注意：linux下面用冒号分割
 解决`java/lang/NoClassDefFoundError: java/lang/Object` 错误
@@ -46,3 +49,4 @@ export CLASSPATH
 ``` bash
 $ unpack200 rt.pack rt.jar
 ```
+
