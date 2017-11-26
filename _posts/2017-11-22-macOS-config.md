@@ -190,6 +190,14 @@ pip install --user pillow
 pip install --user qrcode
 ```
 
+安装[golang](https://golang.org/)开发环境
+```sh
+brew instal go
+# 在.zshrc中添加
+tee -a ~/.zshrc << EOF
 
-
+# 添加golang path
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
+EOF
+```
 
