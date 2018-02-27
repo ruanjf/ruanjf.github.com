@@ -160,6 +160,18 @@ nvm alias default 8.9
 nvm use 6.12
 ```
 
+[yarn](https://yarnpkg.com/zh-Hans/)依赖管理，并配置[淘宝NPM镜像](https://npm.taobao.org/mirrors)
+```sh
+brew install yarn --without-node
+yarn config set registry https://registry.npm.taobao.org # 注册模块镜像
+yarn config set disturl https://npm.taobao.org/dist # node-gyp 编译依赖的 node源码镜像
+yarn config set chromedriver_cdnurl http://npm.taobao.org/mirrors/chromedriver  # chromedriver 镜像
+yarn config set phantomjs_cdnurl http://npm.taobao.org/mirrors/phantomjs # phantomjs 镜像
+yarn config set electron_mirror https://npm.taobao.org/mirrors/electron/ # electron 镜像
+yarn config set selenium_cdnurl http://npm.taobao.org/mirrors/selenium # Selenium 镜像
+yarn config set sass_binary_site http://npm.taobao.org/mirrors/node-sass # node-sass 镜像
+```
+
 
 安装[nginx](http://nginx.org/)使用[homebrew nginx](https://github.com/Homebrew/homebrew-nginx)扩展仓库
 
@@ -190,7 +202,9 @@ pip install --user pillow
 pip install --user qrcode
 ```
 
+
 安装[golang](https://golang.org/)开发环境
+
 ```sh
 brew instal go
 # 在.zshrc中添加
@@ -199,5 +213,15 @@ tee -a ~/.zshrc << EOF
 # 添加golang path
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 EOF
+
+# 安装Debug环境delve https://github.com/derekparker/delve
+# 参考 https://github.com/go-delve/homebrew-delve/issues/19#issuecomment-330442033
+brew install go-delve/delve/delve
+cd $HOME/Library/Caches/Homebrew
+tar xf delve-*.gz
+# go into directory ( mine is delve-1.0.0-rc.2 )
+sh scripts/gencert.sh # 需要输入密码
+brew install go-delve/delve/delve
 ```
+
 
