@@ -219,9 +219,9 @@ html, body, .notepad-post-container, .notepad-post-header {
         font-weight: 300; }
       @media only screen and (min-width: 40.063em) {
         .post-template .notepad-post-content > div:not(.notepad-post-title) p {
-          font-size: 1.375rem; }
+          font-size: 1rem; }
           .post-template .notepad-post-content > div:not(.notepad-post-title) p:nth-of-type(1) {
-            font-size: 1.375rem; } }
+            font-size: 1rem; } }
       .post-template .notepad-post-content > div:not(.notepad-post-title) p.with-image {
         text-align: center;
         padding-top: 3.125rem;
@@ -383,7 +383,7 @@ html, body, .notepad-post-container, .notepad-post-header {
     @media only screen and (min-width: 90em) {
       .notepad-page-title h1,
       .notepad-post-title-simple h1 {
-        font-size: 5.3125rem;
+        font-size: 3.3125rem;
         padding-top: 8.125rem;
         padding-bottom: 8.125rem; } }
   .notepad-page-title .notepad-post-meta-simple,
@@ -410,8 +410,8 @@ html, body, .notepad-post-container, .notepad-post-header {
     @media only screen and (min-width: 90em) {
       .notepad-page-title .notepad-post-meta-simple,
       .notepad-post-title-simple .notepad-post-meta-simple {
-        padding-top: 10rem;
-        padding-bottom: 6.25rem; } }
+        padding-top: 5rem;
+        padding-bottom: 3.25rem; } }
 
 /* Page conent */
 .notepad-page-content {

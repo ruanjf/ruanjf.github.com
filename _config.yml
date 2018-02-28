@@ -6,7 +6,7 @@ disqus_shortname: runjf
 share:            true
 readtime:		  true
 wpm:			  200
-dropcap:		  true
+dropcap:		  false
 # theme:			  blue
 nprogress:        true
 header_bg:        wallhaven-72696.jpg #grand-canyons.jpg

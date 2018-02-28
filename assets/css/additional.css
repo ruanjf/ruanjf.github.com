@@ -705,7 +705,7 @@ blockquote,blockquote p {
     margin-top: 1rem!important;
     margin-bottom: 2.1rem!important;
     font-style: italic!important;
-    font-size: 2.5rem!important;
+    /* font-size: 2.5rem!important; */
     font-family: serif!important;
     line-height: 1.4!important;
     text-align: center!important;
@@ -713,7 +713,8 @@ blockquote,blockquote p {
 }
 
 blockquote {
-    border-left: none!important;
+    /* border-left: none!important; */
+    border-left: 3px solid #ddd !important;
 }
 
 @media only screen and (max-width:40.063em) {
