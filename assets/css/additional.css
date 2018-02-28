@@ -700,10 +700,14 @@ img.mfp-img {
   right: 0;
   padding-top: 0; }
 
+blockquote p {
+    margin: 0;
+}
+
 blockquote,blockquote p {
     padding: .25rem!important;
     margin-top: 1rem!important;
-    margin-bottom: 2.1rem!important;
+    margin-bottom: 1rem!important;
     font-style: italic!important;
     /* font-size: 2.5rem!important; */
     font-family: serif!important;
