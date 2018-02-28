@@ -7,7 +7,7 @@ share:            true
 readtime:		  true
 wpm:			  200
 dropcap:		  true
-theme:			  blue
+# theme:			  blue
 nprogress:        true
 header_bg:        wallhaven-72696.jpg #grand-canyons.jpg
 author_bg:		  newyork.jpg
