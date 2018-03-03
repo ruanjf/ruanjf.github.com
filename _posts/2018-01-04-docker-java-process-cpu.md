@@ -3,7 +3,7 @@ layout: post
 title: "在Docker内定位使用CPU过高的Java进程"
 date: 2018-01-04 14:33
 comments: true
-category: java
+category: linux
 tags: ['java', 'jvm', 'linux' , 'docker']
 ---
 
