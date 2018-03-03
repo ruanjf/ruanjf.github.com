@@ -12,9 +12,11 @@ tags: ['java', 'jvm', 'linux' , 'docker']
 首先，通过`top`命令找到CPU使用过高的进程（如：`7152`），如下信息已忽略top的头信息
 
 ```
-  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND                                                                                                                     7152 root      20   0 1668880 308248   4640 S  1.3 16.4   8:14.01 java
- 1390 root      20   0  129848   7080   1708 S  0.3  0.4 153:43.35 AliYunDun                                                                                                                    2451 root      20   0  166704   4548    440 S  0.3  0.2  30:11.21 ilogtail
- 2509 root      20   0  134896   2788      0 S  0.3  0.1   1:16.78 docker-containe
+ PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
+7152 root      20   0 1668880 308248   4640 S  1.3 16.4   8:14.01 java
+1390 root      20   0  129848   7080   1708 S  0.3  0.4 153:43.35 AliYunDun
+2451 root      20   0  166704   4548    440 S  0.3  0.2  30:11.21 ilogtail
+2509 root      20   0  134896   2788      0 S  0.3  0.1   1:16.78 docker-containe
 ```
 
 
