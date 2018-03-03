@@ -139,11 +139,11 @@ root        90     0  0 16:16 ?        00:00:00 ps -ef
 - 查看线程，可以使用[Process Explorer](https://docs.microsoft.com/zh-cn/sysinternals/downloads/process-explorer)，如图
     
     <img src="/images/post/2018/2018-01-04-process-explorer.png" alt="显示线程信息">
-    
-- 进制转换，可以使用计算器（快捷键`Win + R`启动运行窗口然后输入`calc`，接着依次按下`Alt` `V` `S`切换到科学型）
+- 进制转换，可以使用计算器（快捷键`Win + R`启动运行窗口然后输入`calc`，接着依次按下`Alt`、`V`、`S`切换到科学型）
 
 ## 参考
 [线程Dump](https://my.oschina.net/dabird/blog/691692)
+
 [Process Explorer](https://docs.microsoft.com/zh-cn/sysinternals/downloads/process-explorer)
 
 
