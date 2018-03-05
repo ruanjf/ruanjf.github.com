@@ -32,8 +32,9 @@
 {% endif %}
 {% if site.nprogress %}<script>NProgress.start();var interval=setInterval(function(){NProgress.inc()},1000);jQuery(window).load(function(){clearInterval(interval);NProgress.done()});jQuery(window).unload(function(){NProgress.start()});</script>{% endif %}
 {% if site.baidu_tongji %}
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%{{ site.baidu_tongji }}' type='text/javascript'%3E%3C/script%3E"));
-</script>
+</script> -->
+<script src="//hm.baidu.com/h.js%{{ site.baidu_tongji }}"></script>
 {% endif %}
