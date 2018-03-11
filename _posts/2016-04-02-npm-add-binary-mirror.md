@@ -7,7 +7,7 @@ category: nodejs
 tags: ['npm']
 ---
 
-由于国内访问[S3](https://s3.amazonaws.com)比较慢，导致通过[npm](https://npmjs.com)下载二进制文件依赖时会中断或者直接下不动，所以需要在`npm`命令后面加上`--{module_name}_binary_host_mirror`，其中`module_name`存在于`package.json`中。每个模块名称又不一样（例如：`sqlite3`的模块名为`node_sqlite3`）这时可以通过`npm view sqlite3 binary`或者指定版本`npm view sqlite3@3.1.3 binary`查询到模块名称而不需要去仓库查看打印结果如下：
+由于国内访问[Amazon S3](https://s3.amazonaws.com)比较慢，导致通过[npm](https://npmjs.com)下载二进制文件依赖时会中断或者直接下不动，所以需要在`npm`命令后面加上`--{module_name}_binary_host_mirror`，其中`module_name`存在于`package.json`中。每个模块名称又不一样（例如：`sqlite3`的模块名为`node_sqlite3`）这时可以通过`npm view sqlite3 binary`或者指定版本`npm view sqlite3@3.1.3 binary`查询到模块名称而不需要去仓库查看打印结果如下：
 
 ```
 $ npm view sqlite3@3.1.3 binary
