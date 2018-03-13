@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "基于Spring Cloud的分布式微服务化项目（Saas）搭建"
+title: "基于Spring Cloud的分布式微服务化项目搭建"
 date: 2018-02-28 21:18
 comments: true
 category: java
@@ -16,6 +16,7 @@ tags: ['spring', 'docker']
 - 路由
 - 网关微服务
 - 多租户
+- 分布式追踪
 - Docker集成
 
 ## 前期准备
@@ -575,6 +576,52 @@ demo-abc:
 
 通过集成[Shiro](https://shiro.apache.org/)进行权限校验，校验通过后会在请求Header中添加用户标识符方便后端微服务获取用户信息。
 
+## 分布式追踪
+
+使用[Spring Cloud Sleuth](http://cloud.spring.io/spring-cloud-static/Camden.SR7/#_spring_cloud_sleuth)进行请求链路的追踪，通过[Zipkin](https://github.com/openzipkin/zipkin)查看采样数据。首先在微服务的`pom.xml`中添加`spring-cloud-starter-sleuth`依赖如果想通过Stream的方式传递数据可以再添加`spring-cloud-sleuth-stream`和`spring-cloud-starter-stream-rabbit`（如果之前的Hystrix已添加则可忽略）依赖。然后创建Zipkin服务端添加如下依赖：
+
+```xml
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-sleuth</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-sleuth-zipkin-stream</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.zipkin.java</groupId>
+    <artifactId>zipkin-autoconfigure-ui</artifactId>
+    <version>1.31.3</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-jdbc</artifactId>
+</dependency>
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+</dependency>
+```
+
+其中`zipkin-autoconfigure-ui`提供了UI界面方便查看数据，`spring-boot-starter-jdbc`和`mysql-connector-java`用来存储追踪的采样数据`ZipkinServerConfiguration`默认的存储`zipkin.storage.type`是在内存中使用一段时间后会把内存占满因此建议改用外部存储。默认的采样百分比为`10%`在`application.yml`中可以配置`spring.sleuth.sampler.percentage`也可以自己创建Bean提供采样策略替换`SleuthStreamAutoConfiguration`中默认配置。
+
+接下来在`Application.java`中添加注解`@EnableZipkinStreamServer`用于启动Zipkin服务，用浏览器打开服务的地址就可以看到界面了。
+
+由于项目中使用了[WebSocket](https://zh.wikipedia.org/wiki/WebSocket)和[JMS](https://zh.wikipedia.org/zh-cn/Java%E6%B6%88%E6%81%AF%E6%9C%8D%E5%8A%A1)这部分追踪数据不是必须的因此添加如下配置
+
+```yaml
+spring:
+  sleuth:
+    integration: # 关闭 Trace Messaging指定MQ队列
+      enabled: false
+      patterns: demo-*,topic://demo- # 或者指定队列不采集
+      websockets:
+        enabled: false
+    scheduled: # 关闭定时
+      enabled: false
+```
+
 ## 多租户
 
 通过[EclipseLink](http://www.eclipse.org/eclipselink/)提供的多租户功能并扩展`JpaTransactionManager`和代理`EntityManagerFactory`从而提供了EclipseLink需要的租户标识`eclipselink.tenant-id`。
@@ -648,6 +695,7 @@ CMD exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.jar
 - [Hystrix](https://github.com/Netflix/Hystrix/wiki/Configuration)
 - [Ribbon](https://github.com/Netflix/ribbon/wiki/Programmers-Guide)
 - [ngx_http_proxy_module](http://nginx.org/en/docs/http/ngx_http_proxy_module.html#proxy_read_timeout)
+- [Zipkin](https://github.com/openzipkin/zipkin)
 - [docker-maven-plugin](https://github.com/spotify/docker-maven-plugin)
 - [Dockerfile](https://docs.docker.com/v17.03/engine/reference/builder)
 - [Docker Compose](https://docs.docker.com/v17.03/compose/reference/overview/)
