@@ -225,7 +225,7 @@ Vue.use(Element)
 使用[axios](https://github.com/axios/axios)来访问后端API，选择这个的原因是它支持[Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)和可以在node.js环境下使用。但是考虑到后期可能存在切换为[Fetch API](https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API)时比较方便点，而且封装成RESTful将于后端提供的API保持一致的概念，还可以提供了统一的异常处理。提供`get`、`post`、`del`，`patch`方法。由于axios对`location.search`部分没有处理，因此再引入[qs](https://github.com/ljharb/qs)来处理：
 
 ```js
-
+qs.stringify({ a: { b: 'c' } }, { allowDots: true, indices: false })
 ```
 
 ## PDF预览支持
