@@ -37,7 +37,7 @@ owner:
 #google_verify:      1oh55StBm-EjdVgFomDCM4Dt1iSrJhB5a776bHEXojU
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
-baidu_tongji:     3F774a0532b8cfbef912972f05fc00ff87
+baidu_tongji:     774a0532b8cfbef912972f05fc00ff87
 
 # Links to include in footer navigation
 # For external links add external: true
